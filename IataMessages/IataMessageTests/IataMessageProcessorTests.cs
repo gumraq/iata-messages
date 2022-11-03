@@ -6,15 +6,15 @@ using IataMessagesProcessor.Formatters.TextMessages;
 using IataMessagesProcessor.Parsers.TextMessages;
 
 
-namespace IataMessagesTests
+namespace IataMessageTests
 {
-    public class Test2
+    public class IataMessageProcessorTests
     {
         private IataMessageTextParser parser;
         
         private TextMessageFormatter formatter;
 
-        public Test2()
+        public IataMessageProcessorTests()
         {
           this.parser = new IataMessageTextParser(new Fbl4MessageParser(new Ffm8MessageParser()));
             this.formatter = new TextMessageFormatter();
