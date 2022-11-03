@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IataMessagesProcessor\IataMessagesProcessor.csproj" />
+    <ProjectReference Include="..\IataMessageProcessor\IataMessageProcessor.csproj" />
   </ItemGroup>
 
 </Project>
