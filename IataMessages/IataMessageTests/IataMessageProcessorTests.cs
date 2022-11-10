@@ -1,9 +1,8 @@
 ﻿using FluentResults;
+using IataMessageProcessor.Formatters.TextMessages;
+using IataMessageProcessor.Parsers.TextMessages;
+using IataMessageStandard;
 using Xunit;
-
-using IataMessagesProcessor.Messages;
-using IataMessagesProcessor.Formatters.TextMessages;
-using IataMessagesProcessor.Parsers.TextMessages;
 
 
 namespace IataMessageTests
