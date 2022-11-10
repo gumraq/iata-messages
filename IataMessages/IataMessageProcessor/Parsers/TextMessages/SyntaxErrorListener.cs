@@ -1,9 +1,6 @@
-﻿using System;
-using Antlr4.Runtime;
-using System.Collections.Generic;
-using System.IO;
+﻿using Antlr4.Runtime;
 
-namespace IataMessagesProcessor.Parsers.TextMessages
+namespace IataMessageProcessor.Parsers.TextMessages
 {
     public class SyntaxErrorListener : BaseErrorListener
     {

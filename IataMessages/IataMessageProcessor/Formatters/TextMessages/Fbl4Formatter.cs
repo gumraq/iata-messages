@@ -1,10 +1,7 @@
-﻿using System.Linq;
+﻿using IataMessageStandard;
+using IataMessageStandard.Fbl4Parts;
 
-using IataMessagesProcessor.Messages;
-using IataMessagesProcessor.Messages.Fbl4Parts;
-
-
-namespace IataMessagesProcessor.Formatters.TextMessages
+namespace IataMessageProcessor.Formatters.TextMessages
 {
     public partial class TextMessageFormatter :
     #region inherits interfaces

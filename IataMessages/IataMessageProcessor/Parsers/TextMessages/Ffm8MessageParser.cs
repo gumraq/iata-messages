@@ -1,10 +1,7 @@
-﻿using System;
-using System.IO;
-using Antlr4.Runtime;
+﻿using Antlr4.Runtime;
 using FluentResults;
-using IataMessagesProcessor.Messages;
 
-namespace IataMessagesProcessor.Parsers.TextMessages
+namespace IataMessageProcessor.Parsers.TextMessages
 {
     public class Ffm8MessageParser : Parser<string>
     {
@@ -41,7 +38,7 @@ namespace IataMessagesProcessor.Parsers.TextMessages
                 var errorListener = new SyntaxErrorListener();
                 ffm8Parser.AddErrorListener(errorListener);
                 var fsuContext = ffm8Parser.ffm8();
-                var visitor = new MessageParseTreeVisitor<Ffm8>();
+                var visitor = new MessageParseTreeVisitor<IataMessageStandard.Ffm8>();
 
                 visitor.Visit(fsuContext);
                 visitor.ExpressionExecute()();

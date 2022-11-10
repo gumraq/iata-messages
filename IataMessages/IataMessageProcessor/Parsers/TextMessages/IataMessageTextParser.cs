@@ -1,4 +1,4 @@
-﻿namespace IataMessagesProcessor.Parsers.TextMessages
+﻿namespace IataMessageProcessor.Parsers.TextMessages
 {
     public class IataMessageTextParser : Parser<string>
     {

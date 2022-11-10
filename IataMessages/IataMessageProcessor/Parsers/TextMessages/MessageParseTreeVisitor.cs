@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using Antlr4.Runtime.Tree;
 using Microsoft.Extensions.Logging;
 
-namespace IataMessagesProcessor.Parsers.TextMessages
+namespace IataMessageProcessor.Parsers.TextMessages
 {
     public class MessageParseTreeVisitor<Result> : AbstractParseTreeVisitor<Result> where Result : new()
     {

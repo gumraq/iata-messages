@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentResults;
+﻿using FluentResults;
 
-namespace IataMessagesProcessor.Parsers
+namespace IataMessageProcessor.Parsers
 {
     /// <summary>
     /// Интерфейс раскладки

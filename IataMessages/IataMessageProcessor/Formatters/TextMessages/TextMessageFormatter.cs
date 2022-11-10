@@ -1,4 +1,4 @@
-﻿namespace IataMessagesProcessor.Formatters.TextMessages
+﻿namespace IataMessageProcessor.Formatters.TextMessages
 {
     /// <summary>
     /// Форматтер телесков под текстовый вида
