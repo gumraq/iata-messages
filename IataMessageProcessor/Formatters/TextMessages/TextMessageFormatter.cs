@@ -5,8 +5,8 @@
     /// </summary>
     public partial class TextMessageFormatter
     {
-        private string sCRLF = "\u000d\u000a";
-        private string sSlant = "/";
-        private string sHyphen = "-";
+        protected string sCRLF = "\u000d\u000a";
+        protected string sSlant = "/";
+        protected string sHyphen = "-";
     }
 }
