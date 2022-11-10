@@ -9,13 +9,13 @@ namespace IataMessageTests
 {
     public class IataMessageProcessorTests
     {
-        private IataMessageTextParser parser;
+        private TextMessageParser parser;
         
         private TextMessageFormatter formatter;
 
         public IataMessageProcessorTests()
         {
-          this.parser = new IataMessageTextParser(new Fbl4MessageParser(new Ffm8MessageParser()));
+          this.parser = new TextMessageParser(new Fbl4MessageParser(new Ffm8MessageParser()));
             this.formatter = new TextMessageFormatter();
         }
 

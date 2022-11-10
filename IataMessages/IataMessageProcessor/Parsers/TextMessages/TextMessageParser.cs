@@ -1,8 +1,8 @@
 ﻿namespace IataMessageProcessor.Parsers.TextMessages
 {
-    public class IataMessageTextParser : Parser<string>
+    public class TextMessageParser : Parser<string>
     {
-        public IataMessageTextParser(IParser<string> parser) : base(parser)
+        public TextMessageParser(IParser<string> parser) : base(parser)
         {
         }
     }
