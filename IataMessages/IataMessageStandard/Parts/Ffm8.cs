@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace IataMessagesProcessor.Messages.Ffm8Parts
+﻿namespace IataMessageStandard.Ffm8Parts
 {
     [SeparatorCrlf]
     public class StandardMessageIdentification

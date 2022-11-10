@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace IataMessagesProcessor.Messages.Fbl4Parts
+﻿namespace IataMessageStandard.Fbl4Parts
 {
     [SeparatorCrlf]
     public class StandardMessageIdentification

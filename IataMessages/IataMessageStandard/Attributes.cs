@@ -1,4 +1,4 @@
-﻿namespace IataMessagesProcessor
+﻿namespace IataMessageStandard
 {
     public class SeparatorCrlfAttribute : Attribute { }
 

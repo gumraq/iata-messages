@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace IataMessagesProcessor.Messages
+namespace IataMessageStandard
 {
     public class Ffm8
     {
