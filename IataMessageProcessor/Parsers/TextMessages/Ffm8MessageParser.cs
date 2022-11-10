@@ -37,10 +37,10 @@ namespace IataMessageProcessor.Parsers.TextMessages
                 var ffm8Parser = new ffm8Parser(commonTokenStream);
                 var errorListener = new SyntaxErrorListener();
                 ffm8Parser.AddErrorListener(errorListener);
-                var fsuContext = ffm8Parser.ffm8();
+                var ffm8Context = ffm8Parser.ffm8();
                 var visitor = new MessageParseTreeVisitor<IataMessageStandard.Ffm8>();
 
-                visitor.Visit(fsuContext);
+                visitor.Visit(ffm8Context);
                 visitor.ExpressionExecute()();
 
                 return Result.Ok(visitor.Message);

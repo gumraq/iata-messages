@@ -3,13 +3,13 @@ using FluentResults;
 
 namespace IataMessageProcessor.Parsers.TextMessages
 {
-    public class Fbl4MessageParser : Parser<string>
+    public class Fwb17MessageParser : Parser<string>
     {
-        public Fbl4MessageParser()
+        public Fwb17MessageParser()
         {
         }
 
-        public Fbl4MessageParser(IParser<string> parser) : base(parser)
+        public Fwb17MessageParser(IParser<string> parser) : base(parser)
         {
         }
 
@@ -19,7 +19,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
             {
                 using var reader = new StringReader(standatdMessage);
                 string firstLine = reader.ReadLine();
-                return string.Equals(firstLine, "FBL/4");
+                return string.Equals(firstLine, "FWB/17");
             }
             catch
             {
@@ -32,15 +32,15 @@ namespace IataMessageProcessor.Parsers.TextMessages
             try
             {
                 var inputStream = new AntlrInputStream(standatdMessage);
-                var speakLexer = new fbl4Lexer(inputStream);
+                var speakLexer = new fwb17Lexer(inputStream);
                 var commonTokenStream = new CommonTokenStream(speakLexer);
-                var fbl4Parser = new fbl4Parser(commonTokenStream);
+                var fwb17Parser = new fwb17Parser(commonTokenStream);
                 var errorListener = new SyntaxErrorListener();
-                fbl4Parser.AddErrorListener(errorListener);
-                var fbl4Context = fbl4Parser.fbl4();
-                var visitor = new MessageParseTreeVisitor<IataMessageStandard.Fbl4>();
+                fwb17Parser.AddErrorListener(errorListener);
+                var fwb17Context = fwb17Parser.fwb17();
+                var visitor = new MessageParseTreeVisitor<IataMessageStandard.Fwb17>();
 
-                visitor.Visit(fbl4Context);
+                visitor.Visit(fwb17Context);
                 visitor.ExpressionExecute()();
 
                 return Result.Ok(visitor.Message);
@@ -48,7 +48,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
             }
             catch (Exception ex)
             {
-                return Result.Fail(new Error("Не удалось разложить FBL/4").CausedBy(ex));
+                return Result.Fail(new Error("Не удалось разложить FWB/17").CausedBy(ex));
             }
         }
     }

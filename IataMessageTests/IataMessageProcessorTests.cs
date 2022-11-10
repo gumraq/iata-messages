@@ -15,7 +15,7 @@ namespace IataMessageTests
 
         public IataMessageProcessorTests()
         {
-          this.parser = new TextMessageParser(new Fbl4MessageParser(new Ffm8MessageParser()));
+          this.parser = new TextMessageParser(new Fbl4MessageParser(new Ffm8MessageParser(new Fwb17MessageParser())));
             this.formatter = new TextMessageFormatter();
         }
 
