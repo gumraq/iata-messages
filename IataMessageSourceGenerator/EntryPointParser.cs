@@ -24,8 +24,8 @@ namespace IataMessageSourceGenerator
                 ANTLRv4Parser.GrammarSpecContext rootContext = grammarParser.grammarSpec();
                 CsharpStructureParseTreeVisitor visitor = new CsharpStructureParseTreeVisitor();
                 visitor.Visit(rootContext);
-
-                return Result.Ok(visitor.SourceCode(true));
+                visitor.SourceCode();
+                return Result.Ok();
 
             }
             catch (Exception ex)

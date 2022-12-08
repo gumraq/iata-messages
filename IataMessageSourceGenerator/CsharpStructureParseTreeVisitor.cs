@@ -2,12 +2,15 @@
 using Antlr4.Runtime.Tree;
 using MoreLinq;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace IataMessageSourceGenerator
 {
     internal class CsharpStructureParseTreeVisitor : ANTLRv4ParserBaseVisitor<string>
     {
+
         private List<ClassBuilder> builders;
 
         private List<string> simpleProps;
@@ -22,41 +25,88 @@ namespace IataMessageSourceGenerator
             this.readonlyProps = new Dictionary<string, string>();
         }
 
-        public string SourceCode(bool withVisitor = false)
+        public void SourceCode()
         {
-            var unusedTokens = this.simpleProps.Except(this.builders.SelectMany(b => b.Properties).Select(p => p.Name)).ToList();
+            this.SourceCodeStandard();
+            this.SourceCodeParts();
+            this.SourceCodeFormatter();
+            this.SourceCodeParser();
+            this.UnusedProperties();
+        }
 
-            string code = string.Join("\r\n\r\n", builders.Select(b => b.ToString()));
-            if (withVisitor)
+        private async void SourceCodeStandard()
+        {
+            ClassBuilder? firstBuilder = builders.FirstOrDefault();
+            if (firstBuilder != null)
             {
-                string visitorSourcCode = $@"using System.Linq;
-
-public partial class ImpFormatter :
-#region inherits interfaces
-{string.Join(",\r\n", builders.Select(b=> $"    IVisitor<{b.Name.FirstCharToUpper()}, string>"))}
-#endregion
-
+                string code = firstBuilder.ToString();
+                code = $@"namespace IataMessageStandard
 {"{"}
-    private string sCRLF = {'"'}\u000d\u000a{'"'};
-    private string sSlant = {'"'}/{'"'};
-    private string sHyphen = {'"'}-{ '"'};
+{code}{"}"}";
+                string className = firstBuilder.Name.FirstCharToUpper();
+                await this.Write($"{className}.cs", code);
+            }
+        }
 
-{string.Join(string.Empty, builders.Select(b => $@"    public string Visit({b.Name.FirstCharToUpper()} e)
+        private async void SourceCodeParts()
+        {
+            string className = builders.FirstOrDefault()?.Name.FirstCharToUpper() ?? "NoName";
+            string code = string.Join("\r\n", builders.Skip(1).Select(b => b.ToString()));
+            
+            code = $@"namespace IataMessageStandard.{className}Parts
+{"{"}
+{code}
+";
+            
+            await this.Write($"{className}Parts.cs", code);
+        }
+
+        private async void SourceCodeFormatter()
+        {
+            string className = builders.FirstOrDefault()?.Name.FirstCharToUpper() ?? "NoName";
+            string visitorSourcCode = $@"using IataMessageStandard;
+using IataMessageStandard.{className}Parts;
+
+namespace IataMessageProcessor.Formatters.TextMessages
+{"{"}
+    public partial class TextMessageFormatter :
+    #region inherits interfaces
+{string.Join(",\r\n", builders.Select(b => $"    IVisitor<{b.Name.FirstCharToUpper()}, string>"))}
+    #endregion
+
 {"    {"}
-        if (e == null)
-{"        {"}
-            return string.Empty;
-{"        }"}
+        private string sCRLF = {'"'}\u000d\u000a{'"'};
+        private string sSlant = {'"'}/{'"'};
+        private string sHyphen = {'"'}-{ '"'};
 
-        return ${'"'}{string.Join(string.Empty, b.Properties.Select(FormatProp))}{(b.WithAttribute? "{sCRLF}" : string.Empty)}{'"'};
+{string.Join("\r\n\r\n", builders.Select(b => $@"        public string Visit({b.Name.FirstCharToUpper()} e)
+{"        {"}
+            if (e == null)
+{"            {"}
+                return string.Empty;
+{"            }"}
+
+            return ${'"'}{string.Join(string.Empty, b.Properties.Select(FormatProp))}{(b.WithAttribute ? "{sCRLF}" : string.Empty)}{'"'};
+{"        }"}"))}
 {"    }"}
-"))}
 {"}"}
 ";
-                return visitorSourcCode;
-            }
 
-            return code;
+            await this.Write($"{className}Formatter.cs", visitorSourcCode);
+        }
+
+        private void SourceCodeParser()
+        {
+        }
+
+        private void UnusedProperties()
+        {
+            var unusedTokens = this.simpleProps.Except(this.builders.SelectMany(b => b.Properties).Select(p => p.Name)).ToList();
+        }
+
+        private async Task Write(string fileName, string content)
+        {
+            await File.WriteAllTextAsync(fileName, content);
         }
 
         string FormatProp(PropInfo propInfo)
@@ -277,7 +327,7 @@ public partial class ImpFormatter :
 
             public override string ToString()
             {
-                return $@"{(this.WithAttribute? "[SeparatorCrlf]\r\n":string.Empty)}public class {this.Name.FirstCharToUpper()}
+                return $@"{(this.WithAttribute? "    [SeparatorCrlf]\r\n" : string.Empty)}    public class {this.Name.FirstCharToUpper()}
 {"    {"}{string.Join(string.Empty,this.Properties.Select(p =>
         {
             if (p.Type == PropType.CLASS)
