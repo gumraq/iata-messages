@@ -37,13 +37,17 @@ namespace IataMessageSourceGenerator
         private async void SourceCodeStandard()
         {
             ClassBuilder? firstBuilder = builders.FirstOrDefault();
+            string className = firstBuilder?.Name?.FirstCharToUpper() ?? "NoName";
+
             if (firstBuilder != null)
             {
                 string code = firstBuilder.ToString();
-                code = $@"namespace IataMessageStandard
+                code = $@"using IataMessageStandard.{className}Parts;
+
+namespace IataMessageStandard
 {"{"}
 {code}{"}"}";
-                string className = firstBuilder.Name.FirstCharToUpper();
+
                 await this.Write($"{className}.cs", code);
             }
         }
@@ -51,11 +55,12 @@ namespace IataMessageSourceGenerator
         private async void SourceCodeParts()
         {
             string className = builders.FirstOrDefault()?.Name.FirstCharToUpper() ?? "NoName";
-            string code = string.Join("\r\n", builders.Skip(1).Select(b => b.ToString()));
+            string code = string.Join("\r\n\r\n", builders.Skip(1).Select(b => b.ToString()));
             
             code = $@"namespace IataMessageStandard.{className}Parts
 {"{"}
 {code}
+{"}"}
 ";
             
             await this.Write($"{className}Parts.cs", code);
@@ -75,10 +80,6 @@ namespace IataMessageProcessor.Formatters.TextMessages
     #endregion
 
 {"    {"}
-        private string sCRLF = {'"'}\u000d\u000a{'"'};
-        private string sSlant = {'"'}/{'"'};
-        private string sHyphen = {'"'}-{ '"'};
-
 {string.Join("\r\n\r\n", builders.Select(b => $@"        public string Visit({b.Name.FirstCharToUpper()} e)
 {"        {"}
             if (e == null)
@@ -347,8 +348,7 @@ namespace IataMessageProcessor.Formatters.TextMessages
 
             return string.Empty;
         }))}
-{"    }"}
-";
+{"    }"}";
             }
         }
 
