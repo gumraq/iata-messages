@@ -8,7 +8,6 @@
         public string MessageTypeVersionNumber { get; set; }
     }
 
-
     [SeparatorCrlf]
     public class FlightIdAndPointOfLoading
     {
@@ -21,7 +20,6 @@
         public FirstPointOfArrivalInformation FirstPointOfArrivalInformation { get; set; }
     }
 
-
     public class DestinationHeader
     {
         public PointOfUnloading PointOfUnloading { get; set; }
@@ -29,13 +27,11 @@
         public List<UldLoadedCargo> UldLoadedCargo { get; set; }
     }
 
-
     [SeparatorCrlf]
     public class ManifestCompleteIndicator
     {
         public string EndOfMessageCode { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class PointOfUnloading
@@ -46,12 +42,10 @@
         public DepartureInformation DepartureInformation { get; set; }
     }
 
-
     public class BulkLoadedCargo
     {
         public List<Consignments> Consignments { get; set; }
     }
-
 
     public class UldLoadedCargo
     {
@@ -60,7 +54,6 @@
         public UldUtilisationDetail UldUtilisationDetail { get; set; }
         public List<Consignments> Consignments { get; set; }
     }
-
 
     public class Consignments
     {
@@ -72,7 +65,6 @@
         public OtherCustSecurityAndRegulatCtrlInfo OtherCustSecurityAndRegulatCtrlInfo { get; set; }
     }
 
-
     [SeparatorCrlf]
     public class UldDescription
     {
@@ -82,14 +74,12 @@
         public UldRemarks UldRemarks { get; set; }
     }
 
-
     [SeparatorCrlf]
     public class UldMovementInformation
     {
         public UldOnwardRoutingDetail UldOnwardRoutingDetail { get; set; }
         public UldOnwardBookingDetail UldOnwardBookingDetail { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class UldUtilisationDetail
@@ -98,14 +88,12 @@
         public string UldVolumeAvailableCode { get; set; }
     }
 
-
     public class OtherServiceInformation
     {
         public string LineIdentifier { get; set; }
         public OsiDetails1stLine OsiDetails1stLine { get; set; }
         public OsiDetails2stLine OsiDetails2stLine { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class CustomsOrigin
@@ -115,13 +103,11 @@
         public string CustomsOriginCode { get; set; }
     }
 
-
     public class OtherCustSecurityAndRegulatCtrlInfo
     {
         public string LineIdentifier { get; set; }
         public List<OtherCustSecurityAndRegulatCtrlInfoDet> OtherCustSecurityAndRegulatCtrlInfoDet { get; set; }
     }
-
 
     public class FlightIdentification
     {
@@ -132,7 +118,6 @@
         public string MonthOfScheduledDeparture { get; set; }
         public string TimeOfScheduledDeparture { get; set; }
     }
-
 
     public class FirstPointOfArrivalInformation
     {
@@ -146,13 +131,11 @@
         public string AirportCodeOfArrival { get; set; }
     }
 
-
     public class NilCargoIndication
     {
         [SeparatorSlant]
         public string NilCargoCode { get; set; }
     }
-
 
     public class AircraftIdentification
     {
@@ -160,20 +143,17 @@
         public string AircraftRegistration { get; set; }
     }
 
-
     public class ArrivalInformation
     {
         [SeparatorSlant]
         public ArrivalInformationDetail ArrivalInformationDetail { get; set; }
     }
 
-
     public class DepartureInformation
     {
         [SeparatorSlant]
         public DepartureInformationDetail DepartureInformationDetail { get; set; }
     }
-
 
     public class ArrivalInformationDetail
     {
@@ -182,14 +162,12 @@
         public string TimeOfScheduledArrival { get; set; }
     }
 
-
     public class DepartureInformationDetail
     {
         public string DayOfScheduledDeparture { get; set; }
         public string MonthOfScheduledDeparture { get; set; }
         public string TimeOfScheduledDeparture { get; set; }
     }
-
 
     public class AwbIdentification
     {
@@ -198,13 +176,11 @@
         public string AwbSerialNumber { get; set; }
     }
 
-
     public class AwbOriginAndDestination
     {
         public string AirportCodeOfOrigin { get; set; }
         public string AirportCodeOfDestitation { get; set; }
     }
-
 
     public class QuantityDetail
     {
@@ -215,13 +191,11 @@
         public string Weight { get; set; }
     }
 
-
     public class VolumeDetail
     {
         public string VolumeCode { get; set; }
         public string VolumeAmount { get; set; }
     }
-
 
     public class DensityGroup
     {
@@ -229,13 +203,11 @@
         public string DensityGroupInner { get; set; }
     }
 
-
     public class TotalWeightDetails
     {
         public string WeightCode { get; set; }
         public string Weight { get; set; }
     }
-
 
     public class TotalConsignmentPieces
     {
@@ -243,20 +215,17 @@
         public string NumberOfPieces { get; set; }
     }
 
-
     public class Shrs
     {
         [SeparatorCrlf]
         public List<SpecialHandlingRequirements> SpecialHandlingRequirements { get; set; }
     }
 
-
     public class SpecialHandlingRequirements
     {
         [SeparatorSlant]
         public string SpecialHandlingCode { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class ConsignmentDetail
@@ -271,20 +240,17 @@
         public Shrs Shrs { get; set; }
     }
 
-
     public class DimensionsInformation
     {
         public string LineIdentifier { get; set; }
         public List<Dimensions> Dimensions { get; set; }
     }
 
-
     public class ConsignmentOnwardMovementInfo
     {
         public List<ConsignmentOnward> ConsignmentOnward { get; set; }
         public MovementPriority MovementPriority { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class ConsignmentOnward
@@ -293,14 +259,12 @@
         public OnwardBookingDetail OnwardBookingDetail { get; set; }
     }
 
-
     public class OnwardRoutingDetail
     {
         [SeparatorSlant]
         public string AirportCodeOfNextDestination { get; set; }
         public string CarrierCode { get; set; }
     }
-
 
     public class OnwardBookingDetail
     {
@@ -310,14 +274,12 @@
         public string MonthOfScheduledDeparture { get; set; }
     }
 
-
     [SeparatorCrlf]
     public class OsiDetails1stLine
     {
         [SeparatorSlant]
         public string OsiDescription { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class OsiDetails2stLine
@@ -326,14 +288,12 @@
         public string OsiDescription { get; set; }
     }
 
-
     public class UldOnwardRoutingDetail
     {
         [SeparatorSlant]
         public string AirportCodeOfNextDestination { get; set; }
         public string CarrierCode { get; set; }
     }
-
 
     public class UldOnwardBookingDetail
     {
@@ -343,7 +303,6 @@
         public string MonthOfScheduledDeparture { get; set; }
     }
 
-
     public class UldIdentification
     {
         public string UldType { get; set; }
@@ -351,20 +310,17 @@
         public string UldOwnerCode { get; set; }
     }
 
-
     public class UldPositionInformation
     {
         [SeparatorHyphen]
         public string UldLoadingIndicator { get; set; }
     }
 
-
     public class UldRemarks
     {
         [SeparatorSlant]
         public string UldRemarksDescription { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class MovementPriority
@@ -373,13 +329,11 @@
         public string MovementPriorityCode { get; set; }
     }
 
-
     public class NatureOfGoods
     {
         [SeparatorSlant]
         public string ManifestDescriptionOfGoods { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class Dimensions
@@ -392,7 +346,6 @@
         public string NumberOfPieces { get; set; }
     }
 
-
     public class DimensionsDetails
     {
         public string MeasurementUnitCode { get; set; }
@@ -402,7 +355,6 @@
         [SeparatorHyphen]
         public string HeightDimension { get; set; }
     }
-
 
     [SeparatorCrlf]
     public class OtherCustSecurityAndRegulatCtrlInfoDet
@@ -416,5 +368,4 @@
         [SeparatorSlant]
         public string SupplemCustSecurityAndRegulatCtrlInfo { get; set; }
     }
-
 }
