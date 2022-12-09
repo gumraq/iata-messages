@@ -15,10 +15,25 @@ namespace IataMessageTests
 
         public IataMessageProcessorTests()
         {
-          this.parser = new TextMessageParser(new Fbl4MessageParser(new Ffm8MessageParser(new Fwb17MessageParser())));
+          this.parser = new TextMessageParser(new Fbl4MessageParser(new Ffm8MessageParser(new Fwb17MessageParser(new Fbr2MessageParser()))));
             this.formatter = new TextMessageFormatter();
         }
 
+        [Fact]
+        public void Fbr2ParserTests1()
+        {
+            string fbrText = @"FBR/2
+FLT/KL775/09FEB/ZRH
+REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
+";
+            Result<object> rObject = this.parser.Parse(fbrText);
+            Assert.NotNull(rObject);
+            var fbr2 = ((Result<Fbr2>)rObject.Value).Value;
+
+            string fblText = this.formatter.Visit(fbr2);
+
+            Assert.Equal(fbrText, fblText);
+        }
         [Fact]
         public void Fbl2ParserTests1()
         {
