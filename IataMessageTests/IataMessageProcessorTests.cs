@@ -20,7 +20,7 @@ namespace IataMessageTests
         }
 
         [Fact]
-        public void Fbr2ParserTests1()
+        public void Fbl2ParserTests1()
         {
             string fbrText = @"FBL/4
 1/KL775/09FEB/ZRH/HB-IHA

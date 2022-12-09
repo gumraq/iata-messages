@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace IataMessageSourceGenerator
 {
@@ -100,18 +101,21 @@ namespace IataMessageProcessor.Formatters.TextMessages
         {
             ClassBuilder? firstBuilder = builders.FirstOrDefault();
             string className = firstBuilder?.Name?.FirstCharToUpper() ?? "NoName";
+            string msgId = Regex.Match( className,"[a-zA-Z]+").Value.ToUpper();
+            string msgVer = Regex.Match(className, "\\d+").Value;
+            string classNameLc = className.ToLower();
             string sourceCode = $@"using Antlr4.Runtime;
 using FluentResults;
 
 namespace IataMessageProcessor.Parsers.TextMessages
 {"{"}
-    public class Fwb17MessageParser : Parser<string>
+    public class {className}MessageParser : Parser<string>
     {"{"}
-        public Fwb17MessageParser()
+        public {className}MessageParser()
         {"{"}
         {"}"}
 
-        public Fwb17MessageParser(IParser<string> parser) : base(parser)
+        public {className}MessageParser(IParser<string> parser) : base(parser)
         {"{"}
         {"}"}
 
@@ -121,7 +125,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
             {"{"}
                 using var reader = new StringReader(standatdMessage);
                 string firstLine = reader.ReadLine();
-                return string.Equals(firstLine, {"\""}FWB/17{"\""});
+                return string.Equals(firstLine, {"\""}{msgId}/{msgVer}{"\""});
             {"}"}
             catch
             {"{"}
@@ -134,15 +138,15 @@ namespace IataMessageProcessor.Parsers.TextMessages
             try
             {"{"}
                 var inputStream = new AntlrInputStream(standatdMessage);
-                var speakLexer = new fwb17Lexer(inputStream);
+                var speakLexer = new {classNameLc}Lexer(inputStream);
                 var commonTokenStream = new CommonTokenStream(speakLexer);
-                var fwb17Parser = new fwb17Parser(commonTokenStream);
+                var {classNameLc}Parser = new {classNameLc}Parser(commonTokenStream);
                 var errorListener = new SyntaxErrorListener();
-                fwb17Parser.AddErrorListener(errorListener);
-                var fwb17Context = fwb17Parser.fwb17();
-                var visitor = new MessageParseTreeVisitor<IataMessageStandard.Fwb17>();
+                {classNameLc}Parser.AddErrorListener(errorListener);
+                var {classNameLc}Context = {classNameLc}Parser.{classNameLc}();
+                var visitor = new MessageParseTreeVisitor<IataMessageStandard.{className}>();
 
-                visitor.Visit(fwb17Context);
+                visitor.Visit({classNameLc}Context);
                 visitor.ExpressionExecute()();
 
                 return Result.Ok(visitor.Message);
@@ -150,12 +154,12 @@ namespace IataMessageProcessor.Parsers.TextMessages
             {"}"}
             catch (Exception ex)
             {"{"}
-                return Result.Fail(new Error({"\""}Не удалось разложить FWB/17{"\""}).CausedBy(ex));
+                return Result.Fail(new Error({"\""}Не удалось разложить {msgId}/{msgVer}{"\""}).CausedBy(ex));
             {"}"}
         {"}"}
     {"}"}
 {"}"}";
-            await this.Write($"{className}Parser.cs", sourceCode);
+            await this.Write($"{className}MessageParser.cs", sourceCode);
         }
 
         private void UnusedProperties()
