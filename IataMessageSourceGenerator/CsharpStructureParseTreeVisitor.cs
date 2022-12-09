@@ -88,7 +88,7 @@ namespace IataMessageProcessor.Formatters.TextMessages
                 return string.Empty;
 {"            }"}
 
-            return ${'"'}{string.Join(string.Empty, b.Properties.Select(FormatProp))}{(b.WithAttribute ? "{sCRLF}" : string.Empty)}{'"'};
+            return ${'"'}{string.Join(string.Empty, b.Properties.Select(FormatProp))}{b.LastSep}{'"'};
 {"        }"}"))}
 {"    }"}
 {"}"}
@@ -240,7 +240,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
             base.VisitRules(context);
             if (this.separators.Any())
             {
-                this.builders[^1].WithAttribute = true;
+                this.builders[^1].LastAttribute = this.separators.Dequeue();
                 this.separators.Clear();
             }
 
@@ -313,7 +313,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
 
                 if (this.separators.Any())
                 {
-                    this.builders[^1].WithAttribute = true;
+                    this.builders[^1].LastAttribute = separators.Dequeue();
                     this.separators.Clear();
                 }
 
@@ -385,8 +385,6 @@ namespace IataMessageProcessor.Parsers.TextMessages
                         this.builders[^1].Properties.Add(pi);
                     }
                 }
-
-                
             }
         }
 
@@ -405,7 +403,28 @@ namespace IataMessageProcessor.Parsers.TextMessages
 
         class ClassBuilder
         {
-            public bool WithAttribute { get; set; }
+            public string LastAttribute { get; set; }
+
+            public string LastSep { get
+                {
+                    if (LastAttribute == "SeparatorSlant")
+                    {
+                        return "{sSlant}";
+                    }
+                    else if (LastAttribute == "SeparatorHyphen")
+                    {
+                        return "{sHyphen}";
+                    }
+                    else if (LastAttribute == "SeparatorCrlf")
+                    {
+                        return "{sCRLF}";
+                    }
+                    else
+                    {
+                        return LastAttribute;
+                    }
+                }
+            }
             public string Name { get; set; }
             public List<PropInfo> Properties { get; set; }
 
@@ -416,7 +435,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
 
             public override string ToString()
             {
-                return $@"{(this.WithAttribute? "    [SeparatorCrlf]\r\n" : string.Empty)}    public class {this.Name.FirstCharToUpper()}
+                return $@"{(!string.IsNullOrEmpty(this.LastAttribute) ? $"    [{this.LastAttribute}]\r\n" : string.Empty)}    public class {this.Name.FirstCharToUpper()}
 {"    {"}{string.Join(string.Empty,this.Properties.Select(p =>
         {
             if (p.Type == PropType.CLASS)
