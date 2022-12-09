@@ -21,7 +21,8 @@ namespace IataMessageTests
               new Ffm8MessageParser(
               new Fwb17MessageParser(
               new Fbr2MessageParser(
-              new Fsa15MessageParser())))));
+              new Fsa15MessageParser(
+              new Ffa4MessageParser()))))));
             this.formatter = new TextMessageFormatter();
         }
 
@@ -369,6 +370,29 @@ OCI/GB/ISS/RA/001-011
             Result<object> rObject = this.parser.Parse(fwb17OriginText);
             Assert.NotNull(rObject);
             var fwb17 = ((Result<Fwb17>)rObject.Value).Value;
+
+            string fwb17ActualText = this.formatter.Visit(fwb17);
+
+            Assert.Equal(fwb17OriginText, fwb17ActualText);
+        }
+
+        [Fact]
+        public void Ffa4ParserTests()
+        {
+            string fwb17OriginText = @"FFA/4
+555-29681396SVOKHV/T286K878MC0.4/KOSMETIKA
+/470/471/RMD
+SU1712/03NOV/SVOKHV/KK
+SU2301/31DEC/FRASVO/KK
+SU270/01JAN/SVOBKK/KK
+SSR/SPECIALIZED DGR
+/DANGEROUS GOODS AS PER ATTACHED SHIPPER S DECLARATION
+OSI/NOT SECURED
+REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
+";
+            Result<object> rObject = this.parser.Parse(fwb17OriginText);
+            Assert.NotNull(rObject);
+            var fwb17 = ((Result<Ffa4>)rObject.Value).Value;
 
             string fwb17ActualText = this.formatter.Visit(fwb17);
 
