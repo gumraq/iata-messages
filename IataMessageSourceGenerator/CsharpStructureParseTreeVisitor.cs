@@ -15,14 +15,14 @@ namespace IataMessageSourceGenerator
         private List<ClassBuilder> builders;
 
         private List<string> simpleProps;
-        private Stack<string> separators;
+        private Queue<string> separators;
         private Dictionary<string,string> readonlyProps;
 
         public CsharpStructureParseTreeVisitor()
         {
             this.builders = new List<ClassBuilder>();
             this.simpleProps = new List<string>();
-            this.separators = new Stack<string>();
+            this.separators = new Queue<string>();
             this.readonlyProps = new Dictionary<string, string>();
         }
 
@@ -174,38 +174,59 @@ namespace IataMessageProcessor.Parsers.TextMessages
 
         string FormatProp(PropInfo propInfo)
         {
-            string separator = string.Empty;
+            string sep1 = string.Empty;
+            string sep2 = string.Empty;
             if (!string.IsNullOrEmpty(propInfo.Attribute1))
             {
                 if (propInfo.Attribute1 == "SeparatorSlant")
                 {
-                    separator = "{sSlant}"; 
+                    sep1 = "{sSlant}"; 
                 }
                 else if (propInfo.Attribute1 == "SeparatorHyphen")
                 {
-                    separator = "{sHyphen}";
+                    sep1 = "{sHyphen}";
                 }
                 else if (propInfo.Attribute1 == "SeparatorCrlf")
                 {
-                    separator = "{sCRLF}";
+                    sep1 = "{sCRLF}";
                 }
                 else
                 {
-                    separator = propInfo.Attribute1;
+                    sep1 = propInfo.Attribute1;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(propInfo.Attribute2))
+            {
+                if (propInfo.Attribute2 == "SeparatorSlant")
+                {
+                    sep2 = "{sSlant}";
+                }
+                else if (propInfo.Attribute2 == "SeparatorHyphen")
+                {
+                    sep2 = "{sHyphen}";
+                }
+                else if (propInfo.Attribute2 == "SeparatorCrlf")
+                {
+                    sep2 = "{sCRLF}";
+                }
+                else
+                {
+                    sep2 = propInfo.Attribute2;
                 }
             }
 
             if (propInfo.Type == PropType.CLASS)
             {
-                return separator + "{this.Visit(e." + propInfo.Name.FirstCharToUpper() + ")}";
+                return sep1 + sep2 + "{this.Visit(e." + propInfo.Name.FirstCharToUpper() + ")}";
             }
             if (propInfo.Type == PropType.LIST)
             {
-                return separator + "{string.Join(string.Empty, e." + propInfo.Name.FirstCharToUpper() + "?.Select(this.Visit) ?? Enumerable.Empty<string>())}";
+                return sep1 + sep2 + "{string.Join(string.Empty, e." + propInfo.Name.FirstCharToUpper() + "?.Select(this.Visit) ?? Enumerable.Empty<string>())}";
             }
             if (propInfo.Type == PropType.STRING)
             {
-                return separator + "{e." + propInfo.Name.FirstCharToUpper() +"}";
+                return sep1 + sep2 + "{e." + propInfo.Name.FirstCharToUpper() +"}";
             }
 
             return string.Empty;
@@ -335,9 +356,14 @@ namespace IataMessageProcessor.Parsers.TextMessages
                     PropInfo pi = new PropInfo { Type = pt, Name = atom.GetText() };
                     if (separators.Any())
                     {
-                        pi.Attribute1 = separators.Pop();
-                        separators.Clear();
+                        pi.Attribute1 = separators.Dequeue();
                     }
+                    if (separators.Any())
+                    {
+                        pi.Attribute2 = separators.Dequeue();
+                    }
+
+                    separators.Clear();
 
                     this.readonlyProps.TryGetValue(pi.Name, out var constVal);
                     pi.Const = constVal;
@@ -349,7 +375,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
                     string terminalName = atom.GetText();
                     if (terminalName.StartsWith("Separator"))
                     {
-                        separators.Push(terminalName);
+                        separators.Enqueue(terminalName);
                     }
                     else
                     {
