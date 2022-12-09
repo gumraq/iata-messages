@@ -1,10 +1,5 @@
-﻿using System;
-using Antlr4.Runtime.Tree;
+﻿using Antlr4.Runtime.Tree;
 using MoreLinq;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 namespace IataMessageSourceGenerator
