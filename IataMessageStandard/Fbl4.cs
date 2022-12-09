@@ -1,10 +1,12 @@
-﻿namespace IataMessageStandard
+﻿using IataMessageStandard.Fbl4Parts;
+
+namespace IataMessageStandard
 {
     public class Fbl4
     {
-        public Fbl4Parts.StandardMessageIdentification StandardMessageIdentification { get; set; }
-        public Fbl4Parts.FlightIdAndPointOfLoading FlightIdAndPointOfLoading { get; set; }
-        public List<Fbl4Parts.DestinationHeader> DestinationHeader { get; set; }
-        public Fbl4Parts.ListCompleteIndicator ListCompleteIndicator { get; set; }
+        public StandardMessageIdentification StandardMessageIdentification { get; set; }
+        public FlightIdAndPointOfLoading FlightIdAndPointOfLoading { get; set; }
+        public List<DestinationHeader> DestinationHeader { get; set; }
+        public ListCompleteIndicator ListCompleteIndicator { get; set; }
     }
 }
