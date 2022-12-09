@@ -15,7 +15,13 @@ namespace IataMessageTests
 
         public IataMessageProcessorTests()
         {
-          this.parser = new TextMessageParser(new Fbl4MessageParser(new Ffm8MessageParser(new Fwb17MessageParser(new Fbr2MessageParser()))));
+          this.parser =
+              new TextMessageParser(
+              new Fbl4MessageParser(
+              new Ffm8MessageParser(
+              new Fwb17MessageParser(
+              new Fbr2MessageParser(
+              new Fsa15MessageParser())))));
             this.formatter = new TextMessageFormatter();
         }
 
@@ -34,6 +40,7 @@ REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
 
             Assert.Equal(fbrText, fblText);
         }
+
         [Fact]
         public void Fbl2ParserTests1()
         {
