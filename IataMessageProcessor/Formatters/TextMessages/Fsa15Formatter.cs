@@ -702,7 +702,7 @@ namespace IataMessageProcessor.Formatters.TextMessages
                 return string.Empty;
             }
 
-            return $"{sSlant}{e.ReceivingCarrier}{this.Visit(e.ReceivedName)}";
+            return $"{sCRLF}{sSlant}{e.ReceivingCarrier}{this.Visit(e.ReceivedName)}";
         }
 
         public string Visit(DiscrepancyDescription e)
@@ -732,7 +732,7 @@ namespace IataMessageProcessor.Formatters.TextMessages
                 return string.Empty;
             }
 
-            return $"{sSlant}{e.TransferringCarrier}{this.Visit(e.TransferredName)}";
+            return $"{sCRLF}{sSlant}{e.TransferringCarrier}{this.Visit(e.TransferredName)}";
         }
 
         public string Visit(UldDescriptions e)

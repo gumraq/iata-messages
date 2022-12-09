@@ -506,6 +506,7 @@ namespace IataMessageStandard.Fsa15Parts
 
     public class ReceivedfromDetailSep
     {
+        [SeparatorCrlf]
         [SeparatorSlant]
         public string ReceivingCarrier { get ; set;  }
         public ReceivedName ReceivedName { get; set; }
@@ -525,6 +526,7 @@ namespace IataMessageStandard.Fsa15Parts
 
     public class TransferredFromDetail
     {
+        [SeparatorCrlf]
         [SeparatorSlant]
         public string TransferringCarrier { get ; set;  }
         public TransferredName TransferredName { get; set; }
