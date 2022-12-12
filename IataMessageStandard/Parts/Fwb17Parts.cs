@@ -1,11 +1,11 @@
-﻿namespace IataMessageStandard.Fwb17Parts
+namespace IataMessageStandard.Fwb17Parts
 {
     [SeparatorCrlf]
     public class StandardMessageIdentification
     {
-        public string StandardMessageIdentifier { get; set; }
+        public string StandardMessageIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string MessageTypeVersionNumber { get; set; }
+        public string MessageTypeVersionNumber { get ; set;  }
     }
 
     [SeparatorCrlf]
@@ -21,14 +21,14 @@
     [SeparatorCrlf]
     public class FlightBookings
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public List<FlightIdentification> FlightIdentification { get; set; }
     }
 
     [SeparatorCrlf]
     public class Routing
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public FirstDestinationCarrier FirstDestinationCarrier { get; set; }
         public List<OnwardDestinationCarrier> OnwardDestinationCarrier { get; set; }
     }
@@ -36,7 +36,7 @@
     [SeparatorCrlf]
     public class Shipper
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public AccountDetail AccountDetail { get; set; }
         [SeparatorCrlf]
         public Name Name { get; set; }
@@ -49,7 +49,7 @@
     [SeparatorCrlf]
     public class Consignee
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public AccountDetail AccountDetail { get; set; }
         [SeparatorCrlf]
         public Name Name { get; set; }
@@ -61,7 +61,7 @@
 
     public class Agent
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public AccountDetailAgt AccountDetailAgt { get; set; }
         [SeparatorCrlf]
         public NameDetail NameDetail { get; set; }
@@ -70,14 +70,14 @@
 
     public class SpecialServiceRequest
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public List<SsrDetail> SsrDetail { get; set; }
     }
 
     [SeparatorCrlf]
     public class AlsoNotify
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorCrlf]
         public Name Name { get; set; }
         public StreetAddress StreetAddress { get; set; }
@@ -88,18 +88,18 @@
 
     public class AccountingInformation
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public List<AccountDetails> AccountDetails { get; set; }
     }
 
     [SeparatorCrlf]
     public class ChargeDeclarations
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string IsoCurrencyCode { get; set; }
+        public string IsoCurrencyCode { get ; set;  }
         [SeparatorSlant]
-        public string ChargeCode { get; set; }
+        public string ChargeCode { get ; set;  }
         [SeparatorSlant]
         public PrepaidCollectChargeDeclarations PrepaidCollectChargeDeclarations { get; set; }
         [SeparatorSlant]
@@ -112,20 +112,20 @@
 
     public class RateDescription
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public List<RateDescriptionItems> RateDescriptionItems { get; set; }
     }
 
     public class OtherCharges
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public List<OtherChargeDetails> OtherChargeDetails { get; set; }
     }
 
     [SeparatorCrlf]
     public class PrepaidChargeSummary
     {
-        public string LineIdentifierPpd { get { return "PPD"; } }
+        public string LineIdentifierPpd { get {return "PPD";} }
         public List<ChargesOrTaxes> ChargesOrTaxes { get; set; }
         [SeparatorCrlf]
         public List<TotalCharges> TotalCharges { get; set; }
@@ -134,7 +134,7 @@
     [SeparatorCrlf]
     public class CollectChargeSummary
     {
-        public string LineIdentifierCol { get { return "COL"; } }
+        public string LineIdentifierCol { get {return "COL";} }
         public List<ChargesOrTaxes> ChargesOrTaxes { get; set; }
         [SeparatorCrlf]
         public List<TotalCharges> TotalCharges { get; set; }
@@ -143,29 +143,29 @@
     [SeparatorCrlf]
     public class ShippersCertification
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string Signature { get; set; }
+        public string Signature { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class CarriersExecution
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public AwbIssueDetails AwbIssueDetails { get; set; }
         public Authorisation Authorisation { get; set; }
     }
 
     public class OtherServiceInformation
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public List<OsiItems> OsiItems { get; set; }
     }
 
     [SeparatorCrlf]
     public class CcChargesInDestinationCurrency
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorSlant]
         public DestinationCurrency DestinationCurrency { get; set; }
         public CurrencyConversionRate CurrencyConversionRate { get; set; }
@@ -180,7 +180,7 @@
     [SeparatorCrlf]
     public class SenderReference
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorSlant]
         public SenderOfficeMessageAddress SenderOfficeMessageAddress { get; set; }
         public Sofr Sofr { get; set; }
@@ -189,15 +189,15 @@
     [SeparatorCrlf]
     public class CustomsOrigin
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string CustomsOriginCode { get; set; }
+        public string CustomsOriginCode { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class CommissionInformation
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorSlant]
         public NoCommissionIndication NoCommissionIndication { get; set; }
         public CommissionAmountOrPercentage CommissionAmountOrPercentage { get; set; }
@@ -206,7 +206,7 @@
     [SeparatorCrlf]
     public class SalesIncentiveInformation
     {
-        public string LineIdentifierSii { get { return "SII"; } }
+        public string LineIdentifierSii { get {return "SII";} }
         [SeparatorSlant]
         public SalesIncentiveDetail SalesIncentiveDetail { get; set; }
         public SalesIncentiveIndication SalesIncentiveIndication { get; set; }
@@ -215,7 +215,7 @@
     [SeparatorCrlf]
     public class AgentReferenceData
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorSlant]
         public AgentReference AgentReference { get; set; }
     }
@@ -223,35 +223,35 @@
     [SeparatorCrlf]
     public class SpecialHandlingDetails
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public List<SpecialHandlingRequirements> SpecialHandlingRequirements { get; set; }
     }
 
     [SeparatorCrlf]
     public class NominatedHandlingParty
     {
-        public string LineIdentifierNom { get { return "NOM"; } }
+        public string LineIdentifierNom { get {return "NOM";} }
         [SeparatorSlant]
-        public string NameInner { get; set; }
+        public string NameInner { get ; set;  }
         [SeparatorSlant]
-        public string PlaceInner { get; set; }
+        public string PlaceInner { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class ShipmentReferenceInformation
     {
-        public string LineIdentifierSri { get { return "SRI"; } }
+        public string LineIdentifierSri { get {return "SRI";} }
         [SeparatorSlant]
-        public string ReferenceNumber { get; set; }
+        public string ReferenceNumber { get ; set;  }
         public Supplementary1or2 Supplementary1or2 { get; set; }
     }
 
     [SeparatorCrlf]
     public class OtherParticipantInformation
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string NameInner { get; set; }
+        public string NameInner { get ; set;  }
         [SeparatorCrlf]
         [SeparatorSlant]
         public OtherParticipantOfficeMessageAddress OtherParticipantOfficeMessageAddress { get; set; }
@@ -260,7 +260,7 @@
 
     public class OtherCustSecurityAndRegulatCtrlInfo
     {
-        public string LineIdentifier { get; set; }
+        public string LineIdentifier { get ; set;  }
         public List<OtherCustSecurityAndRegulatCtrlInfoDet> OtherCustSecurityAndRegulatCtrlInfoDet { get; set; }
     }
 
@@ -274,7 +274,7 @@
     public class ChargeLineCount
     {
         [SeparatorSlant]
-        public string HwbRateLineNumber { get; set; }
+        public string HwbRateLineNumber { get ; set;  }
     }
 
     [SeparatorCrlf]
@@ -306,9 +306,9 @@
     public class NumberOfPiecesRcpDetails
     {
         [SeparatorSlant]
-        public string HwbColumnIdentifier { get; set; }
-        public string NumberOfPieces { get; set; }
-        public string RateCombinationPoint { get; set; }
+        public string HwbColumnIdentifier { get ; set;  }
+        public string NumberOfPieces { get ; set;  }
+        public string RateCombinationPoint { get ; set;  }
     }
 
     public class GrossWeightDetails
@@ -320,57 +320,57 @@
     public class RateClassDetails
     {
         [SeparatorSlant]
-        public string HwbColumnIdentifier { get; set; }
-        public string RateClassCode { get; set; }
+        public string HwbColumnIdentifier { get ; set;  }
+        public string RateClassCode { get ; set;  }
     }
 
     public class CommodityItemNumberDetails
     {
         [SeparatorSlant]
-        public string HwbColumnIdentifier { get; set; }
-        public string CommodityItemNumber { get; set; }
-        public string UldRateClassType { get; set; }
+        public string HwbColumnIdentifier { get ; set;  }
+        public string CommodityItemNumber { get ; set;  }
+        public string UldRateClassType { get ; set;  }
         public RateClassCodeBasisAndPercentage RateClassCodeBasisAndPercentage { get; set; }
     }
 
     public class ChargeableWeightDetails
     {
         [SeparatorSlant]
-        public string HwbColumnIdentifier { get; set; }
-        public string Weight { get; set; }
+        public string HwbColumnIdentifier { get ; set;  }
+        public string Weight { get ; set;  }
     }
 
     public class RateChargeDetails
     {
         [SeparatorSlant]
-        public string HwbColumnIdentifier { get; set; }
-        public string RateOrCharge { get; set; }
-        public string Discount { get; set; }
+        public string HwbColumnIdentifier { get ; set;  }
+        public string RateOrCharge { get ; set;  }
+        public string Discount { get ; set;  }
     }
 
     public class TotalDetails
     {
         [SeparatorSlant]
-        public string HwbColumnIdentifier { get; set; }
-        public string ChargeAmount { get; set; }
-        public string Discount { get; set; }
+        public string HwbColumnIdentifier { get ; set;  }
+        public string ChargeAmount { get ; set;  }
+        public string Discount { get ; set;  }
     }
 
     public class GoodsDescription
     {
-        public string GoodsDescriptionIdentifier { get { return "/NG/"; } }
-        public string NatureAndQuantityOfGoods { get; set; }
+        public string GoodsDescriptionIdentifier { get {return "/NG/";} }
+        public string NatureAndQuantityOfGoods { get ; set;  }
     }
 
     public class GoodsConsolidation
     {
-        public string ConsolidationIdentifier { get { return "/NC/"; } }
-        public string NatureAndQuantityOfGoods { get; set; }
+        public string ConsolidationIdentifier { get {return "/NC/";} }
+        public string NatureAndQuantityOfGoods { get ; set;  }
     }
 
     public class Dimensions
     {
-        public string DimensionsIdentifier { get { return "/ND/"; } }
+        public string DimensionsIdentifier { get {return "/ND/";} }
         public WeightInfo WeightInfo { get; set; }
         [SeparatorSlant]
         public DimentionsDimNda DimentionsDimNda { get; set; }
@@ -378,157 +378,157 @@
 
     public class Volume
     {
-        public string VolumeIdentifier { get { return "/NV/"; } }
-        public string VolumeCode { get; set; }
-        public string VolumeAmount { get; set; }
+        public string VolumeIdentifier { get {return "/NV/";} }
+        public string VolumeCode { get ; set;  }
+        public string VolumeAmount { get ; set;  }
     }
 
     public class UldNumber
     {
-        public string UldNumberIdentifier { get { return "/NU/"; } }
-        public string UldType { get; set; }
-        public string UldSerialNumber { get; set; }
-        public string UldOwnerCode { get; set; }
+        public string UldNumberIdentifier { get {return "/NU/";} }
+        public string UldType { get ; set;  }
+        public string UldSerialNumber { get ; set;  }
+        public string UldOwnerCode { get ; set;  }
     }
 
     public class ShippersLoadAndCount
     {
-        public string ShippersLoadAndCountIdentifier { get { return "/NS/"; } }
-        public string Slac { get; set; }
+        public string ShippersLoadAndCountIdentifier { get {return "/NS/";} }
+        public string Slac { get ; set;  }
     }
 
     public class HarmonisedCommodityCode
     {
-        public string HarmonisedCommodityCodeIdentifier { get { return "/NH/"; } }
-        public string HarmonisedCommodityCodeInner { get; set; }
+        public string HarmonisedCommodityCodeIdentifier { get {return "/NH/";} }
+        public string HarmonisedCommodityCodeInner { get ; set;  }
     }
 
     public class CountryOfOriginOfGoods
     {
-        public string CountryOfOriginOfGoodsIdentifier { get { return "/NO/"; } }
-        public string IsoCountryCode { get; set; }
+        public string CountryOfOriginOfGoodsIdentifier { get {return "/NO/";} }
+        public string IsoCountryCode { get ; set;  }
     }
 
     public class ServiceCodeDetails
     {
         [SeparatorSlant]
-        public string ServiceCode { get; set; }
+        public string ServiceCode { get ; set;  }
     }
 
     public class RateClassCodeBasisAndPercentage
     {
-        public string RateClassCodeBasis { get; set; }
-        public string ClassRatePercentage { get; set; }
+        public string RateClassCodeBasis { get ; set;  }
+        public string ClassRatePercentage { get ; set;  }
     }
 
     public class WeightInfo
     {
-        public string WeightCode { get; set; }
-        public string Weight { get; set; }
+        public string WeightCode { get ; set;  }
+        public string Weight { get ; set;  }
     }
 
     public class DimentionsDimNda
     {
-        public string MeasurementUnitCode { get; set; }
+        public string MeasurementUnitCode { get ; set;  }
         public Dimension Dimension { get; set; }
     }
 
     public class Dimension
     {
-        public string LengthDimension { get; set; }
+        public string LengthDimension { get ; set;  }
         [SeparatorHyphen]
-        public string WidthDimension { get; set; }
+        public string WidthDimension { get ; set;  }
         [SeparatorHyphen]
-        public string HeightDimension { get; set; }
+        public string HeightDimension { get ; set;  }
         [SeparatorSlant]
-        public string NumberOfPieces { get; set; }
+        public string NumberOfPieces { get ; set;  }
     }
 
     public class AwbIdentification
     {
-        public string AirlinePrefix { get; set; }
+        public string AirlinePrefix { get ; set;  }
         [SeparatorHyphen]
-        public string AwbSerialNumber { get; set; }
+        public string AwbSerialNumber { get ; set;  }
     }
 
     public class AwbOriginAndDestination
     {
-        public string AirportCodeOfOrigin { get; set; }
-        public string AirportCodeOfDestitation { get; set; }
+        public string AirportCodeOfOrigin { get ; set;  }
+        public string AirportCodeOfDestitation { get ; set;  }
     }
 
     public class QuantityDetail
     {
         [SeparatorSlant]
-        public string ShipmentDescriptionCode { get; set; }
-        public string NumberOfPieces { get; set; }
-        public string WeightCode { get; set; }
-        public string Weight { get; set; }
+        public string ShipmentDescriptionCode { get ; set;  }
+        public string NumberOfPieces { get ; set;  }
+        public string WeightCode { get ; set;  }
+        public string Weight { get ; set;  }
     }
 
     public class VolumeDetail
     {
-        public string VolumeCode { get; set; }
-        public string VolumeAmount { get; set; }
+        public string VolumeCode { get ; set;  }
+        public string VolumeAmount { get ; set;  }
     }
 
     public class DensityGroup
     {
-        public string DensityIndicator { get; set; }
-        public string DensityGroupInner { get; set; }
+        public string DensityIndicator { get ; set;  }
+        public string DensityGroupInner { get ; set;  }
     }
 
     public class SpecialHandlingRequirements
     {
         [SeparatorSlant]
-        public string SpecialHandlingCode { get; set; }
+        public string SpecialHandlingCode { get ; set;  }
     }
 
     public class FlightIdentification
     {
         [SeparatorSlant]
-        public string CarrierCode { get; set; }
-        public string FlightNumber { get; set; }
+        public string CarrierCode { get ; set;  }
+        public string FlightNumber { get ; set;  }
         [SeparatorSlant]
-        public string Day { get; set; }
+        public string Day { get ; set;  }
     }
 
     public class FirstDestinationCarrier
     {
         [SeparatorSlant]
-        public string AirportCode { get; set; }
-        public string CarrierCode { get; set; }
+        public string AirportCode { get ; set;  }
+        public string CarrierCode { get ; set;  }
     }
 
     public class OnwardDestinationCarrier
     {
         [SeparatorSlant]
-        public string AirportCode { get; set; }
-        public string CarrierCode { get; set; }
+        public string AirportCode { get ; set;  }
+        public string CarrierCode { get ; set;  }
     }
 
     public class PrepaidCollectChargeDeclarations
     {
-        public string PcIndWeightValuation { get; set; }
-        public string PcIndOtherCharges { get; set; }
+        public string PcIndWeightValuation { get ; set;  }
+        public string PcIndOtherCharges { get ; set;  }
     }
 
     public class ValueForCarriageDeclaration
     {
-        public string DeclaredValueForCarriage { get; set; }
-        public string NoValue { get; set; }
+        public string DeclaredValueForCarriage { get ; set;  }
+        public string NoValue { get ; set;  }
     }
 
     public class ValueForCustomsDeclaration
     {
-        public string DeclaredValueForCustoms { get; set; }
-        public string NoValue { get; set; }
+        public string DeclaredValueForCustoms { get ; set;  }
+        public string NoValue { get ; set;  }
     }
 
     public class ValueForInsuranceDeclaration
     {
-        public string AmountOfInsurance { get; set; }
-        public string NoValue { get; set; }
+        public string AmountOfInsurance { get ; set;  }
+        public string NoValue { get ; set;  }
     }
 
     [SeparatorCrlf]
@@ -542,75 +542,75 @@
     public class ChargeLine
     {
         [SeparatorSlant]
-        public string PcIndOtherCharges { get; set; }
+        public string PcIndOtherCharges { get ; set;  }
     }
 
     public class OtherChargeItems
     {
-        public string OtherChargeCode { get; set; }
-        public string EntitlementCode { get; set; }
-        public string ChargeAmount { get; set; }
+        public string OtherChargeCode { get ; set;  }
+        public string EntitlementCode { get ; set;  }
+        public string ChargeAmount { get ; set;  }
     }
 
     public class ChargesOrTaxes
     {
         [SeparatorSlant]
-        public string ChargeIdentifier { get; set; }
-        public string ChargeAmount { get; set; }
+        public string ChargeIdentifier { get ; set;  }
+        public string ChargeAmount { get ; set;  }
     }
 
     public class TotalCharges
     {
         [SeparatorSlant]
-        public string ChargeIdentifier { get; set; }
-        public string ChargeAmount { get; set; }
+        public string ChargeIdentifier { get ; set;  }
+        public string ChargeAmount { get ; set;  }
     }
 
     public class AwbIssueDetails
     {
         [SeparatorSlant]
-        public string Day { get; set; }
-        public string Month { get; set; }
-        public string Year { get; set; }
+        public string Day { get ; set;  }
+        public string Month { get ; set;  }
+        public string Year { get ; set;  }
         [SeparatorSlant]
-        public string PlaceInner { get; set; }
-        public string AirportCityCode { get; set; }
+        public string PlaceInner { get ; set;  }
+        public string AirportCityCode { get ; set;  }
     }
 
     public class Authorisation
     {
         [SeparatorSlant]
-        public string Signature { get; set; }
+        public string Signature { get ; set;  }
     }
 
     public class DestinationCurrency
     {
-        public string IsoCurrencyCode { get; set; }
+        public string IsoCurrencyCode { get ; set;  }
     }
 
     public class CurrencyConversionRate
     {
-        public string RateOfExchange { get; set; }
+        public string RateOfExchange { get ; set;  }
     }
 
     public class CcChargesInDestinationCurrencyInner
     {
-        public string ChargeAmount { get; set; }
+        public string ChargeAmount { get ; set;  }
     }
 
     public class ChargesAtDestination
     {
-        public string ChargeAmount { get; set; }
+        public string ChargeAmount { get ; set;  }
     }
 
     public class TotalCollectCharges
     {
-        public string ChargeAmount { get; set; }
+        public string ChargeAmount { get ; set;  }
     }
 
     public class NoCommissionIndication
     {
-        public string CassIndicator { get; set; }
+        public string CassIndicator { get ; set;  }
     }
 
     public class CommissionAmountOrPercentage
@@ -622,53 +622,53 @@
 
     public class CommissionAmount
     {
-        public string CassSettlementFactor { get; set; }
+        public string CassSettlementFactor { get ; set;  }
     }
 
     public class CommissionPercentage
     {
         [SeparatorSlant]
-        public string CassSettlementFactor { get; set; }
+        public string CassSettlementFactor { get ; set;  }
     }
 
     public class SalesIncentiveDetail
     {
-        public string ChargeAmount { get; set; }
+        public string ChargeAmount { get ; set;  }
     }
 
     public class SalesIncentiveIndication
     {
         [SeparatorSlant]
-        public string CassIndicator { get; set; }
+        public string CassIndicator { get ; set;  }
     }
 
     public class AgentReference
     {
-        public string FileReference { get; set; }
+        public string FileReference { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class OtherCustSecurityAndRegulatCtrlInfoDet
     {
         [SeparatorSlant]
-        public string IsoCountryCode { get; set; }
+        public string IsoCountryCode { get ; set;  }
         [SeparatorSlant]
-        public string InformationIdentifier { get; set; }
+        public string InformationIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string CustSecurityAndRegulatCtrlInfoId { get; set; }
+        public string CustSecurityAndRegulatCtrlInfoId { get ; set;  }
         [SeparatorSlant]
-        public string SupplemCustSecurityAndRegulatCtrlInfo { get; set; }
+        public string SupplemCustSecurityAndRegulatCtrlInfo { get ; set;  }
     }
 
     public class AccountDetail
     {
         [SeparatorSlant]
-        public string AccountNumber { get; set; }
+        public string AccountNumber { get ; set;  }
     }
 
     public class Name
     {
-        public string NamIdentifier { get { return "NAM"; } }
+        public string NamIdentifier { get {return "NAM";} }
         public List<NameDetail> NameDetail { get; set; }
     }
 
@@ -676,12 +676,12 @@
     public class NameDetail
     {
         [SeparatorSlant]
-        public string NameInner { get; set; }
+        public string NameInner { get ; set;  }
     }
 
     public class StreetAddress
     {
-        public string AdrIdentifier { get { return "ADR"; } }
+        public string AdrIdentifier { get {return "ADR";} }
         public List<StreetAddressDetail> StreetAddressDetail { get; set; }
     }
 
@@ -689,51 +689,51 @@
     public class StreetAddressDetail
     {
         [SeparatorSlant]
-        public string StreetAddressInner { get; set; }
+        public string StreetAddressInner { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class Location
     {
-        public string LocIdentifier { get { return "LOC"; } }
+        public string LocIdentifier { get {return "LOC";} }
         [SeparatorSlant]
-        public string PlaceInner { get; set; }
+        public string PlaceInner { get ; set;  }
         public StateProvince StateProvince { get; set; }
     }
 
     public class StateProvince
     {
         [SeparatorSlant]
-        public string StateProvinceInner { get; set; }
+        public string StateProvinceInner { get ; set;  }
     }
 
     public class CodedLocation
     {
         [SeparatorSlant]
-        public string IsoCountryCode { get; set; }
+        public string IsoCountryCode { get ; set;  }
         public PostCode PostCode { get; set; }
     }
 
     public class PostCode
     {
         [SeparatorSlant]
-        public string PostCodeInner { get; set; }
+        public string PostCodeInner { get ; set;  }
     }
 
     public class ContactDetail
     {
         [SeparatorSlant]
-        public string ContactIdentifier { get; set; }
+        public string ContactIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string ContactNumber { get; set; }
+        public string ContactNumber { get ; set;  }
     }
 
     public class AccountDetailAgt
     {
         [SeparatorSlant]
-        public string AccountNumber { get; set; }
+        public string AccountNumber { get ; set;  }
         [SeparatorSlant]
-        public string IataCargoAgentNumericCode { get; set; }
+        public string IataCargoAgentNumericCode { get ; set;  }
         public CargoAgentCassOrParticipantId CargoAgentCassOrParticipantId { get; set; }
     }
 
@@ -747,42 +747,42 @@
     public class ParticipantId
     {
         [SeparatorSlant]
-        public string ParticipantIdentifier { get; set; }
+        public string ParticipantIdentifier { get ; set;  }
     }
 
     public class CargoAgentCassAddress
     {
-        public string CargoAgentCassAddressInner { get; set; }
+        public string CargoAgentCassAddressInner { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class AccountDetails
     {
         [SeparatorSlant]
-        public string AccountingInformationIdentifier { get; set; }
+        public string AccountingInformationIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string AccountingInformationInner { get; set; }
+        public string AccountingInformationInner { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class Place
     {
         [SeparatorSlant]
-        public string PlaceInner { get; set; }
+        public string PlaceInner { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class SsrDetail
     {
         [SeparatorSlant]
-        public string SpecialServiceRequestInner { get; set; }
+        public string SpecialServiceRequestInner { get ; set;  }
     }
 
     [SeparatorCrlf]
     public class OsiItems
     {
         [SeparatorSlant]
-        public string OtherServiceInformationItem { get; set; }
+        public string OtherServiceInformationItem { get ; set;  }
     }
 
     public class Sofr
@@ -794,24 +794,24 @@
 
     public class SenderOfficeMessageAddress
     {
-        public string AirportCityCode { get; set; }
-        public string OfficeFunctionDesignator { get; set; }
-        public string CompanyDesignator { get; set; }
+        public string AirportCityCode { get ; set;  }
+        public string OfficeFunctionDesignator { get ; set;  }
+        public string CompanyDesignator { get ; set;  }
     }
 
     public class SenderOfficeFileReference
     {
-        public string FileReference { get; set; }
+        public string FileReference { get ; set;  }
     }
 
     public class SenderParticipantIdentification
     {
         [SeparatorSlant]
-        public string ParticipantIdentifier { get; set; }
+        public string ParticipantIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string ParticipantCode { get; set; }
+        public string ParticipantCode { get ; set;  }
         [SeparatorSlant]
-        public string AirportCode { get; set; }
+        public string AirportCode { get ; set;  }
     }
 
     public class Supplementary1or2
@@ -823,20 +823,20 @@
 
     public class SupplementaryShipmentInformation1
     {
-        public string InnerSupplementaryShipmentInformation { get; set; }
+        public string InnerSupplementaryShipmentInformation { get ; set;  }
     }
 
     public class SupplementaryShipmentInformation2
     {
         [SeparatorSlant]
-        public string InnerSupplementaryShipmentInformation { get; set; }
+        public string InnerSupplementaryShipmentInformation { get ; set;  }
     }
 
     public class OtherParticipantOfficeMessageAddress
     {
-        public string AirportCityCode { get; set; }
-        public string OfficeFunctionDesignator { get; set; }
-        public string CompanyDesignator { get; set; }
+        public string AirportCityCode { get ; set;  }
+        public string OfficeFunctionDesignator { get ; set;  }
+        public string CompanyDesignator { get ; set;  }
     }
 
     public class Opofr
@@ -848,16 +848,16 @@
 
     public class OtherParticipantOfficeFileReference
     {
-        public string FileReference { get; set; }
+        public string FileReference { get ; set;  }
     }
 
     public class OtherParticipantIdentification
     {
         [SeparatorSlant]
-        public string ParticipantIdentifier { get; set; }
+        public string ParticipantIdentifier { get ; set;  }
         [SeparatorSlant]
-        public string ParticipantCode { get; set; }
+        public string ParticipantCode { get ; set;  }
         [SeparatorSlant]
-        public string AirportCityCode { get; set; }
+        public string AirportCityCode { get ; set;  }
     }
 }

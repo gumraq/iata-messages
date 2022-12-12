@@ -1,4 +1,4 @@
-﻿using IataMessageStandard.Fwb17Parts;
+using IataMessageStandard.Fwb17Parts;
 
 namespace IataMessageStandard
 {
@@ -33,5 +33,4 @@ namespace IataMessageStandard
         public ShipmentReferenceInformation ShipmentReferenceInformation { get; set; }
         public List<OtherParticipantInformation> OtherParticipantInformation { get; set; }
         public OtherCustSecurityAndRegulatCtrlInfo OtherCustSecurityAndRegulatCtrlInfo { get; set; }
-    }
-}
+    }}

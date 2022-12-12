@@ -1,4 +1,4 @@
-﻿using IataMessageStandard.Fbl4Parts;
+using IataMessageStandard.Fbl4Parts;
 
 namespace IataMessageStandard
 {
@@ -8,5 +8,4 @@ namespace IataMessageStandard
         public FlightIdAndPointOfLoading FlightIdAndPointOfLoading { get; set; }
         public List<DestinationHeader> DestinationHeader { get; set; }
         public ListCompleteIndicator ListCompleteIndicator { get; set; }
-    }
-}
+    }}

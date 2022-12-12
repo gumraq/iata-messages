@@ -1,4 +1,4 @@
-﻿using IataMessageStandard;
+using IataMessageStandard;
 using IataMessageStandard.Fbl4Parts;
 
 namespace IataMessageProcessor.Formatters.TextMessages
