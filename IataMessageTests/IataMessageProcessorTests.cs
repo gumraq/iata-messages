@@ -10,7 +10,6 @@ namespace IataMessageTests
     public class IataMessageProcessorTests
     {
         private TextMessageParser parser;
-        
         private TextMessageFormatter formatter;
 
         public IataMessageProcessorTests()
@@ -116,7 +115,7 @@ OCI/IE/OSS/RC/QADOH-QR
             Assert.NotNull(rObject);
             var fbr2 = ((Result<Fsa15>)rObject.Value).Value;
 
-            string fblText = this.formatter.Visit(fbr2);
+            var fblText = this.formatter.ToString(fbr2);
 
             Assert.Equal(fbrText, fblText);
         }
@@ -132,7 +131,7 @@ REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
             Assert.NotNull(rObject);
             var fbr2 = ((Result<Fbr2>)rObject.Value).Value;
 
-            string fblText = this.formatter.Visit(fbr2);
+            string fblText = this.formatter.ToString(fbr2);
 
             Assert.Equal(fbrText, fblText);
         }
@@ -207,7 +206,7 @@ LAST
             Assert.NotNull(rObject);
             var fbl4 = ((Result<Fbl4>)rObject.Value).Value;
             
-            string fblText = this.formatter.Visit(fbl4);
+            string fblText = this.formatter.ToString(fbl4);
 
             Assert.Equal(fbrText, fblText);
         }
@@ -271,7 +270,7 @@ LAST
             Assert.NotNull(rObject);
             var ffm8 = ((Result<Ffm8>)rObject.Value).Value;
 
-            string ffm8ActualText = this.formatter.Visit(ffm8);
+            string ffm8ActualText = this.formatter.ToString(ffm8);
 
             Assert.Equal(ffm8OriginText, ffm8ActualText);
         }
@@ -371,7 +370,7 @@ OCI/GB/ISS/RA/001-011
             Assert.NotNull(rObject);
             var fwb17 = ((Result<Fwb17>)rObject.Value).Value;
 
-            string fwb17ActualText = this.formatter.Visit(fwb17);
+            string fwb17ActualText = this.formatter.ToString(fwb17);
 
             Assert.Equal(fwb17OriginText, fwb17ActualText);
         }
@@ -394,7 +393,7 @@ REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
             Assert.NotNull(rObject);
             var fwb17 = ((Result<Ffa4>)rObject.Value).Value;
 
-            string fwb17ActualText = this.formatter.Visit(fwb17);
+            string fwb17ActualText = this.formatter.ToString(fwb17);
 
             Assert.Equal(fwb17OriginText, fwb17ActualText);
         }
