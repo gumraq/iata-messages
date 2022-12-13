@@ -3,21 +3,39 @@ namespace IataMessageStandard.Ffa4Parts
     [SeparatorCrlf]
     public class StandardMessageIdentification
     {
-        public string StandardMessageIdentifier { get ; set;  }
+        [Reference(1)]
+        public string StandardMessageIdentifier { get; set;  }
+
+        [Reference(2)]
         [SeparatorSlant]
-        public string MessageTypeVersionNumber { get ; set;  }
+        public string MessageTypeVersionNumber { get; set;  }
     }
 
     [SeparatorCrlf]
     public class ConsignmentDetail
     {
+        [Reference(1)]
         public AwbIdentification AwbIdentification { get; set; }
+
+        [Reference(2)]
         public AwbOriginAndDestination AwbOriginAndDestination { get; set; }
+
+        [Reference(3)]
         public QuantityDetail QuantityDetail { get; set; }
+
+        [Reference(4)]
         public VolumeDetail VolumeDetail { get; set; }
+
+        [Reference(5)]
         public DensityGroup DensityGroup { get; set; }
+
+        [Reference(6)]
         public TotalConsignmentPieces TotalConsignmentPieces { get; set; }
+
+        [Reference(7)]
         public NatureOfGoods NatureOfGoods { get; set; }
+
+        [Reference(8)]
         public Shrs Shrs { get; set; }
     }
 
@@ -28,99 +46,156 @@ namespace IataMessageStandard.Ffa4Parts
 
     public class SpecialServiceRequest
     {
+        [Reference(1)]
         public string LineIdentifierSsr { get {return "SSR/";} }
+
+        [Reference(2)]
         public SsrDetails1stLine SsrDetails1stLine { get; set; }
+
+        [Reference(3)]
         public SsrDetails2stLine SsrDetails2stLine { get; set; }
     }
 
     public class OtherServiceInformation
     {
+        [Reference(1)]
         public string LineIdentifierOsi { get {return "OSI/";} }
+
+        [Reference(2)]
         public OsiDetails1stLine OsiDetails1stLine { get; set; }
+
+        [Reference(3)]
         public OsiDetails2stLine OsiDetails2stLine { get; set; }
     }
 
     [SeparatorCrlf]
     public class BookingReference
     {
-        public string LineIdentifier { get ; set;  }
+        [Reference(1)]
+        public string LineIdentifier { get; set;  }
+
+        [Reference(2)]
         [SeparatorSlant]
         public RequestingOfficeMessageAddress RequestingOfficeMessageAddress { get; set; }
+
+        [Reference(3)]
         public Rofr Rofr { get; set; }
     }
 
     [SeparatorCrlf]
     public class ShipmentReferenceInformation
     {
-        public string LineIdentifier { get ; set;  }
+        [Reference(1)]
+        public string LineIdentifier { get; set;  }
+
+        [Reference(2)]
         [SeparatorSlant]
-        public string ReferenceNumber { get ; set;  }
+        public string ReferenceNumber { get; set;  }
+
+        [Reference(3)]
         public Supplementary1or2 Supplementary1or2 { get; set; }
     }
 
     [SeparatorCrlf]
     public class FlightInfoDetails
     {
+        [Reference(1)]
         public FlightIdentification FlightIdentification { get; set; }
+
+        [Reference(2)]
         [SeparatorSlant]
         public AirportsOfDepartureAndArrival AirportsOfDepartureAndArrival { get; set; }
+
+        [Reference(3)]
         [SeparatorSlant]
-        public string SpaceAllocationCode { get ; set;  }
+        public string SpaceAllocationCode { get; set;  }
     }
 
     public class FlightIdentification
     {
-        public string CarrierCode { get ; set;  }
-        public string FlightNumber { get ; set;  }
+        [Reference(1)]
+        public string CarrierCode { get; set;  }
+
+        [Reference(2)]
+        public string FlightNumber { get; set;  }
+
+        [Reference(3)]
         [SeparatorSlant]
-        public string DayOfScheduledDeparture { get ; set;  }
-        public string MonthOfScheduledDeparture { get ; set;  }
+        public string DayOfScheduledDeparture { get; set;  }
+
+        [Reference(4)]
+        public string MonthOfScheduledDeparture { get; set;  }
     }
 
     public class AirportsOfDepartureAndArrival
     {
-        public string AirportCodeOfDeparture { get ; set;  }
-        public string AirportCodeOfArrival { get ; set;  }
+        [Reference(1)]
+        public string AirportCodeOfDeparture { get; set;  }
+
+        [Reference(2)]
+        public string AirportCodeOfArrival { get; set;  }
     }
 
     public class AwbIdentification
     {
-        public string AirlinePrefix { get ; set;  }
+        [Reference(1)]
+        public string AirlinePrefix { get; set;  }
+
+        [Reference(2)]
         [SeparatorHyphen]
-        public string AwbSerialNumber { get ; set;  }
+        public string AwbSerialNumber { get; set;  }
     }
 
     public class AwbOriginAndDestination
     {
-        public string AirportCodeOfOrigin { get ; set;  }
-        public string AirportCodeOfDestitation { get ; set;  }
+        [Reference(1)]
+        public string AirportCodeOfOrigin { get; set;  }
+
+        [Reference(2)]
+        public string AirportCodeOfDestitation { get; set;  }
     }
 
     public class QuantityDetail
     {
+        [Reference(1)]
         [SeparatorSlant]
-        public string ShipmentDescriptionCode { get ; set;  }
-        public string NumberOfPieces { get ; set;  }
-        public string WeightCode { get ; set;  }
-        public string Weight { get ; set;  }
+        public string ShipmentDescriptionCode { get; set;  }
+
+        [Reference(2)]
+        public string NumberOfPieces { get; set;  }
+
+        [Reference(3)]
+        public string WeightCode { get; set;  }
+
+        [Reference(4)]
+        public string Weight { get; set;  }
     }
 
     public class VolumeDetail
     {
-        public string VolumeCode { get ; set;  }
-        public string VolumeAmount { get ; set;  }
+        [Reference(1)]
+        public string VolumeCode { get; set;  }
+
+        [Reference(2)]
+        public string VolumeAmount { get; set;  }
     }
 
     public class DensityGroup
     {
-        public string DensityIndicator { get ; set;  }
-        public string DensityGroupInner { get ; set;  }
+        [Reference(1)]
+        public string DensityIndicator { get; set;  }
+
+        [Reference(2)]
+        public string DensityGroupInner { get; set;  }
     }
 
     public class TotalConsignmentPieces
     {
-        public string ShipmentDescriptionCode { get ; set;  }
-        public string NumberOfPieces { get ; set;  }
+        [Reference(1)]
+        public string ShipmentDescriptionCode { get; set;  }
+
+        [Reference(2)]
+        public string NumberOfPieces { get; set;  }
     }
 
     public class Shrs
@@ -132,85 +207,101 @@ namespace IataMessageStandard.Ffa4Parts
     public class SpecialHandlingRequirements
     {
         [SeparatorSlant]
-        public string SpecialHandlingCode { get ; set;  }
+        public string SpecialHandlingCode { get; set;  }
     }
 
     [SeparatorCrlf]
     public class SsrDetails1stLine
     {
-        public string SsrDescription { get ; set;  }
+        public string SsrDescription { get; set;  }
     }
 
     [SeparatorCrlf]
     public class SsrDetails2stLine
     {
         [SeparatorSlant]
-        public string SsrDescription { get ; set;  }
+        public string SsrDescription { get; set;  }
     }
 
     [SeparatorCrlf]
     public class OsiDetails1stLine
     {
-        public string OsiDescription { get ; set;  }
+        public string OsiDescription { get; set;  }
     }
 
     [SeparatorCrlf]
     public class OsiDetails2stLine
     {
         [SeparatorSlant]
-        public string OsiDescription { get ; set;  }
+        public string OsiDescription { get; set;  }
     }
 
     public class NatureOfGoods
     {
         [SeparatorSlant]
-        public string ManifestDescriptionOfGoods { get ; set;  }
+        public string ManifestDescriptionOfGoods { get; set;  }
     }
 
     public class RequestingOfficeMessageAddress
     {
-        public string AirportCityCode { get ; set;  }
-        public string OfficeFunctionDesignator { get ; set;  }
-        public string CompanyDesignator { get ; set;  }
+        [Reference(1)]
+        public string AirportCityCode { get; set;  }
+
+        [Reference(2)]
+        public string OfficeFunctionDesignator { get; set;  }
+
+        [Reference(3)]
+        public string CompanyDesignator { get; set;  }
     }
 
     public class Rofr
     {
+        [Reference(1)]
         [SeparatorSlant]
         public RequestingOfficeFileReference RequestingOfficeFileReference { get; set; }
+
+        [Reference(2)]
         public RequestingParticipantIdentification RequestingParticipantIdentification { get; set; }
     }
 
     public class RequestingOfficeFileReference
     {
-        public string FileReference { get ; set;  }
+        public string FileReference { get; set;  }
     }
 
     public class RequestingParticipantIdentification
     {
+        [Reference(1)]
         [SeparatorSlant]
-        public string ParticipantIdentifier { get ; set;  }
+        public string ParticipantIdentifier { get; set;  }
+
+        [Reference(2)]
         [SeparatorSlant]
-        public string ParticipantCode { get ; set;  }
+        public string ParticipantCode { get; set;  }
+
+        [Reference(3)]
         [SeparatorSlant]
-        public string AirportCityCode { get ; set;  }
+        public string AirportCityCode { get; set;  }
     }
 
     public class Supplementary1or2
     {
+        [Reference(1)]
         [SeparatorSlant]
         public SupplementaryShipmentInformation1 SupplementaryShipmentInformation1 { get; set; }
+
+        [Reference(2)]
         public SupplementaryShipmentInformation2 SupplementaryShipmentInformation2 { get; set; }
     }
 
     public class SupplementaryShipmentInformation1
     {
-        public string InnerSupplementaryShipmentInformation { get ; set;  }
+        public string InnerSupplementaryShipmentInformation { get; set;  }
     }
 
     public class SupplementaryShipmentInformation2
     {
         [SeparatorSlant]
-        public string InnerSupplementaryShipmentInformation { get ; set;  }
+        public string InnerSupplementaryShipmentInformation { get; set;  }
     }
 }
