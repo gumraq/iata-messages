@@ -42,7 +42,8 @@ namespace IataMessageSourceGenerator
 
 namespace IataMessageStandard
 {"{"}
-{code}{"}"}";
+{code}
+{"}"}";
 
                 await this.Write($"{className}.cs", code);
             }
@@ -431,26 +432,56 @@ namespace IataMessageProcessor.Parsers.TextMessages
             public override string ToString()
             {
                 return $@"{(!string.IsNullOrEmpty(this.LastAttribute) ? $"    [{this.LastAttribute}]\r\n" : string.Empty)}    public class {this.Name.FirstCharToUpper()}
-{"    {"}{string.Join(string.Empty,this.Properties.Select(p =>
-        {
-            if (p.Type == PropType.CLASS)
-            {
-                return $"\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty: $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public {p.Name.FirstCharToUpper()} {p.Name.FirstCharToUpper()} {"{"} get; set; {"}"}";
-            }
-
-            if (p.Type == PropType.LIST)
-            {
-                return $"\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty : $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public List<{p.Name.FirstCharToUpper()}> {p.Name.FirstCharToUpper()} {"{"} get; set; {"}"}";
-            }
-
-            if (p.Type == PropType.STRING)
-            {
-                return $"\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty : $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public string {p.Name.FirstCharToUpper()} {"{"} get {(string.IsNullOrEmpty(p.Const) ? "; set; " : string.Concat("{return \"",p.Const,"\";}"))} {"}"}";
-            }
-
-            return string.Empty;
-        }))}
+{"    {"}{string.Join("\r\n",this.Properties.Select(this.BuildProperty(this.Properties.Count>1)))}
 {"    }"}";
+            }
+
+            private Func<PropInfo, int, string> BuildProperty(bool propsCountGreaterThan1)
+            {
+                if (propsCountGreaterThan1)
+                {
+                    return (p, i) =>
+                    {
+                        if (p.Type == PropType.CLASS)
+                        {
+                            return $"\r\n        [Reference({i+1})]\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty : $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public {p.Name.FirstCharToUpper()} {p.Name.FirstCharToUpper()} {"{"} get; set; {"}"}";
+                        }
+
+                        if (p.Type == PropType.LIST)
+                        {
+                            return $"\r\n        [Reference({i + 1})]\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty : $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public List<{p.Name.FirstCharToUpper()}> {p.Name.FirstCharToUpper()} {"{"} get; set; {"}"}";
+                        }
+
+                        if (p.Type == PropType.STRING)
+                        {
+                            return $"\r\n        [Reference({i + 1})]\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty : $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public string {p.Name.FirstCharToUpper()} {"{"} get{(string.IsNullOrEmpty(p.Const) ? "; set; " : string.Concat(" {return \"", p.Const, "\";}"))} {"}"}";
+                        }
+
+                        return string.Empty;
+                    };
+                }
+                else
+                {
+                    return (p,i) =>
+                    {
+                        if (p.Type == PropType.CLASS)
+                        {
+                            return $"\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty : $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public {p.Name.FirstCharToUpper()} {p.Name.FirstCharToUpper()} {"{"} get; set; {"}"}";
+                        }
+
+                        if (p.Type == PropType.LIST)
+                        {
+                            return $"\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty : $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public List<{p.Name.FirstCharToUpper()}> {p.Name.FirstCharToUpper()} {"{"} get; set; {"}"}";
+                        }
+
+                        if (p.Type == PropType.STRING)
+                        {
+                            return $"\r\n        {(string.IsNullOrEmpty(p.Attribute1) ? string.Empty : $"[{p.Attribute1}]\r\n        ")}{(string.IsNullOrEmpty(p.Attribute2) ? string.Empty : $"[{p.Attribute2}]\r\n        ")}public string {p.Name.FirstCharToUpper()} {"{"} get{(string.IsNullOrEmpty(p.Const) ? "; set; " : string.Concat(" {return \"", p.Const, "\";}"))} {"}"}";
+                        }
+
+                        return string.Empty;
+                    };
+                }
             }
         }
 
