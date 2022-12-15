@@ -1,5 +1,5 @@
-﻿using System.Linq.Expressions;
-using System.Reflection;
+﻿using System.Reflection;
+using System.Text;
 using IataMessageStandard;
 
 namespace IataMessageProcessor.Formatters.TextMessages
