@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 using Antlr4.Runtime.Tree;
@@ -7,19 +10,22 @@ namespace IataMessageProcessor.Parsers.TextMessages
 {
     public class MessageParseTreeVisitor<Result> : AbstractParseTreeVisitor<Result> where Result : new()
     {
-        public Result Message { get; private set; }
-        public IEnumerable<Expression> expression = Enumerable.Empty<Expression>();
+        private Result message;
+        private IEnumerable<Expression> expression = Enumerable.Empty<Expression>();
         ILogger<MessageParseTreeVisitor<Result>> logger;
 
         public override Result Visit(IParseTree tree)
         {
-            this.Message = new Result();
-            return base.Visit(tree);
+            this.message = new Result();
+            base.Visit(tree);
+            Action action = this.ExpressionExecute();
+            action.Invoke();
+            return this.message;
         }
 
         public override Result VisitChildren(IRuleNode node)
         {
-                Expression currentProp = Expression.Property(Expression.Constant(this), nameof(Message));
+                Expression currentProp = Expression.Field(Expression.Constant(this), nameof(message));
                 List<string> ancestors = Ancestors(node).ToList();
                 int countRealNodes = 0;
             try
@@ -98,7 +104,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
             return node.GetType().Name.Replace("Context", string.Empty);
         }
 
-        public Action ExpressionExecute()
+        private Action ExpressionExecute()
         {
             BlockExpression beLambdaBody = Expression.Block(this.expression.ToList());
             Expression<Action> le = Expression.Lambda<Action>(beLambdaBody);
