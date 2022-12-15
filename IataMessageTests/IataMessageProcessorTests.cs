@@ -14,21 +14,14 @@ namespace IataMessageTests
 
         public IataMessageProcessorTests()
         {
-          this.parser =
-              new TextMessageParser(
-              new Fbl4MessageParser(
-              new Ffm8MessageParser(
-              new Fwb17MessageParser(
-              new Fbr2MessageParser(
-              new Fsa15MessageParser(
-              new Ffa4MessageParser()))))));
+            this.parser = new TextMessageParser();
             this.formatter = new TextMessageFormatter();
         }
 
         [Fact]
         public void Fsa15ParserTests1()
         {
-            string fbrText = @"FSA/15
+            string fsa15Text = @"FSA/15
 157-72071554PENSVO/T10K4044.0
 RCS/02JAN1403/ALA/T6K150/UTEGENOV SERIK
 /MC2.96
@@ -111,35 +104,35 @@ OCI/IE/OSS/RC/QADOH-QR
 /MY//SD/02-DEC-2021 1507
 /MY//ED/0522
 ";
-            Result<object> rObject = this.parser.Parse(fbrText);
+            Result<object> rObject = this.parser.Parse(fsa15Text);
             Assert.NotNull(rObject);
-            var fbr2 = ((Result<Fsa15>)rObject.Value).Value;
+            var fsa15 = rObject.ToResult(o => (Fsa15)o);
 
-            var fblText = this.formatter.ToString(fbr2);
+            var fsa15TextActual = this.formatter.ToString(fsa15.Value);
 
-            Assert.Equal(fbrText, fblText);
+            Assert.Equal(fsa15Text, fsa15TextActual);
         }
 
         [Fact]
         public void Fbr2ParserTests1()
         {
-            string fbrText = @"FBR/2
+            string fbr2Text = @"FBR/2
 FLT/KL775/09FEB/ZRH
 REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
 ";
-            Result<object> rObject = this.parser.Parse(fbrText);
+            Result<object> rObject = this.parser.Parse(fbr2Text);
             Assert.NotNull(rObject);
-            var fbr2 = ((Result<Fbr2>)rObject.Value).Value;
+            Result<Fbr2> fbr2 = rObject.ToResult(o=>(Fbr2)o);
 
-            string fblText = this.formatter.ToString(fbr2);
+            string fblTextActual = this.formatter.ToString(fbr2.Value);
 
-            Assert.Equal(fbrText, fblText);
+            Assert.Equal(fbr2Text, fblTextActual);
         }
 
         [Fact]
-        public void Fbl2ParserTests1()
+        public void Fbl4ParserTests1()
         {
-            string fbrText = @"FBL/4
+            string fbl4TextOrigin = @"FBL/4
 1/KL775/09FEB/ZRH/HB-IHA
 LIS/NIL
 CCS
@@ -202,13 +195,13 @@ OCI///ST/DSV AIR SEA CO. LTD. CN1 HAS
 /IT/SHP/T/EUROPEAN VAT NUMBERITIT00748210150
 LAST
 ";
-            Result<object> rObject = this.parser.Parse(fbrText);
+            Result<object> rObject = this.parser.Parse(fbl4TextOrigin);
             Assert.NotNull(rObject);
-            var fbl4 = ((Result<Fbl4>)rObject.Value).Value;
+            var fbl4 = rObject.ToResult(o=>(Fbl4) o);
             
-            string fblText = this.formatter.ToString(fbl4);
+            string fbl4TextActual = this.formatter.ToString(fbl4.Value);
 
-            Assert.Equal(fbrText, fblText);
+            Assert.Equal(fbl4TextOrigin, fbl4TextActual);
         }
 
         [Fact]
@@ -268,9 +261,9 @@ LAST
 ";
             Result<object> rObject = this.parser.Parse(ffm8OriginText);
             Assert.NotNull(rObject);
-            var ffm8 = ((Result<Ffm8>)rObject.Value).Value;
+            Result<Ffm8> ffm8 = rObject.ToResult(o => (Ffm8)o);
 
-            string ffm8ActualText = this.formatter.ToString(ffm8);
+            string ffm8ActualText = this.formatter.ToString(ffm8.Value);
 
             Assert.Equal(ffm8OriginText, ffm8ActualText);
         }
@@ -368,9 +361,9 @@ OCI/GB/ISS/RA/001-011
 ";
             Result<object> rObject = this.parser.Parse(fwb17OriginText);
             Assert.NotNull(rObject);
-            var fwb17 = ((Result<Fwb17>)rObject.Value).Value;
+            var fwb17 = rObject.ToResult(o=>(Fwb17)o);
 
-            string fwb17ActualText = this.formatter.ToString(fwb17);
+            string fwb17ActualText = this.formatter.ToString(fwb17.Value);
 
             Assert.Equal(fwb17OriginText, fwb17ActualText);
         }
@@ -378,7 +371,7 @@ OCI/GB/ISS/RA/001-011
         [Fact]
         public void Ffa4ParserTests()
         {
-            string fwb17OriginText = @"FFA/4
+            string ffa4OriginText = @"FFA/4
 555-29681396SVOKHV/T286K878MC0.4/KOSMETIKA
 /470/471/RMD
 SU1712/03NOV/SVOKHV/KK
@@ -389,13 +382,13 @@ SSR/SPECIALIZED DGR
 OSI/NOT SECURED
 REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
 ";
-            Result<object> rObject = this.parser.Parse(fwb17OriginText);
+            Result<object> rObject = this.parser.Parse(ffa4OriginText);
             Assert.NotNull(rObject);
-            var fwb17 = ((Result<Ffa4>)rObject.Value).Value;
+            var ffa4 = rObject.ToResult(o=>(Ffa4)o);
 
-            string fwb17ActualText = this.formatter.ToString(fwb17);
+            string ffa4ActualText = this.formatter.ToString(ffa4.Value);
 
-            Assert.Equal(fwb17OriginText, fwb17ActualText);
+            Assert.Equal(ffa4OriginText, ffa4ActualText);
         }
     }
 }
