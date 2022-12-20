@@ -1,4 +1,4 @@
-namespace IataMessageStandard.Fsr1Parts
+namespace IataMessageStandard.FsrParts
 {
     [SeparatorCrlf]
     public class StandardMessageIdentification

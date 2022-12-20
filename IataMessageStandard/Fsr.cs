@@ -1,8 +1,8 @@
-using IataMessageStandard.Fsr1Parts;
+using IataMessageStandard.FsrParts;
 
 namespace IataMessageStandard
 {
-    public class Fsr1
+    public class Fsr
     {
         [Reference(1)]
         public StandardMessageIdentification StandardMessageIdentification { get; set; }
