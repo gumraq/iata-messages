@@ -390,5 +390,25 @@ REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
 
             Assert.Equal(ffa4OriginText, ffa4ActualText);
         }
+
+        [Fact]
+        public void FsrParserTests()
+        {
+            string fsrOriginText = @"FSR
+057-12345675CDGLAX/T10K500/BOOKS
+AF099/20MAR/CDGJFK
+AA1234/22MAR/JFKLAX
+SU//JFKLAX
+OSI/CONSIGNEE IS LOOKING FOR THE TENTH PIECE
+/SAFE TO -6 DEGREE
+";
+            Result<object> rObject = this.parser.Parse(fsrOriginText);
+            Assert.NotNull(rObject);
+            var fsr = rObject.ToResult(o => (Fsr)o);
+
+            string fsrActualText = this.formatter.ToString(fsr.Value);
+
+            Assert.Equal(fsrOriginText, fsrActualText);
+        }
     }
 }
