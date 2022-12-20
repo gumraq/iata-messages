@@ -21,7 +21,7 @@ G
 SeparatorCrlf
 
 rule names:
-fsr1
+fsr
 standardMessageIdentification
 consignmentDetail
 flightDetails

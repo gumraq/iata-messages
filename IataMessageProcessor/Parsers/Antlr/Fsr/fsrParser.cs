@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from fsr1.g4 by ANTLR 4.10.1
+// Generated from fsr.g4 by ANTLR 4.10.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -32,13 +32,13 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.10.1")]
 [System.CLSCompliant(false)]
-public partial class fsr1Parser : Parser {
+public partial class fsrParser : Parser {
 	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
 		T__0=1, T__1=2, SeparatorSlant=3, SeparatorHyphen=4, A=5, N=6, G=7, SeparatorCrlf=8;
 	public const int
-		RULE_fsr1 = 0, RULE_standardMessageIdentification = 1, RULE_consignmentDetail = 2, 
+		RULE_fsr = 0, RULE_standardMessageIdentification = 1, RULE_consignmentDetail = 2, 
 		RULE_flightDetails = 3, RULE_otherServiceInformation = 4, RULE_awbIdentification = 5, 
 		RULE_awbOriginAndDestination = 6, RULE_quantityDetail = 7, RULE_totalConsignmentPieces = 8, 
 		RULE_weightDetails = 9, RULE_natureOfGoods = 10, RULE_flightIdentification = 11, 
@@ -51,7 +51,7 @@ public partial class fsr1Parser : Parser {
 		RULE_airportCodeOfArrival = 29, RULE_airportCodeOfOrigin = 30, RULE_airportCodeOfDestitation = 31, 
 		RULE_manifestDescriptionOfGoods = 32, RULE_osiDescription = 33;
 	public static readonly string[] ruleNames = {
-		"fsr1", "standardMessageIdentification", "consignmentDetail", "flightDetails", 
+		"fsr", "standardMessageIdentification", "consignmentDetail", "flightDetails", 
 		"otherServiceInformation", "awbIdentification", "awbOriginAndDestination", 
 		"quantityDetail", "totalConsignmentPieces", "weightDetails", "natureOfGoods", 
 		"flightIdentification", "airportsOfDepartureAndArrival", "osiDetails1stLine", 
@@ -81,28 +81,28 @@ public partial class fsr1Parser : Parser {
 		}
 	}
 
-	public override string GrammarFileName { get { return "fsr1.g4"; } }
+	public override string GrammarFileName { get { return "fsr.g4"; } }
 
 	public override string[] RuleNames { get { return ruleNames; } }
 
 	public override int[] SerializedAtn { get { return _serializedATN; } }
 
-	static fsr1Parser() {
+	static fsrParser() {
 		decisionToDFA = new DFA[_ATN.NumberOfDecisions];
 		for (int i = 0; i < _ATN.NumberOfDecisions; i++) {
 			decisionToDFA[i] = new DFA(_ATN.GetDecisionState(i), i);
 		}
 	}
 
-		public fsr1Parser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
+		public fsrParser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
 
-		public fsr1Parser(ITokenStream input, TextWriter output, TextWriter errorOutput)
+		public fsrParser(ITokenStream input, TextWriter output, TextWriter errorOutput)
 		: base(input, output, errorOutput)
 	{
 		Interpreter = new ParserATNSimulator(this, _ATN, decisionToDFA, sharedContextCache);
 	}
 
-	public partial class Fsr1Context : ParserRuleContext {
+	public partial class FsrContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public StandardMessageIdentificationContext standardMessageIdentification() {
 			return GetRuleContext<StandardMessageIdentificationContext>(0);
 		}
@@ -118,23 +118,23 @@ public partial class fsr1Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public OtherServiceInformationContext otherServiceInformation() {
 			return GetRuleContext<OtherServiceInformationContext>(0);
 		}
-		public Fsr1Context(ParserRuleContext parent, int invokingState)
+		public FsrContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_fsr1; } }
+		public override int RuleIndex { get { return RULE_fsr; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitFsr1(this);
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitFsr(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 
 	[RuleVersion(0)]
-	public Fsr1Context fsr1() {
-		Fsr1Context _localctx = new Fsr1Context(Context, State);
-		EnterRule(_localctx, 0, RULE_fsr1);
+	public FsrContext fsr() {
+		FsrContext _localctx = new FsrContext(Context, State);
+		EnterRule(_localctx, 0, RULE_fsr);
 		int _la;
 		try {
 			int _alt;
@@ -187,7 +187,7 @@ public partial class fsr1Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public StandardMessageIdentifierContext standardMessageIdentifier() {
 			return GetRuleContext<StandardMessageIdentifierContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsr1Parser.SeparatorCrlf, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsrParser.SeparatorCrlf, 0); }
 		public StandardMessageIdentificationContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -195,7 +195,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_standardMessageIdentification; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitStandardMessageIdentification(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -229,7 +229,7 @@ public partial class fsr1Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public AwbIdentificationContext awbIdentification() {
 			return GetRuleContext<AwbIdentificationContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsr1Parser.SeparatorCrlf, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsrParser.SeparatorCrlf, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public AwbOriginAndDestinationContext awbOriginAndDestination() {
 			return GetRuleContext<AwbOriginAndDestinationContext>(0);
 		}
@@ -249,7 +249,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_consignmentDetail; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitConsignmentDetail(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -324,11 +324,11 @@ public partial class fsr1Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public FlightIdentificationContext flightIdentification() {
 			return GetRuleContext<FlightIdentificationContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsr1Parser.SeparatorSlant, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsrParser.SeparatorSlant, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public AirportsOfDepartureAndArrivalContext airportsOfDepartureAndArrival() {
 			return GetRuleContext<AirportsOfDepartureAndArrivalContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsr1Parser.SeparatorCrlf, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsrParser.SeparatorCrlf, 0); }
 		public FlightDetailsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -336,7 +336,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_flightDetails; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFlightDetails(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -387,7 +387,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_otherServiceInformation; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOtherServiceInformation(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -432,7 +432,7 @@ public partial class fsr1Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public AirlinePrefixContext airlinePrefix() {
 			return GetRuleContext<AirlinePrefixContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorHyphen() { return GetToken(fsr1Parser.SeparatorHyphen, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorHyphen() { return GetToken(fsrParser.SeparatorHyphen, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public AwbSerialNumberContext awbSerialNumber() {
 			return GetRuleContext<AwbSerialNumberContext>(0);
 		}
@@ -443,7 +443,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_awbIdentification; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAwbIdentification(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -489,7 +489,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_awbOriginAndDestination; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAwbOriginAndDestination(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -520,7 +520,7 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class QuantityDetailContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsr1Parser.SeparatorSlant, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsrParser.SeparatorSlant, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ShipmentDescriptionCodeContext shipmentDescriptionCode() {
 			return GetRuleContext<ShipmentDescriptionCodeContext>(0);
 		}
@@ -537,7 +537,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_quantityDetail; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitQuantityDetail(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -593,7 +593,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_totalConsignmentPieces; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitTotalConsignmentPieces(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -637,7 +637,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_weightDetails; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitWeightDetails(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -668,7 +668,7 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class NatureOfGoodsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsr1Parser.SeparatorSlant, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsrParser.SeparatorSlant, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ManifestDescriptionOfGoodsContext manifestDescriptionOfGoods() {
 			return GetRuleContext<ManifestDescriptionOfGoodsContext>(0);
 		}
@@ -679,7 +679,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_natureOfGoods; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNatureOfGoods(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -713,7 +713,7 @@ public partial class fsr1Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public CarrierCodeContext carrierCode() {
 			return GetRuleContext<CarrierCodeContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsr1Parser.SeparatorSlant, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsrParser.SeparatorSlant, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public FlightNumberContext flightNumber() {
 			return GetRuleContext<FlightNumberContext>(0);
 		}
@@ -727,7 +727,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_flightIdentification; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFlightIdentification(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -792,7 +792,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_airportsOfDepartureAndArrival; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAirportsOfDepartureAndArrival(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -823,11 +823,11 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class OsiDetails1stLineContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsr1Parser.SeparatorSlant, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsrParser.SeparatorSlant, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public OsiDescriptionContext osiDescription() {
 			return GetRuleContext<OsiDescriptionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsr1Parser.SeparatorCrlf, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsrParser.SeparatorCrlf, 0); }
 		public OsiDetails1stLineContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -835,7 +835,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_osiDetails1stLine; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOsiDetails1stLine(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -868,11 +868,11 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class OsiDetails2stLineContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsr1Parser.SeparatorSlant, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant() { return GetToken(fsrParser.SeparatorSlant, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public OsiDescriptionContext osiDescription() {
 			return GetRuleContext<OsiDescriptionContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsr1Parser.SeparatorCrlf, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf() { return GetToken(fsrParser.SeparatorCrlf, 0); }
 		public OsiDetails2stLineContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -880,7 +880,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_osiDetails2stLine; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOsiDetails2stLine(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -926,7 +926,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_flightDate; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFlightDate(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -957,9 +957,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class StandardMessageIdentifierContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsr1Parser.A); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsrParser.A); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A(int i) {
-			return GetToken(fsr1Parser.A, i);
+			return GetToken(fsrParser.A, i);
 		}
 		public StandardMessageIdentifierContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -968,7 +968,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_standardMessageIdentifier; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitStandardMessageIdentifier(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1001,9 +1001,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class LineIdentifierContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsr1Parser.A); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsrParser.A); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A(int i) {
-			return GetToken(fsr1Parser.A, i);
+			return GetToken(fsrParser.A, i);
 		}
 		public LineIdentifierContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1012,7 +1012,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_lineIdentifier; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitLineIdentifier(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1045,9 +1045,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class AirlinePrefixContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsr1Parser.N); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsrParser.N); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode N(int i) {
-			return GetToken(fsr1Parser.N, i);
+			return GetToken(fsrParser.N, i);
 		}
 		public AirlinePrefixContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1056,7 +1056,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_airlinePrefix; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAirlinePrefix(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1089,9 +1089,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class AwbSerialNumberContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsr1Parser.N); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsrParser.N); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode N(int i) {
-			return GetToken(fsr1Parser.N, i);
+			return GetToken(fsrParser.N, i);
 		}
 		public AwbSerialNumberContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1100,7 +1100,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_awbSerialNumber; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAwbSerialNumber(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1143,7 +1143,7 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class ShipmentDescriptionCodeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A() { return GetToken(fsr1Parser.A, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A() { return GetToken(fsrParser.A, 0); }
 		public ShipmentDescriptionCodeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1151,7 +1151,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_shipmentDescriptionCode; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitShipmentDescriptionCode(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1180,9 +1180,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class NumberOfPiecesContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsr1Parser.N); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsrParser.N); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode N(int i) {
-			return GetToken(fsr1Parser.N, i);
+			return GetToken(fsrParser.N, i);
 		}
 		public NumberOfPiecesContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1191,7 +1191,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_numberOfPieces; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitNumberOfPieces(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1251,7 +1251,7 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class WeightCodeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A() { return GetToken(fsr1Parser.A, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A() { return GetToken(fsrParser.A, 0); }
 		public WeightCodeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1259,7 +1259,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_weightCode; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitWeightCode(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1288,9 +1288,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class WeightContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsr1Parser.N); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsrParser.N); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode N(int i) {
-			return GetToken(fsr1Parser.N, i);
+			return GetToken(fsrParser.N, i);
 		}
 		public WeightContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1299,7 +1299,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_weight; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitWeight(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1372,9 +1372,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class CarrierCodeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsr1Parser.A); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsrParser.A); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A(int i) {
-			return GetToken(fsr1Parser.A, i);
+			return GetToken(fsrParser.A, i);
 		}
 		public CarrierCodeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1383,7 +1383,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_carrierCode; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitCarrierCode(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1414,11 +1414,11 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class FlightNumberContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsr1Parser.N); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsrParser.N); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode N(int i) {
-			return GetToken(fsr1Parser.N, i);
+			return GetToken(fsrParser.N, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A() { return GetToken(fsr1Parser.A, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A() { return GetToken(fsrParser.A, 0); }
 		public FlightNumberContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -1426,7 +1426,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_flightNumber; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFlightNumber(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1480,9 +1480,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class DayOfScheduledDepartureContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsr1Parser.N); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] N() { return GetTokens(fsrParser.N); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode N(int i) {
-			return GetToken(fsr1Parser.N, i);
+			return GetToken(fsrParser.N, i);
 		}
 		public DayOfScheduledDepartureContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1491,7 +1491,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_dayOfScheduledDeparture; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitDayOfScheduledDeparture(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1522,9 +1522,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class MonthOfScheduledDepartureContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsr1Parser.A); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsrParser.A); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A(int i) {
-			return GetToken(fsr1Parser.A, i);
+			return GetToken(fsrParser.A, i);
 		}
 		public MonthOfScheduledDepartureContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1533,7 +1533,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_monthOfScheduledDeparture; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitMonthOfScheduledDeparture(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1566,9 +1566,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class AirportCodeOfDepartureContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsr1Parser.A); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsrParser.A); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A(int i) {
-			return GetToken(fsr1Parser.A, i);
+			return GetToken(fsrParser.A, i);
 		}
 		public AirportCodeOfDepartureContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1577,7 +1577,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_airportCodeOfDeparture; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAirportCodeOfDeparture(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1610,9 +1610,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class AirportCodeOfArrivalContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsr1Parser.A); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsrParser.A); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A(int i) {
-			return GetToken(fsr1Parser.A, i);
+			return GetToken(fsrParser.A, i);
 		}
 		public AirportCodeOfArrivalContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1621,7 +1621,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_airportCodeOfArrival; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAirportCodeOfArrival(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1654,9 +1654,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class AirportCodeOfOriginContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsr1Parser.A); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsrParser.A); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A(int i) {
-			return GetToken(fsr1Parser.A, i);
+			return GetToken(fsrParser.A, i);
 		}
 		public AirportCodeOfOriginContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1665,7 +1665,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_airportCodeOfOrigin; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAirportCodeOfOrigin(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1698,9 +1698,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class AirportCodeOfDestitationContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsr1Parser.A); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] A() { return GetTokens(fsrParser.A); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode A(int i) {
-			return GetToken(fsr1Parser.A, i);
+			return GetToken(fsrParser.A, i);
 		}
 		public AirportCodeOfDestitationContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1709,7 +1709,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_airportCodeOfDestitation; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAirportCodeOfDestitation(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1742,9 +1742,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class ManifestDescriptionOfGoodsContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fsr1Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fsrParser.SeparatorCrlf); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
-			return GetToken(fsr1Parser.SeparatorCrlf, i);
+			return GetToken(fsrParser.SeparatorCrlf, i);
 		}
 		public ManifestDescriptionOfGoodsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1753,7 +1753,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_manifestDescriptionOfGoods; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitManifestDescriptionOfGoods(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1802,9 +1802,9 @@ public partial class fsr1Parser : Parser {
 	}
 
 	public partial class OsiDescriptionContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fsr1Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fsrParser.SeparatorCrlf); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
-			return GetToken(fsr1Parser.SeparatorCrlf, i);
+			return GetToken(fsrParser.SeparatorCrlf, i);
 		}
 		public OsiDescriptionContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1813,7 +1813,7 @@ public partial class fsr1Parser : Parser {
 		public override int RuleIndex { get { return RULE_osiDescription; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			Ifsr1Visitor<TResult> typedVisitor = visitor as Ifsr1Visitor<TResult>;
+			IfsrVisitor<TResult> typedVisitor = visitor as IfsrVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOsiDescription(this);
 			else return visitor.VisitChildren(this);
 		}

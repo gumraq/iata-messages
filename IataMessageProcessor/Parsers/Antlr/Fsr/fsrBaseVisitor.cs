@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from fsr1.g4 by ANTLR 4.10.1
+// Generated from fsr.g4 by ANTLR 4.10.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -25,7 +25,7 @@ using IToken = Antlr4.Runtime.IToken;
 using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 
 /// <summary>
-/// This class provides an empty implementation of <see cref="Ifsr1Visitor{Result}"/>,
+/// This class provides an empty implementation of <see cref="IfsrVisitor{Result}"/>,
 /// which can be extended to create a visitor which only needs to handle a subset
 /// of the available methods.
 /// </summary>
@@ -33,9 +33,9 @@ using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.10.1")]
 [System.Diagnostics.DebuggerNonUserCode]
 [System.CLSCompliant(false)]
-public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>, Ifsr1Visitor<Result> {
+public partial class fsrBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IfsrVisitor<Result> {
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.fsr1"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.fsr"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -43,9 +43,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFsr1([NotNull] fsr1Parser.Fsr1Context context) { return VisitChildren(context); }
+	public virtual Result VisitFsr([NotNull] fsrParser.FsrContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.standardMessageIdentification"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.standardMessageIdentification"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -53,9 +53,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitStandardMessageIdentification([NotNull] fsr1Parser.StandardMessageIdentificationContext context) { return VisitChildren(context); }
+	public virtual Result VisitStandardMessageIdentification([NotNull] fsrParser.StandardMessageIdentificationContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.consignmentDetail"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.consignmentDetail"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -63,9 +63,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitConsignmentDetail([NotNull] fsr1Parser.ConsignmentDetailContext context) { return VisitChildren(context); }
+	public virtual Result VisitConsignmentDetail([NotNull] fsrParser.ConsignmentDetailContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.flightDetails"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.flightDetails"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -73,9 +73,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFlightDetails([NotNull] fsr1Parser.FlightDetailsContext context) { return VisitChildren(context); }
+	public virtual Result VisitFlightDetails([NotNull] fsrParser.FlightDetailsContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.otherServiceInformation"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.otherServiceInformation"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -83,9 +83,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOtherServiceInformation([NotNull] fsr1Parser.OtherServiceInformationContext context) { return VisitChildren(context); }
+	public virtual Result VisitOtherServiceInformation([NotNull] fsrParser.OtherServiceInformationContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.awbIdentification"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.awbIdentification"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -93,9 +93,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAwbIdentification([NotNull] fsr1Parser.AwbIdentificationContext context) { return VisitChildren(context); }
+	public virtual Result VisitAwbIdentification([NotNull] fsrParser.AwbIdentificationContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.awbOriginAndDestination"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.awbOriginAndDestination"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -103,9 +103,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAwbOriginAndDestination([NotNull] fsr1Parser.AwbOriginAndDestinationContext context) { return VisitChildren(context); }
+	public virtual Result VisitAwbOriginAndDestination([NotNull] fsrParser.AwbOriginAndDestinationContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.quantityDetail"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.quantityDetail"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -113,9 +113,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitQuantityDetail([NotNull] fsr1Parser.QuantityDetailContext context) { return VisitChildren(context); }
+	public virtual Result VisitQuantityDetail([NotNull] fsrParser.QuantityDetailContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.totalConsignmentPieces"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.totalConsignmentPieces"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -123,9 +123,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTotalConsignmentPieces([NotNull] fsr1Parser.TotalConsignmentPiecesContext context) { return VisitChildren(context); }
+	public virtual Result VisitTotalConsignmentPieces([NotNull] fsrParser.TotalConsignmentPiecesContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.weightDetails"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.weightDetails"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -133,9 +133,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitWeightDetails([NotNull] fsr1Parser.WeightDetailsContext context) { return VisitChildren(context); }
+	public virtual Result VisitWeightDetails([NotNull] fsrParser.WeightDetailsContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.natureOfGoods"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.natureOfGoods"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -143,9 +143,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNatureOfGoods([NotNull] fsr1Parser.NatureOfGoodsContext context) { return VisitChildren(context); }
+	public virtual Result VisitNatureOfGoods([NotNull] fsrParser.NatureOfGoodsContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.flightIdentification"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.flightIdentification"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -153,9 +153,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFlightIdentification([NotNull] fsr1Parser.FlightIdentificationContext context) { return VisitChildren(context); }
+	public virtual Result VisitFlightIdentification([NotNull] fsrParser.FlightIdentificationContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.airportsOfDepartureAndArrival"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.airportsOfDepartureAndArrival"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -163,9 +163,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAirportsOfDepartureAndArrival([NotNull] fsr1Parser.AirportsOfDepartureAndArrivalContext context) { return VisitChildren(context); }
+	public virtual Result VisitAirportsOfDepartureAndArrival([NotNull] fsrParser.AirportsOfDepartureAndArrivalContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.osiDetails1stLine"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.osiDetails1stLine"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -173,9 +173,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOsiDetails1stLine([NotNull] fsr1Parser.OsiDetails1stLineContext context) { return VisitChildren(context); }
+	public virtual Result VisitOsiDetails1stLine([NotNull] fsrParser.OsiDetails1stLineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.osiDetails2stLine"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.osiDetails2stLine"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -183,9 +183,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOsiDetails2stLine([NotNull] fsr1Parser.OsiDetails2stLineContext context) { return VisitChildren(context); }
+	public virtual Result VisitOsiDetails2stLine([NotNull] fsrParser.OsiDetails2stLineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.flightDate"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.flightDate"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -193,9 +193,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFlightDate([NotNull] fsr1Parser.FlightDateContext context) { return VisitChildren(context); }
+	public virtual Result VisitFlightDate([NotNull] fsrParser.FlightDateContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.standardMessageIdentifier"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.standardMessageIdentifier"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -203,9 +203,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitStandardMessageIdentifier([NotNull] fsr1Parser.StandardMessageIdentifierContext context) { return VisitChildren(context); }
+	public virtual Result VisitStandardMessageIdentifier([NotNull] fsrParser.StandardMessageIdentifierContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.lineIdentifier"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.lineIdentifier"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -213,9 +213,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLineIdentifier([NotNull] fsr1Parser.LineIdentifierContext context) { return VisitChildren(context); }
+	public virtual Result VisitLineIdentifier([NotNull] fsrParser.LineIdentifierContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.airlinePrefix"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.airlinePrefix"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -223,9 +223,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAirlinePrefix([NotNull] fsr1Parser.AirlinePrefixContext context) { return VisitChildren(context); }
+	public virtual Result VisitAirlinePrefix([NotNull] fsrParser.AirlinePrefixContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.awbSerialNumber"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.awbSerialNumber"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -233,9 +233,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAwbSerialNumber([NotNull] fsr1Parser.AwbSerialNumberContext context) { return VisitChildren(context); }
+	public virtual Result VisitAwbSerialNumber([NotNull] fsrParser.AwbSerialNumberContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.shipmentDescriptionCode"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.shipmentDescriptionCode"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -243,9 +243,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitShipmentDescriptionCode([NotNull] fsr1Parser.ShipmentDescriptionCodeContext context) { return VisitChildren(context); }
+	public virtual Result VisitShipmentDescriptionCode([NotNull] fsrParser.ShipmentDescriptionCodeContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.numberOfPieces"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.numberOfPieces"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -253,9 +253,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNumberOfPieces([NotNull] fsr1Parser.NumberOfPiecesContext context) { return VisitChildren(context); }
+	public virtual Result VisitNumberOfPieces([NotNull] fsrParser.NumberOfPiecesContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.weightCode"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.weightCode"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -263,9 +263,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitWeightCode([NotNull] fsr1Parser.WeightCodeContext context) { return VisitChildren(context); }
+	public virtual Result VisitWeightCode([NotNull] fsrParser.WeightCodeContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.weight"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.weight"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -273,9 +273,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitWeight([NotNull] fsr1Parser.WeightContext context) { return VisitChildren(context); }
+	public virtual Result VisitWeight([NotNull] fsrParser.WeightContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.carrierCode"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.carrierCode"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -283,9 +283,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitCarrierCode([NotNull] fsr1Parser.CarrierCodeContext context) { return VisitChildren(context); }
+	public virtual Result VisitCarrierCode([NotNull] fsrParser.CarrierCodeContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.flightNumber"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.flightNumber"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -293,9 +293,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFlightNumber([NotNull] fsr1Parser.FlightNumberContext context) { return VisitChildren(context); }
+	public virtual Result VisitFlightNumber([NotNull] fsrParser.FlightNumberContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.dayOfScheduledDeparture"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.dayOfScheduledDeparture"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -303,9 +303,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDayOfScheduledDeparture([NotNull] fsr1Parser.DayOfScheduledDepartureContext context) { return VisitChildren(context); }
+	public virtual Result VisitDayOfScheduledDeparture([NotNull] fsrParser.DayOfScheduledDepartureContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.monthOfScheduledDeparture"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.monthOfScheduledDeparture"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -313,9 +313,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitMonthOfScheduledDeparture([NotNull] fsr1Parser.MonthOfScheduledDepartureContext context) { return VisitChildren(context); }
+	public virtual Result VisitMonthOfScheduledDeparture([NotNull] fsrParser.MonthOfScheduledDepartureContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.airportCodeOfDeparture"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.airportCodeOfDeparture"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -323,9 +323,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAirportCodeOfDeparture([NotNull] fsr1Parser.AirportCodeOfDepartureContext context) { return VisitChildren(context); }
+	public virtual Result VisitAirportCodeOfDeparture([NotNull] fsrParser.AirportCodeOfDepartureContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.airportCodeOfArrival"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.airportCodeOfArrival"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -333,9 +333,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAirportCodeOfArrival([NotNull] fsr1Parser.AirportCodeOfArrivalContext context) { return VisitChildren(context); }
+	public virtual Result VisitAirportCodeOfArrival([NotNull] fsrParser.AirportCodeOfArrivalContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.airportCodeOfOrigin"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.airportCodeOfOrigin"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -343,9 +343,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAirportCodeOfOrigin([NotNull] fsr1Parser.AirportCodeOfOriginContext context) { return VisitChildren(context); }
+	public virtual Result VisitAirportCodeOfOrigin([NotNull] fsrParser.AirportCodeOfOriginContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.airportCodeOfDestitation"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.airportCodeOfDestitation"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -353,9 +353,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAirportCodeOfDestitation([NotNull] fsr1Parser.AirportCodeOfDestitationContext context) { return VisitChildren(context); }
+	public virtual Result VisitAirportCodeOfDestitation([NotNull] fsrParser.AirportCodeOfDestitationContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.manifestDescriptionOfGoods"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.manifestDescriptionOfGoods"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -363,9 +363,9 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitManifestDescriptionOfGoods([NotNull] fsr1Parser.ManifestDescriptionOfGoodsContext context) { return VisitChildren(context); }
+	public virtual Result VisitManifestDescriptionOfGoods([NotNull] fsrParser.ManifestDescriptionOfGoodsContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="fsr1Parser.osiDescription"/>.
+	/// Visit a parse tree produced by <see cref="fsrParser.osiDescription"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -373,5 +373,5 @@ public partial class fsr1BaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOsiDescription([NotNull] fsr1Parser.OsiDescriptionContext context) { return VisitChildren(context); }
+	public virtual Result VisitOsiDescription([NotNull] fsrParser.OsiDescriptionContext context) { return VisitChildren(context); }
 }

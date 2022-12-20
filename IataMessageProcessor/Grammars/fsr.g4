@@ -1,8 +1,8 @@
 // (FREIGHT BOOKED LIST REQUEST (FSR) MESSAGE)
-grammar fsr1;
+grammar fsr;
 
 
-fsr1:									standardMessageIdentification consignmentDetail flightDetails* otherServiceInformation?;
+fsr:									standardMessageIdentification consignmentDetail flightDetails* otherServiceInformation?;
 
 standardMessageIdentification:			standardMessageIdentifier SeparatorCrlf;
 consignmentDetail:						awbIdentification awbOriginAndDestination? quantityDetail? totalConsignmentPieces? natureOfGoods? SeparatorCrlf;
