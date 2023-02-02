@@ -47,7 +47,7 @@ namespace IataMessageStandard.Fhl5Parts
     public class ShipperNameAndAddress
     {
         [Reference(1)]
-        public string ShpLineIdentifier { get {return "SHP'SeparatorCrlf";} }
+        public string ShpLineIdentifier { get {return "SHP\r\n";} }
 
         [Reference(2)]
         public Name Name { get; set; }
@@ -69,7 +69,7 @@ namespace IataMessageStandard.Fhl5Parts
     public class ConsigneeNameAndAddress
     {
         [Reference(1)]
-        public string CneLineIdentifier { get {return "CNE'SeparatorCrlf";} }
+        public string CneLineIdentifier { get {return "CNE\r\n";} }
 
         [Reference(2)]
         public Name Name { get; set; }
