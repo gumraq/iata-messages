@@ -8,8 +8,8 @@ fhl5:									standardMessageIdentification masterAwbConsignmentDetail houseWayb
 standardMessageIdentification:			standardMessageIdentifier SeparatorSlant messageTypeVersionNumber SeparatorCrlf;
 masterAwbConsignmentDetail:				lineIdentifier SeparatorSlant masterAwbIdentification awbOriginAndDestination quantityDetail SeparatorCrlf;
 houseWaybills:							houseWaybillSummaryDetails+ freeTextDescriptionOfGoods? harmonisedTariffScheduleInformation? otherCustSecurityAndRegulatCtrlInfo?;
-shipperNameAndAddress:					ShpLineIdentifier SeparatorCrlf name streetAddress location codedLocation contactDetail* SeparatorCrlf;
-consigneeNameAndAddress:				CneLineIdentifier SeparatorCrlf name streetAddress location codedLocation contactDetail* SeparatorCrlf;
+shipperNameAndAddress:					ShpLineIdentifier name streetAddress location codedLocation contactDetail* SeparatorCrlf;
+consigneeNameAndAddress:				CneLineIdentifier name streetAddress location codedLocation contactDetail* SeparatorCrlf;
 chargeDeclarations:						lineIdentifier SeparatorSlant isoCurrencyCode SeparatorSlant prepaidCollectChargeDeclarations? SeparatorSlant valueForCarriageDeclaration SeparatorSlant valueForCustomsDeclaration SeparatorSlant valueForInsuranceDeclaration SeparatorCrlf;
 
 /*Вспомогательные элементы*/
@@ -92,8 +92,8 @@ LineIdentifierOsi:						'OSI/';
 LineIdentifierUld:						'ULD/';
 
 HbsLineIdentifier:						'HBS/';
-ShpLineIdentifier:						'SHP';
-CneLineIdentifier:						'CNE';
+ShpLineIdentifier:						'SHP' SeparatorCrlf;
+CneLineIdentifier:						'CNE' SeparatorCrlf;
 NamIdentifier:							'NAM';
 AdrIdentifier:							'ADR';
 LocIdentifier:							'LOC';
