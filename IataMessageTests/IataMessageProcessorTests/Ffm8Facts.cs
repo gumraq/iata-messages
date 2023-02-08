@@ -5,17 +5,17 @@ using IataMessageStandard;
 using Xunit;
 
 
-namespace IataMessageTests
+namespace IataMessageProcessorFacts
 {
-    public class IataMessageProcessorTests
+    public class Ffm8Facts
     {
         private TextMessageParser parser;
         private TextMessageFormatter formatter;
 
-        public IataMessageProcessorTests()
+        public Ffm8Facts()
         {
-            this.parser = new TextMessageParser();
-            this.formatter = new TextMessageFormatter();
+            parser = new TextMessageParser();
+            formatter = new TextMessageFormatter();
         }
 
         [Fact]
@@ -104,11 +104,11 @@ OCI/IE/OSS/RC/QADOH-QR
 /MY//SD/02-DEC-2021 1507
 /MY//ED/0522
 ";
-            Result<object> rObject = this.parser.Parse(fsa15Text);
+            Result<object> rObject = parser.Parse(fsa15Text);
             Assert.NotNull(rObject);
             var fsa15 = rObject.ToResult(o => (Fsa15)o);
 
-            var fsa15TextActual = this.formatter.ToString(fsa15.Value);
+            var fsa15TextActual = formatter.ToString(fsa15.Value);
 
             Assert.Equal(fsa15Text, fsa15TextActual);
         }
@@ -153,11 +153,11 @@ LOC/JAMAICA/NY
 /US/22330/TE/171812344566
 CVD/USD/PP/NVD/5696.00/6346.00
 ";
-            Result<object> rObject = this.parser.Parse(fhl5Text);
+            Result<object> rObject = parser.Parse(fhl5Text);
             Assert.NotNull(rObject);
             var fhl5 = rObject.ToResult(o => (Fhl5)o);
 
-            var fhl5TextActual = this.formatter.ToString(fhl5.Value);
+            var fhl5TextActual = formatter.ToString(fhl5.Value);
 
             Assert.Equal(fhl5Text, fhl5TextActual);
         }
@@ -170,11 +170,11 @@ CVD/USD/PP/NVD/5696.00/6346.00
 FLT/KL775/09FEB/ZRH
 REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
 ";
-            Result<object> rObject = this.parser.Parse(fbr2Text);
+            Result<object> rObject = parser.Parse(fbr2Text);
             Assert.NotNull(rObject);
-            Result<Fbr2> fbr2 = rObject.ToResult(o=>(Fbr2)o);
+            Result<Fbr2> fbr2 = rObject.ToResult(o => (Fbr2)o);
 
-            string fblTextActual = this.formatter.ToString(fbr2.Value);
+            string fblTextActual = formatter.ToString(fbr2.Value);
 
             Assert.Equal(fbr2Text, fblTextActual);
         }
@@ -245,11 +245,11 @@ OCI///ST/DSV AIR SEA CO. LTD. CN1 HAS
 /IT/SHP/T/EUROPEAN VAT NUMBERITIT00748210150
 LAST
 ";
-            Result<object> rObject = this.parser.Parse(fbl4TextOrigin);
+            Result<object> rObject = parser.Parse(fbl4TextOrigin);
             Assert.NotNull(rObject);
-            var fbl4 = rObject.ToResult(o=>(Fbl4) o);
-            
-            string fbl4TextActual = this.formatter.ToString(fbl4.Value);
+            var fbl4 = rObject.ToResult(o => (Fbl4)o);
+
+            string fbl4TextActual = formatter.ToString(fbl4.Value);
 
             Assert.Equal(fbl4TextOrigin, fbl4TextActual);
         }
@@ -309,11 +309,11 @@ ULD/AVM9876KL
 074-53153155HAMRTM/T100K1200MC3/MAGAZINES
 LAST
 ";
-            Result<object> rObject = this.parser.Parse(ffm8OriginText);
+            Result<object> rObject = parser.Parse(ffm8OriginText);
             Assert.NotNull(rObject);
             Result<Ffm8> ffm8 = rObject.ToResult(o => (Ffm8)o);
 
-            string ffm8ActualText = this.formatter.ToString(ffm8.Value);
+            string ffm8ActualText = formatter.ToString(ffm8.Value);
 
             Assert.Equal(ffm8OriginText, ffm8ActualText);
         }
@@ -409,11 +409,11 @@ OCI/GB/ISS/RA/001-011
 ///L/DIPL
 /IT/IMP/M/07IT9876AB88901235
 ";
-            Result<object> rObject = this.parser.Parse(fwb17OriginText);
+            Result<object> rObject = parser.Parse(fwb17OriginText);
             Assert.NotNull(rObject);
-            var fwb17 = rObject.ToResult(o=>(Fwb17)o);
+            var fwb17 = rObject.ToResult(o => (Fwb17)o);
 
-            string fwb17ActualText = this.formatter.ToString(fwb17.Value);
+            string fwb17ActualText = formatter.ToString(fwb17.Value);
 
             Assert.Equal(fwb17OriginText, fwb17ActualText);
         }
@@ -432,11 +432,11 @@ SSR/SPECIALIZED DGR
 OSI/NOT SECURED
 REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
 ";
-            Result<object> rObject = this.parser.Parse(ffa4OriginText);
+            Result<object> rObject = parser.Parse(ffa4OriginText);
             Assert.NotNull(rObject);
-            var ffa4 = rObject.ToResult(o=>(Ffa4)o);
+            var ffa4 = rObject.ToResult(o => (Ffa4)o);
 
-            string ffa4ActualText = this.formatter.ToString(ffa4.Value);
+            string ffa4ActualText = formatter.ToString(ffa4.Value);
 
             Assert.Equal(ffa4OriginText, ffa4ActualText);
         }
@@ -452,11 +452,11 @@ SU//JFKLAX
 OSI/CONSIGNEE IS LOOKING FOR THE TENTH PIECE
 /SAFE TO -6 DEGREE
 ";
-            Result<object> rObject = this.parser.Parse(fsrOriginText);
+            Result<object> rObject = parser.Parse(fsrOriginText);
             Assert.NotNull(rObject);
             var fsr = rObject.ToResult(o => (Fsr)o);
 
-            string fsrActualText = this.formatter.ToString(fsr.Value);
+            string fsrActualText = formatter.ToString(fsr.Value);
 
             Assert.Equal(fsrOriginText, fsrActualText);
         }
