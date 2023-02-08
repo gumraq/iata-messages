@@ -21,7 +21,7 @@ namespace IataMessageProcessorFacts
         [Fact]
         public void ParserAndFormat()
         {
-            string fhl5Text = @"FHL/5
+            string fhl5OriginText = @"FHL/5
 MBI/618-12345675SINJFK/T7K1000
 HBS/AEI12345678/SINJFK/1/K400/4/COMPUTER PARTS
 TXT/MODEL 3 MEMORY BOARDS AND OTHER ASSORTED PARTS
@@ -58,13 +58,15 @@ LOC/JAMAICA/NY
 /US/22330/TE/171812344566
 CVD/USD/PP/NVD/5696.00/6346.00
 ";
-            Result<object> rObject = parser.Parse(fhl5Text);
-            Assert.NotNull(rObject);
-            var fhl5 = rObject.ToResult(o => (Fhl5)o);
+            Result<object> rObject = parser.Parse(fhl5OriginText);
+            Fhl5 fhl5 = rObject.ValueOrDefault as Fhl5;
 
-            var fhl5TextActual = formatter.ToString(fhl5.Value);
+            Assert.NotNull(fhl5);
+            Assert.Empty(rObject.Errors);
 
-            Assert.Equal(fhl5Text, fhl5TextActual);
+            string fhl5TextActual = formatter.ToString(fhl5);
+
+            Assert.Equal(fhl5OriginText, fhl5TextActual);
         }
     }
 }
