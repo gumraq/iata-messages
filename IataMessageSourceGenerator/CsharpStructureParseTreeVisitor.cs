@@ -25,9 +25,9 @@ namespace IataMessageSourceGenerator
         {
             this.SourceCodeStandard();
             this.SourceCodeParts();
-            this.SourceCodeFormatter();
-            this.SourceCodeParser();
-            this.UnusedProperties();
+            //this.SourceCodeFormatter();
+            //this.SourceCodeParser();
+            //this.UnusedProperties();
         }
 
         private async void SourceCodeStandard()
