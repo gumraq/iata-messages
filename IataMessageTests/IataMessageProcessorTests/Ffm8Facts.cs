@@ -1,0 +1,85 @@
+﻿using FluentResults;
+using IataMessageProcessor.Formatters.TextMessages;
+using IataMessageProcessor.Parsers.TextMessages;
+using IataMessageStandard;
+using Xunit;
+
+
+namespace IataMessageProcessorFacts
+{
+    public class Ffm8Facts
+    {
+        private TextMessageParser parser;
+        private TextMessageFormatter formatter;
+
+        public Ffm8Facts()
+        {
+            parser = new TextMessageParser();
+            formatter = new TextMessageFormatter();
+        }
+
+        [Fact]
+        public void ParserAndFormat()
+        {
+            string ffm8OriginText = @"FFM/8
+1/SU1145/01JAN0400/AAQ/VPBLN/RU/01JAN0555/SVO
+SVO/24JUL1105/24JUL1300
+074-12345632HAMAMS/T4K8MC0.16/VIDEO CASSETTES
+/COL/RFL/PIL
+DIM/K25.5/CMT69-68-70/1
+/K15/CMT29-80-47/2
+/YYZKL667/19MAR
+/TAORU
+/G
+OSI/OSI EML-NEAPOLIT JINR.RU   TO  SII - SHEREMETYEVO CARGO J.S.C.
+/HANDLE WITH CARE  DO NOT TILT MORE THAN 40 DEGREES
+COR/X
+OCI/GB/ISS/RA/001-011
+///ED/0213
+/US/AGT/AR/12345678
+//DNR/DR/UN1234 UN2345 UN3456 UN4567 UN6789
+//DNR/DR/UN8901 ID8000
+///LR/DIPL
+/IT/IMP/MH/07IT9876AB88901235
+074-12345641HAMYYZ/T15K160MC0.27/WATCHES
+/YYZKL667/19MAR
+074-12345653HAMAMS/T3K41MC0.2/COMP TERMINALS
+074-12345653HAMAMS/T1K1MC0.01/NEWSFILM
+OCI/GB/ISS/RA/001-011
+///ED/0213
+/US/ISS/AR/12345678
+//DNR/DR/UN1234 UN2345 UN3456 UN4567 UN6789
+//DNR/DR/UN8901 ID8000
+///LR/DIPL
+/IT/IMP/MG/07IT9876AB88901235
+ULD/P1G1234KL-M/HT270WT1658.0ENT
+/LISIB785/19MAR
+/2
+074-12345664HAMLIS/T200K500MC0.53/DIAGNOST.TEST
+074-12345653HAMLIS/T4K10MC0.06/PRESSURE GAUGES
+OSI/OSI EML-NEAPOLIT JINR.RU   TO  SII - SHEREMETYEVO CARGO J.S.C.
+/HANDLE WITH CARE  DO NOT TILT MORE THAN 40 DEGREES
+074-12345686TYOLIS/T3K300MC1.36/RADIOS
+COR/T1
+ULD/AVM9243KL
+074-12345690HAMAMS/T60K900MC2.25/MACHINE PARTS
+RTM
+074-35775331HAMRTM/T1K72MC0.6/PURSES
+OSI/CTC CNE PRIOR TO ARRIVAL
+/DUE TO URGENCE OF DISTRIBUTION
+074-67534415HAMRTM/T10K50MC0.15/BOOKS
+COR/C
+ULD/AVM9876KL
+074-53153155HAMRTM/T100K1200MC3/MAGAZINES
+LAST
+";
+            Result<object> rObject = parser.Parse(ffm8OriginText);
+            Assert.NotNull(rObject);
+            Result<Ffm8> ffm8 = rObject.ToResult(o => (Ffm8)o);
+
+            string ffm8ActualText = formatter.ToString(ffm8.Value);
+
+            Assert.Equal(ffm8OriginText, ffm8ActualText);
+        }
+    }
+}

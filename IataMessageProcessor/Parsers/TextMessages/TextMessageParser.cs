@@ -14,16 +14,34 @@ namespace IataMessageProcessor.Parsers.TextMessages
             try
             {
                 string messageIdentification = DetectMessageIdentification(standardMessage);
-                Func<string, IParseTree> textParser = this.CreateParser(messageIdentification);
+                Func<string, SyntaxErrorListener, IParseTree> textParser = this.CreateParser(messageIdentification);
                 Func<IParseTree, object> treeVisitor = this.CreateVisitor(messageIdentification);
 
-                IParseTree tree = textParser.Invoke(standardMessage);
+                SyntaxErrorListener errorListener = new SyntaxErrorListener();
+                IParseTree tree = textParser.Invoke(standardMessage, errorListener);
                 object message = treeVisitor.Invoke(tree);
-                return Result.Ok(message);
+
+                var result = new Result<object>().WithValue(message);
+                if (errorListener.SyntaxErrors.Any())
+                {
+                    IError error = errorListener.SyntaxErrors
+                        .GroupBy(
+                            se => $"Line:{se.Line:D6}",
+                            (key, ses) => new KeyValuePair<string, Dictionary<string, SyntaxError>>(key, ses
+                                .ToDictionary(
+                                    se => $"Pos:{se.CharPositionInLine:D4}",
+                                    se => se)))
+                        .Aggregate(new Error("Invalid parsing"),
+                            (e, pair) => e.WithMetadata(pair.Key, pair.Value));
+
+                    result.WithError(error);
+                }
+
+                return result;
             }
             catch (Exception ex)
             {
-                return Result.Fail(new Error($"Не удалось разложить сообщение '{standardMessage}'").CausedBy(ex));
+                return Result.Fail(new Error($"Fail parsing '{standardMessage}'").CausedBy(ex));
             }
         }
 
@@ -36,17 +54,17 @@ namespace IataMessageProcessor.Parsers.TextMessages
             return Regex.Replace(firstLine, @"\W", String.Empty).ToLower();
         }
 
-        private Func<string, IParseTree> CreateParser(string messageIdentification)
+        private Func<string, SyntaxErrorListener, IParseTree> CreateParser(string messageIdentification)
         {
             Type parseTreeType = typeof(IParseTree);
             Type parserType = Type.GetType($"{messageIdentification}Parser");
             Type lexerType = Type.GetType($"{messageIdentification}Lexer");
-            if (parserType == null || lexerType==null) throw new ArgumentException($"Незарегистирован тип '{messageIdentification}Parser' или '{messageIdentification}Lexer'");
+            if (parserType == null || lexerType == null) throw new ArgumentException($"Незарегистирован тип '{messageIdentification}Parser' или '{messageIdentification}Lexer'");
 
             LabelTarget target = Expression.Label(parseTreeType);
             MethodInfo methodAddErrorListener = parserType.GetMethods().FirstOrDefault(m => m.Name == "AddErrorListener" && m.GetParameters().Length == 1);
             MethodInfo methodMessage = parserType.GetMethods().FirstOrDefault(m => m.Name == messageIdentification && m.GetParameters().Length == 0);
-            ConstructorInfo constructorAntlrInputStream =  typeof(AntlrInputStream).GetConstructor(new[] { typeof(string) });
+            ConstructorInfo constructorAntlrInputStream = typeof(AntlrInputStream).GetConstructor(new[] { typeof(string) });
             ConstructorInfo constructorLexer = lexerType.GetConstructor(new[] { typeof(ICharStream) });
             ConstructorInfo constructorCommonTokenStream = typeof(CommonTokenStream).GetConstructor(new[] { typeof(ITokenSource) });
             ConstructorInfo constructorParser = parserType.GetConstructor(new[] { typeof(ITokenStream) });
@@ -59,7 +77,6 @@ namespace IataMessageProcessor.Parsers.TextMessages
             ParameterExpression peTokenStream = Expression.Parameter(typeof(ITokenStream), "tokenStream");
             ParameterExpression peParser = Expression.Parameter(parserType, "parser");
 
-            BinaryExpression createErrorListener = Expression.Assign(peErrorListener, Expression.New(typeof(SyntaxErrorListener)));
             BinaryExpression createCharStream = Expression.Assign(peCharStream, Expression.New(constructorAntlrInputStream, peStandardMessage));
             BinaryExpression createTokenSource = Expression.Assign(peTokenSource, Expression.New(constructorLexer, peCharStream));
             BinaryExpression createTokenStream = Expression.Assign(peTokenStream, Expression.New(constructorCommonTokenStream, peTokenSource));
@@ -70,10 +87,10 @@ namespace IataMessageProcessor.Parsers.TextMessages
             LabelExpression labelExpression = Expression.Label(target, Expression.Default(parseTreeType));
 
             BlockExpression body = Expression.Block(
-                new List<ParameterExpression>{ peParseTree , peErrorListener , peCharStream , peTokenSource , peTokenStream , peParser }, 
-                new List<Expression> {createErrorListener, createCharStream, createTokenSource, createTokenStream, createParser, addErrorListener, createParseTree, returnParseTree, labelExpression });
+                new List<ParameterExpression> { peParseTree, peCharStream, peTokenSource, peTokenStream, peParser },
+                new List<Expression> { createCharStream, createTokenSource, createTokenStream, createParser, addErrorListener, createParseTree, returnParseTree, labelExpression });
 
-            Expression<Func<string, IParseTree>> lambda = Expression.Lambda<Func<string, IParseTree>>(body, peStandardMessage);
+            Expression<Func<string, SyntaxErrorListener, IParseTree>> lambda = Expression.Lambda<Func<string, SyntaxErrorListener, IParseTree>>(body, peStandardMessage, peErrorListener);
             return lambda.Compile();
         }
 
