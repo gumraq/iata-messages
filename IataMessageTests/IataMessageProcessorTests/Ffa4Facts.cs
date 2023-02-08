@@ -33,12 +33,14 @@ OSI/NOT SECURED
 REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
 ";
             Result<object> rObject = parser.Parse(ffa4OriginText);
-            Assert.NotNull(rObject);
-            var ffa4 = rObject.ToResult(o => (Ffa4)o);
+            Ffa4 ffa4 = rObject.ValueOrDefault as Ffa4;
 
-            string ffa4ActualText = formatter.ToString(ffa4.Value);
+            Assert.NotNull(ffa4);
+            Assert.Empty(rObject.Errors);
 
-            Assert.Equal(ffa4OriginText, ffa4ActualText);
+            string ffa4TextActual = formatter.ToString(ffa4);
+
+            Assert.Equal(ffa4OriginText, ffa4TextActual);
         }
     }
 }

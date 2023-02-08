@@ -74,12 +74,14 @@ ULD/AVM9876KL
 LAST
 ";
             Result<object> rObject = parser.Parse(ffm8OriginText);
-            Assert.NotNull(rObject);
-            Result<Ffm8> ffm8 = rObject.ToResult(o => (Ffm8)o);
+            Ffm8 ffm8 = rObject.ValueOrDefault as Ffm8;
 
-            string ffm8ActualText = formatter.ToString(ffm8.Value);
+            Assert.NotNull(ffm8);
+            Assert.Empty(rObject.Errors);
 
-            Assert.Equal(ffm8OriginText, ffm8ActualText);
+            string ffm8TextActual = formatter.ToString(ffm8);
+
+            Assert.Equal(ffm8OriginText, ffm8TextActual);
         }
     }
 }

@@ -110,12 +110,14 @@ OCI/GB/ISS/RA/001-011
 /IT/IMP/M/07IT9876AB88901235
 ";
             Result<object> rObject = parser.Parse(fwb17OriginText);
-            Assert.NotNull(rObject);
-            var fwb17 = rObject.ToResult(o => (Fwb17)o);
+            Fwb17 fwb17 = rObject.ValueOrDefault as Fwb17;
 
-            string fwb17ActualText = formatter.ToString(fwb17.Value);
+            Assert.NotNull(fwb17);
+            Assert.Empty(rObject.Errors);
 
-            Assert.Equal(fwb17OriginText, fwb17ActualText);
+            string fwb17TextActual = formatter.ToString(fwb17);
+
+            Assert.Equal(fwb17OriginText, fwb17TextActual);
         }
     }
 }

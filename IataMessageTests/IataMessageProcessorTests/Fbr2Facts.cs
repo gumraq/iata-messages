@@ -26,12 +26,14 @@ FLT/KL775/09FEB/ZRH
 REF//FRA111020090112/AGT/STRECKTRANSPORTGE/FRA
 ";
             Result<object> rObject = parser.Parse(fbr2Text);
-            Assert.NotNull(rObject);
-            Result<Fbr2> fbr2 = rObject.ToResult(o => (Fbr2)o);
+            Fbr2 fbr2 = rObject.ValueOrDefault as Fbr2;
 
-            string fblTextActual = formatter.ToString(fbr2.Value);
+            Assert.NotNull(fbr2);
+            Assert.Empty(rObject.Errors);
 
-            Assert.Equal(fbr2Text, fblTextActual);
+            string fbr2TextActual = formatter.ToString(fbr2);
+
+            Assert.Equal(fbr2Text, fbr2TextActual);
         }
     }
 }

@@ -30,12 +30,14 @@ OSI/CONSIGNEE IS LOOKING FOR THE TENTH PIECE
 /SAFE TO -6 DEGREE
 ";
             Result<object> rObject = parser.Parse(fsrOriginText);
-            Assert.NotNull(rObject);
-            var fsr = rObject.ToResult(o => (Fsr)o);
+            Fsr fsr = rObject.ValueOrDefault as Fsr;
 
-            string fsrActualText = formatter.ToString(fsr.Value);
+            Assert.NotNull(fsr);
+            Assert.Empty(rObject.Errors);
 
-            Assert.Equal(fsrOriginText, fsrActualText);
+            string fsrTextActual = formatter.ToString(fsr);
+
+            Assert.Equal(fsrOriginText, fsrTextActual);
         }
     }
 }

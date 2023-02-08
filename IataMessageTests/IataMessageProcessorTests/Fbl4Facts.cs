@@ -85,10 +85,13 @@ OCI///ST/DSV AIR SEA CO. LTD. CN1 HAS
 LAST
 ";
             Result<object> rObject = parser.Parse(fbl4TextOrigin);
-            Assert.NotNull(rObject);
-            var fbl4 = rObject.ToResult(o => (Fbl4)o);
 
-            string fbl4TextActual = formatter.ToString(fbl4.Value);
+            Fbl4 fbl4 = rObject.ValueOrDefault as Fbl4;
+
+            Assert.NotNull(fbl4);
+            Assert.Empty(rObject.Errors);
+
+            string fbl4TextActual = formatter.ToString(fbl4);
 
             Assert.Equal(fbl4TextOrigin, fbl4TextActual);
         }

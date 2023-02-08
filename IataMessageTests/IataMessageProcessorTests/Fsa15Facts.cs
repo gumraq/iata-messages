@@ -21,7 +21,7 @@ namespace IataMessageProcessorFacts
         [Fact]
         public void ParserAndFormat()
         {
-            string fsa15Text = @"FSA/15
+            string fsa15OriginText = @"FSA/15
 157-72071554PENSVO/T10K4044.0
 RCS/02JAN1403/ALA/T6K150/UTEGENOV SERIK
 /MC2.96
@@ -104,13 +104,15 @@ OCI/IE/OSS/RC/QADOH-QR
 /MY//SD/02-DEC-2021 1507
 /MY//ED/0522
 ";
-            Result<object> rObject = parser.Parse(fsa15Text);
-            Assert.NotNull(rObject);
-            var fsa15 = rObject.ToResult(o => (Fsa15)o);
+            Result<object> rObject = parser.Parse(fsa15OriginText);
+            Fsa15 fsa15 = rObject.ValueOrDefault as Fsa15;
 
-            var fsa15TextActual = formatter.ToString(fsa15.Value);
+            Assert.NotNull(fsa15);
+            Assert.Empty(rObject.Errors);
 
-            Assert.Equal(fsa15Text, fsa15TextActual);
+            string fsa15TextActual = formatter.ToString(fsa15);
+
+            Assert.Equal(fsa15OriginText, fsa15TextActual);
         }
     }
 }
