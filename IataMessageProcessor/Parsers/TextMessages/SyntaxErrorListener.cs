@@ -34,7 +34,7 @@ namespace IataMessageProcessor.Parsers.TextMessages
 
         public override string ToString()
         {
-            return $"Line {Line}:{CharPositionInLine}. Error: {Message}";
+            return this.Message;
         }
     }
 }
