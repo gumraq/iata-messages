@@ -111,10 +111,10 @@ informationIdentifier:					A A A;
 custSecurityAndRegulatCtrlInfoId:		A A?;
 endOfMessageCode:						A A A A;
 aircraftRegistration:					~(SeparatorSlant|SeparatorCrlf)+;
-supplemCustSecurityAndRegulatCtrlInfo:	~(SeparatorCrlf)+;
-manifestDescriptionOfGoods:				~(SeparatorCrlf)+;
-uldRemarksDescription:					~(SeparatorCrlf)+;
-osiDescription:							~(SeparatorCrlf)+;
+supplemCustSecurityAndRegulatCtrlInfo:	~(SeparatorSlant|SeparatorCrlf)+;
+manifestDescriptionOfGoods:				~(SeparatorSlant|SeparatorCrlf)+;
+uldRemarksDescription:					~(SeparatorSlant|SeparatorCrlf)+;
+osiDescription:							~(SeparatorSlant|SeparatorCrlf)+;
 
 
 

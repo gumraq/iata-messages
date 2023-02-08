@@ -1742,6 +1742,10 @@ public partial class fsrParser : Parser {
 	}
 
 	public partial class ManifestDescriptionOfGoodsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fsrParser.SeparatorSlant); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
+			return GetToken(fsrParser.SeparatorSlant, i);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fsrParser.SeparatorCrlf); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
 			return GetToken(fsrParser.SeparatorCrlf, i);
@@ -1775,7 +1779,7 @@ public partial class fsrParser : Parser {
 				{
 				State = 234;
 				_la = TokenStream.LA(1);
-				if ( _la <= 0 || (_la==SeparatorCrlf) ) {
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
 				ErrorHandler.RecoverInline(this);
 				}
 				else {
@@ -1787,7 +1791,7 @@ public partial class fsrParser : Parser {
 				State = 237;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << SeparatorSlant) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -1802,6 +1806,10 @@ public partial class fsrParser : Parser {
 	}
 
 	public partial class OsiDescriptionContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fsrParser.SeparatorSlant); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
+			return GetToken(fsrParser.SeparatorSlant, i);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fsrParser.SeparatorCrlf); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
 			return GetToken(fsrParser.SeparatorCrlf, i);
@@ -1835,7 +1843,7 @@ public partial class fsrParser : Parser {
 				{
 				State = 239;
 				_la = TokenStream.LA(1);
-				if ( _la <= 0 || (_la==SeparatorCrlf) ) {
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
 				ErrorHandler.RecoverInline(this);
 				}
 				else {
@@ -1847,7 +1855,7 @@ public partial class fsrParser : Parser {
 				State = 242;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << SeparatorSlant) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -1881,24 +1889,24 @@ public partial class fsrParser : Parser {
 		1,29,1,29,1,29,1,30,1,30,1,30,1,30,1,31,1,31,1,31,1,31,1,32,4,32,236,8,
 		32,11,32,12,32,237,1,33,4,33,241,8,33,11,33,12,33,242,1,33,0,0,34,0,2,
 		4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,
-		54,56,58,60,62,64,66,0,2,1,0,1,2,1,0,8,8,230,0,68,1,0,0,0,2,79,1,0,0,0,
-		4,82,1,0,0,0,6,97,1,0,0,0,8,102,1,0,0,0,10,107,1,0,0,0,12,111,1,0,0,0,
-		14,114,1,0,0,0,16,120,1,0,0,0,18,123,1,0,0,0,20,126,1,0,0,0,22,129,1,0,
-		0,0,24,137,1,0,0,0,26,140,1,0,0,0,28,144,1,0,0,0,30,148,1,0,0,0,32,151,
-		1,0,0,0,34,155,1,0,0,0,36,159,1,0,0,0,38,163,1,0,0,0,40,172,1,0,0,0,42,
-		174,1,0,0,0,44,184,1,0,0,0,46,187,1,0,0,0,48,199,1,0,0,0,50,202,1,0,0,
-		0,52,211,1,0,0,0,54,214,1,0,0,0,56,218,1,0,0,0,58,222,1,0,0,0,60,226,1,
-		0,0,0,62,230,1,0,0,0,64,235,1,0,0,0,66,240,1,0,0,0,68,69,3,2,1,0,69,73,
-		3,4,2,0,70,72,3,6,3,0,71,70,1,0,0,0,72,75,1,0,0,0,73,71,1,0,0,0,73,74,
-		1,0,0,0,74,77,1,0,0,0,75,73,1,0,0,0,76,78,3,8,4,0,77,76,1,0,0,0,77,78,
-		1,0,0,0,78,1,1,0,0,0,79,80,3,32,16,0,80,81,5,8,0,0,81,3,1,0,0,0,82,84,
-		3,10,5,0,83,85,3,12,6,0,84,83,1,0,0,0,84,85,1,0,0,0,85,87,1,0,0,0,86,88,
-		3,14,7,0,87,86,1,0,0,0,87,88,1,0,0,0,88,90,1,0,0,0,89,91,3,16,8,0,90,89,
-		1,0,0,0,90,91,1,0,0,0,91,93,1,0,0,0,92,94,3,20,10,0,93,92,1,0,0,0,93,94,
-		1,0,0,0,94,95,1,0,0,0,95,96,5,8,0,0,96,5,1,0,0,0,97,98,3,22,11,0,98,99,
-		5,3,0,0,99,100,3,24,12,0,100,101,5,8,0,0,101,7,1,0,0,0,102,103,3,34,17,
-		0,103,105,3,26,13,0,104,106,3,28,14,0,105,104,1,0,0,0,105,106,1,0,0,0,
-		106,9,1,0,0,0,107,108,3,36,18,0,108,109,5,4,0,0,109,110,3,38,19,0,110,
+		54,56,58,60,62,64,66,0,2,1,0,1,2,2,0,3,3,8,8,230,0,68,1,0,0,0,2,79,1,0,
+		0,0,4,82,1,0,0,0,6,97,1,0,0,0,8,102,1,0,0,0,10,107,1,0,0,0,12,111,1,0,
+		0,0,14,114,1,0,0,0,16,120,1,0,0,0,18,123,1,0,0,0,20,126,1,0,0,0,22,129,
+		1,0,0,0,24,137,1,0,0,0,26,140,1,0,0,0,28,144,1,0,0,0,30,148,1,0,0,0,32,
+		151,1,0,0,0,34,155,1,0,0,0,36,159,1,0,0,0,38,163,1,0,0,0,40,172,1,0,0,
+		0,42,174,1,0,0,0,44,184,1,0,0,0,46,187,1,0,0,0,48,199,1,0,0,0,50,202,1,
+		0,0,0,52,211,1,0,0,0,54,214,1,0,0,0,56,218,1,0,0,0,58,222,1,0,0,0,60,226,
+		1,0,0,0,62,230,1,0,0,0,64,235,1,0,0,0,66,240,1,0,0,0,68,69,3,2,1,0,69,
+		73,3,4,2,0,70,72,3,6,3,0,71,70,1,0,0,0,72,75,1,0,0,0,73,71,1,0,0,0,73,
+		74,1,0,0,0,74,77,1,0,0,0,75,73,1,0,0,0,76,78,3,8,4,0,77,76,1,0,0,0,77,
+		78,1,0,0,0,78,1,1,0,0,0,79,80,3,32,16,0,80,81,5,8,0,0,81,3,1,0,0,0,82,
+		84,3,10,5,0,83,85,3,12,6,0,84,83,1,0,0,0,84,85,1,0,0,0,85,87,1,0,0,0,86,
+		88,3,14,7,0,87,86,1,0,0,0,87,88,1,0,0,0,88,90,1,0,0,0,89,91,3,16,8,0,90,
+		89,1,0,0,0,90,91,1,0,0,0,91,93,1,0,0,0,92,94,3,20,10,0,93,92,1,0,0,0,93,
+		94,1,0,0,0,94,95,1,0,0,0,95,96,5,8,0,0,96,5,1,0,0,0,97,98,3,22,11,0,98,
+		99,5,3,0,0,99,100,3,24,12,0,100,101,5,8,0,0,101,7,1,0,0,0,102,103,3,34,
+		17,0,103,105,3,26,13,0,104,106,3,28,14,0,105,104,1,0,0,0,105,106,1,0,0,
+		0,106,9,1,0,0,0,107,108,3,36,18,0,108,109,5,4,0,0,109,110,3,38,19,0,110,
 		11,1,0,0,0,111,112,3,60,30,0,112,113,3,62,31,0,113,13,1,0,0,0,114,115,
 		5,3,0,0,115,116,3,40,20,0,116,118,3,42,21,0,117,119,3,18,9,0,118,117,1,
 		0,0,0,118,119,1,0,0,0,119,15,1,0,0,0,120,121,3,40,20,0,121,122,3,42,21,

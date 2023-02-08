@@ -218,21 +218,21 @@ participantCode:						(A | N)+;
 isoCountryCode:							A A;						
 informationIdentifier:					A A A;
 custSecurityAndRegulatCtrlInfoId:		A A?;
-supplemCustSecurityAndRegulatCtrlInfo:	~SeparatorSlant+;
-fileReference:							~SeparatorSlant+;
-nameInner:								~SeparatorSlant+;
-placeInner:								~SeparatorSlant+;
-referenceNumber:						~SeparatorSlant+;
-innerSupplementaryShipmentInformation:	~SeparatorSlant+;
-signature:								~SeparatorSlant+;
-otherServiceInformationItem:			~SeparatorSlant+;
-specialServiceRequestInner:				~SeparatorSlant+;
-accountingInformationInner:				~SeparatorSlant+;
-accountNumber:							~SeparatorSlant+;
-streetAddressInner:						~SeparatorSlant+;
-stateProvinceInner:						~SeparatorSlant+;
-postCodeInner:							~SeparatorSlant+;
-natureAndQuantityOfGoods:				~SeparatorSlant+;
+supplemCustSecurityAndRegulatCtrlInfo:	~(SeparatorSlant|SeparatorCrlf)+;
+fileReference:							~(SeparatorSlant|SeparatorCrlf)+;
+nameInner:								~(SeparatorSlant|SeparatorCrlf)+;
+placeInner:								~(SeparatorSlant|SeparatorCrlf)+;
+referenceNumber:						~(SeparatorSlant|SeparatorCrlf)+;
+innerSupplementaryShipmentInformation:	~(SeparatorSlant|SeparatorCrlf)+;
+signature:								~(SeparatorSlant|SeparatorCrlf)+;
+otherServiceInformationItem:			~(SeparatorSlant|SeparatorCrlf)+;
+specialServiceRequestInner:				~(SeparatorSlant|SeparatorCrlf)+;
+accountingInformationInner:				~(SeparatorSlant|SeparatorCrlf)+;
+accountNumber:							~(SeparatorSlant|SeparatorCrlf)+;
+streetAddressInner:						~(SeparatorSlant|SeparatorCrlf)+;
+stateProvinceInner:						~(SeparatorSlant|SeparatorCrlf)+;
+postCodeInner:							~(SeparatorSlant|SeparatorCrlf)+;
+natureAndQuantityOfGoods:				~(SeparatorSlant|SeparatorCrlf)+;
 
 
 

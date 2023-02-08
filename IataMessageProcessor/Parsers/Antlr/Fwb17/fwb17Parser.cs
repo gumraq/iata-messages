@@ -2404,14 +2404,14 @@ public partial class fwb17Parser : Parser {
 			Match(SeparatorSlant);
 			State = 725;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,47,Context) ) {
-			case 1:
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0)) {
 				{
 				State = 724;
 				referenceNumber();
 				}
-				break;
 			}
+
 			State = 728;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
@@ -6137,7 +6137,7 @@ public partial class fwb17Parser : Parser {
 			State = 1073;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G) | (1L << SeparatorCrlf))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0)) {
 				{
 				State = 1072;
 				accountNumber();
@@ -6539,14 +6539,14 @@ public partial class fwb17Parser : Parser {
 			Match(SeparatorSlant);
 			State = 1112;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,89,Context) ) {
-			case 1:
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0)) {
 				{
 				State = 1111;
 				senderOfficeFileReference();
 				}
-				break;
 			}
+
 			State = 1115;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
@@ -6750,14 +6750,14 @@ public partial class fwb17Parser : Parser {
 			Match(SeparatorSlant);
 			State = 1132;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,91,Context) ) {
-			case 1:
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0)) {
 				{
 				State = 1131;
 				supplementaryShipmentInformation1();
 				}
-				break;
 			}
+
 			State = 1135;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
@@ -6944,14 +6944,14 @@ public partial class fwb17Parser : Parser {
 			Match(SeparatorSlant);
 			State = 1148;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,93,Context) ) {
-			case 1:
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0)) {
 				{
 				State = 1147;
 				otherParticipantOfficeFileReference();
 				}
-				break;
 			}
+
 			State = 1151;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
@@ -11172,6 +11172,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
+		}
 		public SupplemCustSecurityAndRegulatCtrlInfoContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11191,36 +11195,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 374, RULE_supplemCustSecurityAndRegulatCtrlInfo);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1597;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1596;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1596;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1599;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,170,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11238,6 +11235,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public FileReferenceContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11258,36 +11259,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 376, RULE_fileReference);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1602;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1601;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1601;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1604;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,171,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11305,6 +11299,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public NameInnerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11325,36 +11323,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 378, RULE_nameInner);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1607;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1606;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1606;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1609;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,172,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11372,6 +11363,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public PlaceInnerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11405,7 +11400,7 @@ public partial class fwb17Parser : Parser {
 					{
 					State = 1611;
 					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
+					if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
 					ErrorHandler.RecoverInline(this);
 					}
 					else {
@@ -11440,6 +11435,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
+		}
 		public ReferenceNumberContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -11459,36 +11458,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 382, RULE_referenceNumber);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1617;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1616;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1616;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1619;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,174,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11506,6 +11498,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public InnerSupplementaryShipmentInformationContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11526,36 +11522,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 384, RULE_innerSupplementaryShipmentInformation);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1622;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1621;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1621;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1624;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,175,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11573,6 +11562,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public SignatureContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11593,36 +11586,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 386, RULE_signature);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1627;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1626;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1626;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1629;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,176,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11640,6 +11626,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public OtherServiceInformationItemContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11660,36 +11650,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 388, RULE_otherServiceInformationItem);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1632;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1631;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1631;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1634;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,177,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11707,6 +11690,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public SpecialServiceRequestInnerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11727,36 +11714,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 390, RULE_specialServiceRequestInner);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1637;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1636;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1636;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1639;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,178,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11774,6 +11754,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public AccountingInformationInnerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11794,36 +11778,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 392, RULE_accountingInformationInner);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1642;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1641;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1641;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1644;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,179,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11841,6 +11818,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public AccountNumberContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11861,36 +11842,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 394, RULE_accountNumber);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1647;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1646;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1646;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1649;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,180,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11908,6 +11882,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public StreetAddressInnerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11928,36 +11906,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 396, RULE_streetAddressInner);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1652;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1651;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1651;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1654;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,181,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -11975,6 +11946,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public StateProvinceInnerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -11995,36 +11970,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 398, RULE_stateProvinceInner);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1657;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1656;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1656;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1659;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,182,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -12042,6 +12010,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public PostCodeInnerContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -12062,36 +12034,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 400, RULE_postCodeInner);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1662;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1661;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1661;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1664;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,183,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -12109,6 +12074,10 @@ public partial class fwb17Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(fwb17Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(fwb17Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(fwb17Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(fwb17Parser.SeparatorCrlf, i);
 		}
 		public NatureAndQuantityOfGoodsContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -12129,36 +12098,29 @@ public partial class fwb17Parser : Parser {
 		EnterRule(_localctx, 402, RULE_natureAndQuantityOfGoods);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 1667;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 1666;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 1666;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 1669;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,184,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSri) | (1L << LineIdentifierNom) | (1L << LineIdentifierSii) | (1L << LineIdentifierPpd) | (1L << LineIdentifierCol) | (1L << NamIdentifier) | (1L << AdrIdentifier) | (1L << LocIdentifier) | (1L << GoodsDescriptionIdentifier) | (1L << ConsolidationIdentifier) | (1L << DimensionsIdentifier) | (1L << VolumeIdentifier) | (1L << UldNumberIdentifier) | (1L << ShippersLoadAndCountIdentifier) | (1L << HarmonisedCommodityCodeIdentifier) | (1L << CountryOfOriginOfGoodsIdentifier) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -12327,165 +12289,165 @@ public partial class fwb17Parser : Parser {
 		284,286,288,290,292,294,296,298,300,302,304,306,308,310,312,314,316,318,
 		320,322,324,326,328,330,332,334,336,338,340,342,344,346,348,350,352,354,
 		356,358,360,362,364,366,368,370,372,374,376,378,380,382,384,386,388,390,
-		392,394,396,398,400,402,0,3,1,0,1,2,1,0,21,22,1,0,19,19,1662,0,404,1,0,
-		0,0,2,476,1,0,0,0,4,481,1,0,0,0,6,492,1,0,0,0,8,500,1,0,0,0,10,510,1,0,
-		0,0,12,527,1,0,0,0,14,544,1,0,0,0,16,550,1,0,0,0,18,556,1,0,0,0,20,570,
-		1,0,0,0,22,576,1,0,0,0,24,595,1,0,0,0,26,601,1,0,0,0,28,607,1,0,0,0,30,
-		623,1,0,0,0,32,639,1,0,0,0,34,644,1,0,0,0,36,651,1,0,0,0,38,657,1,0,0,
-		0,40,669,1,0,0,0,42,679,1,0,0,0,44,684,1,0,0,0,46,694,1,0,0,0,48,702,1,
-		0,0,0,50,707,1,0,0,0,52,715,1,0,0,0,54,722,1,0,0,0,56,732,1,0,0,0,58,745,
-		1,0,0,0,60,751,1,0,0,0,62,758,1,0,0,0,64,762,1,0,0,0,66,793,1,0,0,0,68,
-		797,1,0,0,0,70,803,1,0,0,0,72,806,1,0,0,0,74,810,1,0,0,0,76,817,1,0,0,
-		0,78,821,1,0,0,0,80,827,1,0,0,0,82,833,1,0,0,0,84,836,1,0,0,0,86,839,1,
-		0,0,0,88,846,1,0,0,0,90,850,1,0,0,0,92,855,1,0,0,0,94,858,1,0,0,0,96,861,
-		1,0,0,0,98,864,1,0,0,0,100,867,1,0,0,0,102,870,1,0,0,0,104,873,1,0,0,0,
-		106,877,1,0,0,0,108,885,1,0,0,0,110,889,1,0,0,0,112,892,1,0,0,0,114,898,
-		1,0,0,0,116,901,1,0,0,0,118,904,1,0,0,0,120,907,1,0,0,0,122,913,1,0,0,
-		0,124,919,1,0,0,0,126,924,1,0,0,0,128,929,1,0,0,0,130,933,1,0,0,0,132,
-		937,1,0,0,0,134,939,1,0,0,0,136,947,1,0,0,0,138,951,1,0,0,0,140,955,1,
-		0,0,0,142,959,1,0,0,0,144,963,1,0,0,0,146,974,1,0,0,0,148,977,1,0,0,0,
-		150,979,1,0,0,0,152,981,1,0,0,0,154,983,1,0,0,0,156,985,1,0,0,0,158,987,
-		1,0,0,0,160,989,1,0,0,0,162,996,1,0,0,0,164,998,1,0,0,0,166,1001,1,0,0,
-		0,168,1003,1,0,0,0,170,1006,1,0,0,0,172,1008,1,0,0,0,174,1024,1,0,0,0,
-		176,1027,1,0,0,0,178,1033,1,0,0,0,180,1037,1,0,0,0,182,1043,1,0,0,0,184,
-		1047,1,0,0,0,186,1055,1,0,0,0,188,1058,1,0,0,0,190,1063,1,0,0,0,192,1066,
-		1,0,0,0,194,1071,1,0,0,0,196,1080,1,0,0,0,198,1087,1,0,0,0,200,1090,1,
-		0,0,0,202,1092,1,0,0,0,204,1098,1,0,0,0,206,1102,1,0,0,0,208,1106,1,0,
-		0,0,210,1110,1,0,0,0,212,1117,1,0,0,0,214,1121,1,0,0,0,216,1123,1,0,0,
-		0,218,1130,1,0,0,0,220,1137,1,0,0,0,222,1139,1,0,0,0,224,1142,1,0,0,0,
-		226,1146,1,0,0,0,228,1153,1,0,0,0,230,1155,1,0,0,0,232,1162,1,0,0,0,234,
-		1166,1,0,0,0,236,1173,1,0,0,0,238,1177,1,0,0,0,240,1180,1,0,0,0,242,1184,
-		1,0,0,0,244,1193,1,0,0,0,246,1197,1,0,0,0,248,1201,1,0,0,0,250,1203,1,
-		0,0,0,252,1207,1,0,0,0,254,1219,1,0,0,0,256,1222,1,0,0,0,258,1227,1,0,
-		0,0,260,1240,1,0,0,0,262,1253,1,0,0,0,264,1265,1,0,0,0,266,1269,1,0,0,
-		0,268,1277,1,0,0,0,270,1281,1,0,0,0,272,1289,1,0,0,0,274,1294,1,0,0,0,
-		276,1298,1,0,0,0,278,1301,1,0,0,0,280,1305,1,0,0,0,282,1308,1,0,0,0,284,
-		1312,1,0,0,0,286,1321,1,0,0,0,288,1324,1,0,0,0,290,1326,1,0,0,0,292,1330,
-		1,0,0,0,294,1337,1,0,0,0,296,1340,1,0,0,0,298,1354,1,0,0,0,300,1358,1,
-		0,0,0,302,1365,1,0,0,0,304,1378,1,0,0,0,306,1391,1,0,0,0,308,1405,1,0,
-		0,0,310,1418,1,0,0,0,312,1430,1,0,0,0,314,1443,1,0,0,0,316,1450,1,0,0,
-		0,318,1452,1,0,0,0,320,1454,1,0,0,0,322,1461,1,0,0,0,324,1464,1,0,0,0,
-		326,1476,1,0,0,0,328,1480,1,0,0,0,330,1490,1,0,0,0,332,1492,1,0,0,0,334,
-		1496,1,0,0,0,336,1498,1,0,0,0,338,1500,1,0,0,0,340,1503,1,0,0,0,342,1505,
-		1,0,0,0,344,1508,1,0,0,0,346,1513,1,0,0,0,348,1525,1,0,0,0,350,1530,1,
-		0,0,0,352,1543,1,0,0,0,354,1555,1,0,0,0,356,1559,1,0,0,0,358,1563,1,0,
-		0,0,360,1567,1,0,0,0,362,1570,1,0,0,0,364,1573,1,0,0,0,366,1581,1,0,0,
-		0,368,1585,1,0,0,0,370,1588,1,0,0,0,372,1592,1,0,0,0,374,1597,1,0,0,0,
-		376,1602,1,0,0,0,378,1607,1,0,0,0,380,1612,1,0,0,0,382,1617,1,0,0,0,384,
-		1622,1,0,0,0,386,1627,1,0,0,0,388,1632,1,0,0,0,390,1637,1,0,0,0,392,1642,
-		1,0,0,0,394,1647,1,0,0,0,396,1652,1,0,0,0,398,1657,1,0,0,0,400,1662,1,
-		0,0,0,402,1667,1,0,0,0,404,405,3,2,1,0,405,407,3,4,2,0,406,408,3,6,3,0,
-		407,406,1,0,0,0,407,408,1,0,0,0,408,409,1,0,0,0,409,410,3,8,4,0,410,411,
-		3,10,5,0,411,413,3,12,6,0,412,414,3,14,7,0,413,412,1,0,0,0,413,414,1,0,
-		0,0,414,416,1,0,0,0,415,417,3,16,8,0,416,415,1,0,0,0,416,417,1,0,0,0,417,
-		419,1,0,0,0,418,420,3,18,9,0,419,418,1,0,0,0,419,420,1,0,0,0,420,422,1,
-		0,0,0,421,423,3,20,10,0,422,421,1,0,0,0,422,423,1,0,0,0,423,424,1,0,0,
-		0,424,425,3,22,11,0,425,427,3,24,12,0,426,428,3,26,13,0,427,426,1,0,0,
-		0,427,428,1,0,0,0,428,430,1,0,0,0,429,431,3,28,14,0,430,429,1,0,0,0,430,
-		431,1,0,0,0,431,433,1,0,0,0,432,434,3,30,15,0,433,432,1,0,0,0,433,434,
-		1,0,0,0,434,436,1,0,0,0,435,437,3,32,16,0,436,435,1,0,0,0,436,437,1,0,
-		0,0,437,438,1,0,0,0,438,440,3,34,17,0,439,441,3,36,18,0,440,439,1,0,0,
-		0,440,441,1,0,0,0,441,443,1,0,0,0,442,444,3,38,19,0,443,442,1,0,0,0,443,
-		444,1,0,0,0,444,445,1,0,0,0,445,447,3,40,20,0,446,448,3,42,21,0,447,446,
-		1,0,0,0,447,448,1,0,0,0,448,450,1,0,0,0,449,451,3,44,22,0,450,449,1,0,
-		0,0,450,451,1,0,0,0,451,453,1,0,0,0,452,454,3,46,23,0,453,452,1,0,0,0,
-		453,454,1,0,0,0,454,456,1,0,0,0,455,457,3,48,24,0,456,455,1,0,0,0,456,
-		457,1,0,0,0,457,459,1,0,0,0,458,460,3,50,25,0,459,458,1,0,0,0,459,460,
-		1,0,0,0,460,462,1,0,0,0,461,463,3,52,26,0,462,461,1,0,0,0,462,463,1,0,
-		0,0,463,465,1,0,0,0,464,466,3,54,27,0,465,464,1,0,0,0,465,466,1,0,0,0,
-		466,470,1,0,0,0,467,469,3,56,28,0,468,467,1,0,0,0,469,472,1,0,0,0,470,
-		468,1,0,0,0,470,471,1,0,0,0,471,474,1,0,0,0,472,470,1,0,0,0,473,475,3,
-		58,29,0,474,473,1,0,0,0,474,475,1,0,0,0,475,1,1,0,0,0,476,477,3,232,116,
-		0,477,478,5,19,0,0,478,479,3,234,117,0,479,480,5,24,0,0,480,3,1,0,0,0,
-		481,482,3,108,54,0,482,483,3,110,55,0,483,485,3,112,56,0,484,486,3,114,
-		57,0,485,484,1,0,0,0,485,486,1,0,0,0,486,488,1,0,0,0,487,489,3,116,58,
-		0,488,487,1,0,0,0,488,489,1,0,0,0,489,490,1,0,0,0,490,491,5,24,0,0,491,
-		5,1,0,0,0,492,494,3,236,118,0,493,495,3,120,60,0,494,493,1,0,0,0,495,496,
-		1,0,0,0,496,494,1,0,0,0,496,497,1,0,0,0,497,498,1,0,0,0,498,499,5,24,0,
-		0,499,7,1,0,0,0,500,501,3,236,118,0,501,505,3,122,61,0,502,504,3,124,62,
-		0,503,502,1,0,0,0,504,507,1,0,0,0,505,503,1,0,0,0,505,506,1,0,0,0,506,
-		508,1,0,0,0,507,505,1,0,0,0,508,509,5,24,0,0,509,9,1,0,0,0,510,512,3,236,
-		118,0,511,513,3,174,87,0,512,511,1,0,0,0,512,513,1,0,0,0,513,514,1,0,0,
-		0,514,515,5,24,0,0,515,516,3,176,88,0,516,517,3,180,90,0,517,518,3,184,
-		92,0,518,522,3,188,94,0,519,521,3,192,96,0,520,519,1,0,0,0,521,524,1,0,
-		0,0,522,520,1,0,0,0,522,523,1,0,0,0,523,525,1,0,0,0,524,522,1,0,0,0,525,
-		526,5,24,0,0,526,11,1,0,0,0,527,529,3,236,118,0,528,530,3,174,87,0,529,
-		528,1,0,0,0,529,530,1,0,0,0,530,531,1,0,0,0,531,532,5,24,0,0,532,533,3,
-		176,88,0,533,534,3,180,90,0,534,535,3,184,92,0,535,539,3,188,94,0,536,
-		538,3,192,96,0,537,536,1,0,0,0,538,541,1,0,0,0,539,537,1,0,0,0,539,540,
-		1,0,0,0,540,542,1,0,0,0,541,539,1,0,0,0,542,543,5,24,0,0,543,13,1,0,0,
-		0,544,545,3,236,118,0,545,546,3,194,97,0,546,547,5,24,0,0,547,548,3,178,
-		89,0,548,549,3,204,102,0,549,15,1,0,0,0,550,552,3,236,118,0,551,553,3,
-		206,103,0,552,551,1,0,0,0,553,554,1,0,0,0,554,552,1,0,0,0,554,555,1,0,
-		0,0,555,17,1,0,0,0,556,557,3,236,118,0,557,558,5,24,0,0,558,559,3,176,
-		88,0,559,560,3,180,90,0,560,561,3,184,92,0,561,565,3,188,94,0,562,564,
-		3,192,96,0,563,562,1,0,0,0,564,567,1,0,0,0,565,563,1,0,0,0,565,566,1,0,
-		0,0,566,568,1,0,0,0,567,565,1,0,0,0,568,569,5,24,0,0,569,19,1,0,0,0,570,
-		572,3,236,118,0,571,573,3,202,101,0,572,571,1,0,0,0,573,574,1,0,0,0,574,
-		572,1,0,0,0,574,575,1,0,0,0,575,21,1,0,0,0,576,577,3,236,118,0,577,578,
-		5,19,0,0,578,579,3,348,174,0,579,581,5,19,0,0,580,582,3,238,119,0,581,
-		580,1,0,0,0,581,582,1,0,0,0,582,583,1,0,0,0,583,585,5,19,0,0,584,586,3,
-		126,63,0,585,584,1,0,0,0,585,586,1,0,0,0,586,587,1,0,0,0,587,588,5,19,
-		0,0,588,589,3,128,64,0,589,590,5,19,0,0,590,591,3,130,65,0,591,592,5,19,
-		0,0,592,593,3,132,66,0,593,594,5,24,0,0,594,23,1,0,0,0,595,597,3,236,118,
-		0,596,598,3,60,30,0,597,596,1,0,0,0,598,599,1,0,0,0,599,597,1,0,0,0,599,
-		600,1,0,0,0,600,25,1,0,0,0,601,603,3,236,118,0,602,604,3,134,67,0,603,
-		602,1,0,0,0,604,605,1,0,0,0,605,603,1,0,0,0,605,606,1,0,0,0,606,27,1,0,
-		0,0,607,611,5,6,0,0,608,610,3,140,70,0,609,608,1,0,0,0,610,613,1,0,0,0,
-		611,609,1,0,0,0,611,612,1,0,0,0,612,614,1,0,0,0,613,611,1,0,0,0,614,618,
-		5,24,0,0,615,617,3,142,71,0,616,615,1,0,0,0,617,620,1,0,0,0,618,616,1,
-		0,0,0,618,619,1,0,0,0,619,621,1,0,0,0,620,618,1,0,0,0,621,622,5,24,0,0,
-		622,29,1,0,0,0,623,627,5,7,0,0,624,626,3,140,70,0,625,624,1,0,0,0,626,
-		629,1,0,0,0,627,625,1,0,0,0,627,628,1,0,0,0,628,630,1,0,0,0,629,627,1,
-		0,0,0,630,634,5,24,0,0,631,633,3,142,71,0,632,631,1,0,0,0,633,636,1,0,
-		0,0,634,632,1,0,0,0,634,635,1,0,0,0,635,637,1,0,0,0,636,634,1,0,0,0,637,
-		638,5,24,0,0,638,31,1,0,0,0,639,640,3,236,118,0,640,641,5,19,0,0,641,642,
-		3,386,193,0,642,643,5,24,0,0,643,33,1,0,0,0,644,645,3,236,118,0,645,647,
-		3,144,72,0,646,648,3,146,73,0,647,646,1,0,0,0,647,648,1,0,0,0,648,649,
-		1,0,0,0,649,650,5,24,0,0,650,35,1,0,0,0,651,653,3,236,118,0,652,654,3,
-		208,104,0,653,652,1,0,0,0,654,655,1,0,0,0,655,653,1,0,0,0,655,656,1,0,
-		0,0,656,37,1,0,0,0,657,658,3,236,118,0,658,659,5,19,0,0,659,660,3,148,
-		74,0,660,661,3,150,75,0,661,662,5,19,0,0,662,663,3,152,76,0,663,664,5,
-		19,0,0,664,665,3,154,77,0,665,666,5,19,0,0,666,667,3,156,78,0,667,668,
-		5,24,0,0,668,39,1,0,0,0,669,670,3,236,118,0,670,672,5,19,0,0,671,673,3,
-		212,106,0,672,671,1,0,0,0,672,673,1,0,0,0,673,675,1,0,0,0,674,676,3,210,
-		105,0,675,674,1,0,0,0,675,676,1,0,0,0,676,677,1,0,0,0,677,678,5,24,0,0,
-		678,41,1,0,0,0,679,680,3,236,118,0,680,681,5,19,0,0,681,682,3,344,172,
-		0,682,683,5,24,0,0,683,43,1,0,0,0,684,685,3,236,118,0,685,687,5,19,0,0,
-		686,688,3,158,79,0,687,686,1,0,0,0,687,688,1,0,0,0,688,690,1,0,0,0,689,
-		691,3,160,80,0,690,689,1,0,0,0,690,691,1,0,0,0,691,692,1,0,0,0,692,693,
-		5,24,0,0,693,45,1,0,0,0,694,695,5,5,0,0,695,696,5,19,0,0,696,698,3,166,
-		83,0,697,699,3,168,84,0,698,697,1,0,0,0,698,699,1,0,0,0,699,700,1,0,0,
-		0,700,701,5,24,0,0,701,47,1,0,0,0,702,703,3,236,118,0,703,704,5,19,0,0,
-		704,705,3,170,85,0,705,706,5,24,0,0,706,49,1,0,0,0,707,709,3,236,118,0,
-		708,710,3,118,59,0,709,708,1,0,0,0,710,711,1,0,0,0,711,709,1,0,0,0,711,
-		712,1,0,0,0,712,713,1,0,0,0,713,714,5,24,0,0,714,51,1,0,0,0,715,716,5,
-		4,0,0,716,717,5,19,0,0,717,718,3,378,189,0,718,719,5,19,0,0,719,720,3,
-		380,190,0,720,721,5,24,0,0,721,53,1,0,0,0,722,723,5,3,0,0,723,725,5,19,
-		0,0,724,726,3,382,191,0,725,724,1,0,0,0,725,726,1,0,0,0,726,728,1,0,0,
-		0,727,729,3,218,109,0,728,727,1,0,0,0,728,729,1,0,0,0,729,730,1,0,0,0,
-		730,731,5,24,0,0,731,55,1,0,0,0,732,733,3,236,118,0,733,734,5,19,0,0,734,
-		735,3,378,189,0,735,736,5,24,0,0,736,738,5,19,0,0,737,739,3,224,112,0,
-		738,737,1,0,0,0,738,739,1,0,0,0,739,741,1,0,0,0,740,742,3,226,113,0,741,
-		740,1,0,0,0,741,742,1,0,0,0,742,743,1,0,0,0,743,744,5,24,0,0,744,57,1,
-		0,0,0,745,747,3,236,118,0,746,748,3,172,86,0,747,746,1,0,0,0,748,749,1,
-		0,0,0,749,747,1,0,0,0,749,750,1,0,0,0,750,59,1,0,0,0,751,753,3,62,31,0,
-		752,754,3,64,32,0,753,752,1,0,0,0,753,754,1,0,0,0,754,756,1,0,0,0,755,
-		757,3,66,33,0,756,755,1,0,0,0,756,757,1,0,0,0,757,61,1,0,0,0,758,759,5,
-		19,0,0,759,760,3,332,166,0,760,63,1,0,0,0,761,763,3,68,34,0,762,761,1,
-		0,0,0,762,763,1,0,0,0,763,765,1,0,0,0,764,766,3,70,35,0,765,764,1,0,0,
-		0,765,766,1,0,0,0,766,768,1,0,0,0,767,769,3,72,36,0,768,767,1,0,0,0,768,
-		769,1,0,0,0,769,771,1,0,0,0,770,772,3,74,37,0,771,770,1,0,0,0,771,772,
-		1,0,0,0,772,774,1,0,0,0,773,775,3,76,38,0,774,773,1,0,0,0,774,775,1,0,
-		0,0,775,777,1,0,0,0,776,778,3,78,39,0,777,776,1,0,0,0,777,778,1,0,0,0,
-		778,780,1,0,0,0,779,781,3,80,40,0,780,779,1,0,0,0,780,781,1,0,0,0,781,
-		782,1,0,0,0,782,783,5,24,0,0,783,65,1,0,0,0,784,794,3,82,41,0,785,794,
-		3,84,42,0,786,794,3,86,43,0,787,794,3,88,44,0,788,794,3,90,45,0,789,794,
-		3,92,46,0,790,794,3,94,47,0,791,794,3,96,48,0,792,794,3,98,49,0,793,784,
-		1,0,0,0,793,785,1,0,0,0,793,786,1,0,0,0,793,787,1,0,0,0,793,788,1,0,0,
-		0,793,789,1,0,0,0,793,790,1,0,0,0,793,791,1,0,0,0,793,792,1,0,0,0,794,
-		795,1,0,0,0,795,796,5,24,0,0,796,67,1,0,0,0,797,798,5,19,0,0,798,801,3,
-		330,165,0,799,802,3,328,164,0,800,802,3,326,163,0,801,799,1,0,0,0,801,
+		392,394,396,398,400,402,0,3,1,0,1,2,1,0,21,22,2,0,19,19,24,24,1662,0,404,
+		1,0,0,0,2,476,1,0,0,0,4,481,1,0,0,0,6,492,1,0,0,0,8,500,1,0,0,0,10,510,
+		1,0,0,0,12,527,1,0,0,0,14,544,1,0,0,0,16,550,1,0,0,0,18,556,1,0,0,0,20,
+		570,1,0,0,0,22,576,1,0,0,0,24,595,1,0,0,0,26,601,1,0,0,0,28,607,1,0,0,
+		0,30,623,1,0,0,0,32,639,1,0,0,0,34,644,1,0,0,0,36,651,1,0,0,0,38,657,1,
+		0,0,0,40,669,1,0,0,0,42,679,1,0,0,0,44,684,1,0,0,0,46,694,1,0,0,0,48,702,
+		1,0,0,0,50,707,1,0,0,0,52,715,1,0,0,0,54,722,1,0,0,0,56,732,1,0,0,0,58,
+		745,1,0,0,0,60,751,1,0,0,0,62,758,1,0,0,0,64,762,1,0,0,0,66,793,1,0,0,
+		0,68,797,1,0,0,0,70,803,1,0,0,0,72,806,1,0,0,0,74,810,1,0,0,0,76,817,1,
+		0,0,0,78,821,1,0,0,0,80,827,1,0,0,0,82,833,1,0,0,0,84,836,1,0,0,0,86,839,
+		1,0,0,0,88,846,1,0,0,0,90,850,1,0,0,0,92,855,1,0,0,0,94,858,1,0,0,0,96,
+		861,1,0,0,0,98,864,1,0,0,0,100,867,1,0,0,0,102,870,1,0,0,0,104,873,1,0,
+		0,0,106,877,1,0,0,0,108,885,1,0,0,0,110,889,1,0,0,0,112,892,1,0,0,0,114,
+		898,1,0,0,0,116,901,1,0,0,0,118,904,1,0,0,0,120,907,1,0,0,0,122,913,1,
+		0,0,0,124,919,1,0,0,0,126,924,1,0,0,0,128,929,1,0,0,0,130,933,1,0,0,0,
+		132,937,1,0,0,0,134,939,1,0,0,0,136,947,1,0,0,0,138,951,1,0,0,0,140,955,
+		1,0,0,0,142,959,1,0,0,0,144,963,1,0,0,0,146,974,1,0,0,0,148,977,1,0,0,
+		0,150,979,1,0,0,0,152,981,1,0,0,0,154,983,1,0,0,0,156,985,1,0,0,0,158,
+		987,1,0,0,0,160,989,1,0,0,0,162,996,1,0,0,0,164,998,1,0,0,0,166,1001,1,
+		0,0,0,168,1003,1,0,0,0,170,1006,1,0,0,0,172,1008,1,0,0,0,174,1024,1,0,
+		0,0,176,1027,1,0,0,0,178,1033,1,0,0,0,180,1037,1,0,0,0,182,1043,1,0,0,
+		0,184,1047,1,0,0,0,186,1055,1,0,0,0,188,1058,1,0,0,0,190,1063,1,0,0,0,
+		192,1066,1,0,0,0,194,1071,1,0,0,0,196,1080,1,0,0,0,198,1087,1,0,0,0,200,
+		1090,1,0,0,0,202,1092,1,0,0,0,204,1098,1,0,0,0,206,1102,1,0,0,0,208,1106,
+		1,0,0,0,210,1110,1,0,0,0,212,1117,1,0,0,0,214,1121,1,0,0,0,216,1123,1,
+		0,0,0,218,1130,1,0,0,0,220,1137,1,0,0,0,222,1139,1,0,0,0,224,1142,1,0,
+		0,0,226,1146,1,0,0,0,228,1153,1,0,0,0,230,1155,1,0,0,0,232,1162,1,0,0,
+		0,234,1166,1,0,0,0,236,1173,1,0,0,0,238,1177,1,0,0,0,240,1180,1,0,0,0,
+		242,1184,1,0,0,0,244,1193,1,0,0,0,246,1197,1,0,0,0,248,1201,1,0,0,0,250,
+		1203,1,0,0,0,252,1207,1,0,0,0,254,1219,1,0,0,0,256,1222,1,0,0,0,258,1227,
+		1,0,0,0,260,1240,1,0,0,0,262,1253,1,0,0,0,264,1265,1,0,0,0,266,1269,1,
+		0,0,0,268,1277,1,0,0,0,270,1281,1,0,0,0,272,1289,1,0,0,0,274,1294,1,0,
+		0,0,276,1298,1,0,0,0,278,1301,1,0,0,0,280,1305,1,0,0,0,282,1308,1,0,0,
+		0,284,1312,1,0,0,0,286,1321,1,0,0,0,288,1324,1,0,0,0,290,1326,1,0,0,0,
+		292,1330,1,0,0,0,294,1337,1,0,0,0,296,1340,1,0,0,0,298,1354,1,0,0,0,300,
+		1358,1,0,0,0,302,1365,1,0,0,0,304,1378,1,0,0,0,306,1391,1,0,0,0,308,1405,
+		1,0,0,0,310,1418,1,0,0,0,312,1430,1,0,0,0,314,1443,1,0,0,0,316,1450,1,
+		0,0,0,318,1452,1,0,0,0,320,1454,1,0,0,0,322,1461,1,0,0,0,324,1464,1,0,
+		0,0,326,1476,1,0,0,0,328,1480,1,0,0,0,330,1490,1,0,0,0,332,1492,1,0,0,
+		0,334,1496,1,0,0,0,336,1498,1,0,0,0,338,1500,1,0,0,0,340,1503,1,0,0,0,
+		342,1505,1,0,0,0,344,1508,1,0,0,0,346,1513,1,0,0,0,348,1525,1,0,0,0,350,
+		1530,1,0,0,0,352,1543,1,0,0,0,354,1555,1,0,0,0,356,1559,1,0,0,0,358,1563,
+		1,0,0,0,360,1567,1,0,0,0,362,1570,1,0,0,0,364,1573,1,0,0,0,366,1581,1,
+		0,0,0,368,1585,1,0,0,0,370,1588,1,0,0,0,372,1592,1,0,0,0,374,1597,1,0,
+		0,0,376,1602,1,0,0,0,378,1607,1,0,0,0,380,1612,1,0,0,0,382,1617,1,0,0,
+		0,384,1622,1,0,0,0,386,1627,1,0,0,0,388,1632,1,0,0,0,390,1637,1,0,0,0,
+		392,1642,1,0,0,0,394,1647,1,0,0,0,396,1652,1,0,0,0,398,1657,1,0,0,0,400,
+		1662,1,0,0,0,402,1667,1,0,0,0,404,405,3,2,1,0,405,407,3,4,2,0,406,408,
+		3,6,3,0,407,406,1,0,0,0,407,408,1,0,0,0,408,409,1,0,0,0,409,410,3,8,4,
+		0,410,411,3,10,5,0,411,413,3,12,6,0,412,414,3,14,7,0,413,412,1,0,0,0,413,
+		414,1,0,0,0,414,416,1,0,0,0,415,417,3,16,8,0,416,415,1,0,0,0,416,417,1,
+		0,0,0,417,419,1,0,0,0,418,420,3,18,9,0,419,418,1,0,0,0,419,420,1,0,0,0,
+		420,422,1,0,0,0,421,423,3,20,10,0,422,421,1,0,0,0,422,423,1,0,0,0,423,
+		424,1,0,0,0,424,425,3,22,11,0,425,427,3,24,12,0,426,428,3,26,13,0,427,
+		426,1,0,0,0,427,428,1,0,0,0,428,430,1,0,0,0,429,431,3,28,14,0,430,429,
+		1,0,0,0,430,431,1,0,0,0,431,433,1,0,0,0,432,434,3,30,15,0,433,432,1,0,
+		0,0,433,434,1,0,0,0,434,436,1,0,0,0,435,437,3,32,16,0,436,435,1,0,0,0,
+		436,437,1,0,0,0,437,438,1,0,0,0,438,440,3,34,17,0,439,441,3,36,18,0,440,
+		439,1,0,0,0,440,441,1,0,0,0,441,443,1,0,0,0,442,444,3,38,19,0,443,442,
+		1,0,0,0,443,444,1,0,0,0,444,445,1,0,0,0,445,447,3,40,20,0,446,448,3,42,
+		21,0,447,446,1,0,0,0,447,448,1,0,0,0,448,450,1,0,0,0,449,451,3,44,22,0,
+		450,449,1,0,0,0,450,451,1,0,0,0,451,453,1,0,0,0,452,454,3,46,23,0,453,
+		452,1,0,0,0,453,454,1,0,0,0,454,456,1,0,0,0,455,457,3,48,24,0,456,455,
+		1,0,0,0,456,457,1,0,0,0,457,459,1,0,0,0,458,460,3,50,25,0,459,458,1,0,
+		0,0,459,460,1,0,0,0,460,462,1,0,0,0,461,463,3,52,26,0,462,461,1,0,0,0,
+		462,463,1,0,0,0,463,465,1,0,0,0,464,466,3,54,27,0,465,464,1,0,0,0,465,
+		466,1,0,0,0,466,470,1,0,0,0,467,469,3,56,28,0,468,467,1,0,0,0,469,472,
+		1,0,0,0,470,468,1,0,0,0,470,471,1,0,0,0,471,474,1,0,0,0,472,470,1,0,0,
+		0,473,475,3,58,29,0,474,473,1,0,0,0,474,475,1,0,0,0,475,1,1,0,0,0,476,
+		477,3,232,116,0,477,478,5,19,0,0,478,479,3,234,117,0,479,480,5,24,0,0,
+		480,3,1,0,0,0,481,482,3,108,54,0,482,483,3,110,55,0,483,485,3,112,56,0,
+		484,486,3,114,57,0,485,484,1,0,0,0,485,486,1,0,0,0,486,488,1,0,0,0,487,
+		489,3,116,58,0,488,487,1,0,0,0,488,489,1,0,0,0,489,490,1,0,0,0,490,491,
+		5,24,0,0,491,5,1,0,0,0,492,494,3,236,118,0,493,495,3,120,60,0,494,493,
+		1,0,0,0,495,496,1,0,0,0,496,494,1,0,0,0,496,497,1,0,0,0,497,498,1,0,0,
+		0,498,499,5,24,0,0,499,7,1,0,0,0,500,501,3,236,118,0,501,505,3,122,61,
+		0,502,504,3,124,62,0,503,502,1,0,0,0,504,507,1,0,0,0,505,503,1,0,0,0,505,
+		506,1,0,0,0,506,508,1,0,0,0,507,505,1,0,0,0,508,509,5,24,0,0,509,9,1,0,
+		0,0,510,512,3,236,118,0,511,513,3,174,87,0,512,511,1,0,0,0,512,513,1,0,
+		0,0,513,514,1,0,0,0,514,515,5,24,0,0,515,516,3,176,88,0,516,517,3,180,
+		90,0,517,518,3,184,92,0,518,522,3,188,94,0,519,521,3,192,96,0,520,519,
+		1,0,0,0,521,524,1,0,0,0,522,520,1,0,0,0,522,523,1,0,0,0,523,525,1,0,0,
+		0,524,522,1,0,0,0,525,526,5,24,0,0,526,11,1,0,0,0,527,529,3,236,118,0,
+		528,530,3,174,87,0,529,528,1,0,0,0,529,530,1,0,0,0,530,531,1,0,0,0,531,
+		532,5,24,0,0,532,533,3,176,88,0,533,534,3,180,90,0,534,535,3,184,92,0,
+		535,539,3,188,94,0,536,538,3,192,96,0,537,536,1,0,0,0,538,541,1,0,0,0,
+		539,537,1,0,0,0,539,540,1,0,0,0,540,542,1,0,0,0,541,539,1,0,0,0,542,543,
+		5,24,0,0,543,13,1,0,0,0,544,545,3,236,118,0,545,546,3,194,97,0,546,547,
+		5,24,0,0,547,548,3,178,89,0,548,549,3,204,102,0,549,15,1,0,0,0,550,552,
+		3,236,118,0,551,553,3,206,103,0,552,551,1,0,0,0,553,554,1,0,0,0,554,552,
+		1,0,0,0,554,555,1,0,0,0,555,17,1,0,0,0,556,557,3,236,118,0,557,558,5,24,
+		0,0,558,559,3,176,88,0,559,560,3,180,90,0,560,561,3,184,92,0,561,565,3,
+		188,94,0,562,564,3,192,96,0,563,562,1,0,0,0,564,567,1,0,0,0,565,563,1,
+		0,0,0,565,566,1,0,0,0,566,568,1,0,0,0,567,565,1,0,0,0,568,569,5,24,0,0,
+		569,19,1,0,0,0,570,572,3,236,118,0,571,573,3,202,101,0,572,571,1,0,0,0,
+		573,574,1,0,0,0,574,572,1,0,0,0,574,575,1,0,0,0,575,21,1,0,0,0,576,577,
+		3,236,118,0,577,578,5,19,0,0,578,579,3,348,174,0,579,581,5,19,0,0,580,
+		582,3,238,119,0,581,580,1,0,0,0,581,582,1,0,0,0,582,583,1,0,0,0,583,585,
+		5,19,0,0,584,586,3,126,63,0,585,584,1,0,0,0,585,586,1,0,0,0,586,587,1,
+		0,0,0,587,588,5,19,0,0,588,589,3,128,64,0,589,590,5,19,0,0,590,591,3,130,
+		65,0,591,592,5,19,0,0,592,593,3,132,66,0,593,594,5,24,0,0,594,23,1,0,0,
+		0,595,597,3,236,118,0,596,598,3,60,30,0,597,596,1,0,0,0,598,599,1,0,0,
+		0,599,597,1,0,0,0,599,600,1,0,0,0,600,25,1,0,0,0,601,603,3,236,118,0,602,
+		604,3,134,67,0,603,602,1,0,0,0,604,605,1,0,0,0,605,603,1,0,0,0,605,606,
+		1,0,0,0,606,27,1,0,0,0,607,611,5,6,0,0,608,610,3,140,70,0,609,608,1,0,
+		0,0,610,613,1,0,0,0,611,609,1,0,0,0,611,612,1,0,0,0,612,614,1,0,0,0,613,
+		611,1,0,0,0,614,618,5,24,0,0,615,617,3,142,71,0,616,615,1,0,0,0,617,620,
+		1,0,0,0,618,616,1,0,0,0,618,619,1,0,0,0,619,621,1,0,0,0,620,618,1,0,0,
+		0,621,622,5,24,0,0,622,29,1,0,0,0,623,627,5,7,0,0,624,626,3,140,70,0,625,
+		624,1,0,0,0,626,629,1,0,0,0,627,625,1,0,0,0,627,628,1,0,0,0,628,630,1,
+		0,0,0,629,627,1,0,0,0,630,634,5,24,0,0,631,633,3,142,71,0,632,631,1,0,
+		0,0,633,636,1,0,0,0,634,632,1,0,0,0,634,635,1,0,0,0,635,637,1,0,0,0,636,
+		634,1,0,0,0,637,638,5,24,0,0,638,31,1,0,0,0,639,640,3,236,118,0,640,641,
+		5,19,0,0,641,642,3,386,193,0,642,643,5,24,0,0,643,33,1,0,0,0,644,645,3,
+		236,118,0,645,647,3,144,72,0,646,648,3,146,73,0,647,646,1,0,0,0,647,648,
+		1,0,0,0,648,649,1,0,0,0,649,650,5,24,0,0,650,35,1,0,0,0,651,653,3,236,
+		118,0,652,654,3,208,104,0,653,652,1,0,0,0,654,655,1,0,0,0,655,653,1,0,
+		0,0,655,656,1,0,0,0,656,37,1,0,0,0,657,658,3,236,118,0,658,659,5,19,0,
+		0,659,660,3,148,74,0,660,661,3,150,75,0,661,662,5,19,0,0,662,663,3,152,
+		76,0,663,664,5,19,0,0,664,665,3,154,77,0,665,666,5,19,0,0,666,667,3,156,
+		78,0,667,668,5,24,0,0,668,39,1,0,0,0,669,670,3,236,118,0,670,672,5,19,
+		0,0,671,673,3,212,106,0,672,671,1,0,0,0,672,673,1,0,0,0,673,675,1,0,0,
+		0,674,676,3,210,105,0,675,674,1,0,0,0,675,676,1,0,0,0,676,677,1,0,0,0,
+		677,678,5,24,0,0,678,41,1,0,0,0,679,680,3,236,118,0,680,681,5,19,0,0,681,
+		682,3,344,172,0,682,683,5,24,0,0,683,43,1,0,0,0,684,685,3,236,118,0,685,
+		687,5,19,0,0,686,688,3,158,79,0,687,686,1,0,0,0,687,688,1,0,0,0,688,690,
+		1,0,0,0,689,691,3,160,80,0,690,689,1,0,0,0,690,691,1,0,0,0,691,692,1,0,
+		0,0,692,693,5,24,0,0,693,45,1,0,0,0,694,695,5,5,0,0,695,696,5,19,0,0,696,
+		698,3,166,83,0,697,699,3,168,84,0,698,697,1,0,0,0,698,699,1,0,0,0,699,
+		700,1,0,0,0,700,701,5,24,0,0,701,47,1,0,0,0,702,703,3,236,118,0,703,704,
+		5,19,0,0,704,705,3,170,85,0,705,706,5,24,0,0,706,49,1,0,0,0,707,709,3,
+		236,118,0,708,710,3,118,59,0,709,708,1,0,0,0,710,711,1,0,0,0,711,709,1,
+		0,0,0,711,712,1,0,0,0,712,713,1,0,0,0,713,714,5,24,0,0,714,51,1,0,0,0,
+		715,716,5,4,0,0,716,717,5,19,0,0,717,718,3,378,189,0,718,719,5,19,0,0,
+		719,720,3,380,190,0,720,721,5,24,0,0,721,53,1,0,0,0,722,723,5,3,0,0,723,
+		725,5,19,0,0,724,726,3,382,191,0,725,724,1,0,0,0,725,726,1,0,0,0,726,728,
+		1,0,0,0,727,729,3,218,109,0,728,727,1,0,0,0,728,729,1,0,0,0,729,730,1,
+		0,0,0,730,731,5,24,0,0,731,55,1,0,0,0,732,733,3,236,118,0,733,734,5,19,
+		0,0,734,735,3,378,189,0,735,736,5,24,0,0,736,738,5,19,0,0,737,739,3,224,
+		112,0,738,737,1,0,0,0,738,739,1,0,0,0,739,741,1,0,0,0,740,742,3,226,113,
+		0,741,740,1,0,0,0,741,742,1,0,0,0,742,743,1,0,0,0,743,744,5,24,0,0,744,
+		57,1,0,0,0,745,747,3,236,118,0,746,748,3,172,86,0,747,746,1,0,0,0,748,
+		749,1,0,0,0,749,747,1,0,0,0,749,750,1,0,0,0,750,59,1,0,0,0,751,753,3,62,
+		31,0,752,754,3,64,32,0,753,752,1,0,0,0,753,754,1,0,0,0,754,756,1,0,0,0,
+		755,757,3,66,33,0,756,755,1,0,0,0,756,757,1,0,0,0,757,61,1,0,0,0,758,759,
+		5,19,0,0,759,760,3,332,166,0,760,63,1,0,0,0,761,763,3,68,34,0,762,761,
+		1,0,0,0,762,763,1,0,0,0,763,765,1,0,0,0,764,766,3,70,35,0,765,764,1,0,
+		0,0,765,766,1,0,0,0,766,768,1,0,0,0,767,769,3,72,36,0,768,767,1,0,0,0,
+		768,769,1,0,0,0,769,771,1,0,0,0,770,772,3,74,37,0,771,770,1,0,0,0,771,
+		772,1,0,0,0,772,774,1,0,0,0,773,775,3,76,38,0,774,773,1,0,0,0,774,775,
+		1,0,0,0,775,777,1,0,0,0,776,778,3,78,39,0,777,776,1,0,0,0,777,778,1,0,
+		0,0,778,780,1,0,0,0,779,781,3,80,40,0,780,779,1,0,0,0,780,781,1,0,0,0,
+		781,782,1,0,0,0,782,783,5,24,0,0,783,65,1,0,0,0,784,794,3,82,41,0,785,
+		794,3,84,42,0,786,794,3,86,43,0,787,794,3,88,44,0,788,794,3,90,45,0,789,
+		794,3,92,46,0,790,794,3,94,47,0,791,794,3,96,48,0,792,794,3,98,49,0,793,
+		784,1,0,0,0,793,785,1,0,0,0,793,786,1,0,0,0,793,787,1,0,0,0,793,788,1,
+		0,0,0,793,789,1,0,0,0,793,790,1,0,0,0,793,791,1,0,0,0,793,792,1,0,0,0,
+		794,795,1,0,0,0,795,796,5,24,0,0,796,67,1,0,0,0,797,798,5,19,0,0,798,801,
+		3,330,165,0,799,802,3,328,164,0,800,802,3,326,163,0,801,799,1,0,0,0,801,
 		800,1,0,0,0,802,69,1,0,0,0,803,804,5,19,0,0,804,805,3,102,51,0,805,71,
 		1,0,0,0,806,807,5,19,0,0,807,808,3,330,165,0,808,809,3,318,159,0,809,73,
 		1,0,0,0,810,811,5,19,0,0,811,815,3,330,165,0,812,816,3,312,156,0,813,816,

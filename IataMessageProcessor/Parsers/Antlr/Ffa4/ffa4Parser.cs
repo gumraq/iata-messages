@@ -661,14 +661,14 @@ public partial class ffa4Parser : Parser {
 			Match(SeparatorSlant);
 			State = 194;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,12,Context) ) {
-			case 1:
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0)) {
 				{
 				State = 193;
 				referenceNumber();
 				}
-				break;
 			}
+
 			State = 197;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
@@ -1541,14 +1541,14 @@ public partial class ffa4Parser : Parser {
 			Match(SeparatorSlant);
 			State = 273;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,16,Context) ) {
-			case 1:
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0)) {
 				{
 				State = 272;
 				requestingOfficeFileReference();
 				}
-				break;
 			}
+
 			State = 276;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
@@ -1703,14 +1703,14 @@ public partial class ffa4Parser : Parser {
 			Match(SeparatorSlant);
 			State = 289;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,18,Context) ) {
-			case 1:
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0)) {
 				{
 				State = 288;
 				supplementaryShipmentInformation1();
 				}
-				break;
 			}
+
 			State = 292;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
@@ -3306,6 +3306,10 @@ public partial class ffa4Parser : Parser {
 	}
 
 	public partial class ManifestDescriptionOfGoodsContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(ffa4Parser.SeparatorSlant); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
+			return GetToken(ffa4Parser.SeparatorSlant, i);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(ffa4Parser.SeparatorCrlf); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
 			return GetToken(ffa4Parser.SeparatorCrlf, i);
@@ -3339,7 +3343,7 @@ public partial class ffa4Parser : Parser {
 				{
 				State = 439;
 				_la = TokenStream.LA(1);
-				if ( _la <= 0 || (_la==SeparatorCrlf) ) {
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
 				ErrorHandler.RecoverInline(this);
 				}
 				else {
@@ -3351,7 +3355,7 @@ public partial class ffa4Parser : Parser {
 				State = 442;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorSlant) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -3366,6 +3370,10 @@ public partial class ffa4Parser : Parser {
 	}
 
 	public partial class SsrDescriptionContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(ffa4Parser.SeparatorSlant); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
+			return GetToken(ffa4Parser.SeparatorSlant, i);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(ffa4Parser.SeparatorCrlf); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
 			return GetToken(ffa4Parser.SeparatorCrlf, i);
@@ -3399,7 +3407,7 @@ public partial class ffa4Parser : Parser {
 				{
 				State = 444;
 				_la = TokenStream.LA(1);
-				if ( _la <= 0 || (_la==SeparatorCrlf) ) {
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
 				ErrorHandler.RecoverInline(this);
 				}
 				else {
@@ -3411,7 +3419,7 @@ public partial class ffa4Parser : Parser {
 				State = 447;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorSlant) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -3426,6 +3434,10 @@ public partial class ffa4Parser : Parser {
 	}
 
 	public partial class OsiDescriptionContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(ffa4Parser.SeparatorSlant); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
+			return GetToken(ffa4Parser.SeparatorSlant, i);
+		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(ffa4Parser.SeparatorCrlf); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
 			return GetToken(ffa4Parser.SeparatorCrlf, i);
@@ -3459,7 +3471,7 @@ public partial class ffa4Parser : Parser {
 				{
 				State = 449;
 				_la = TokenStream.LA(1);
-				if ( _la <= 0 || (_la==SeparatorCrlf) ) {
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
 				ErrorHandler.RecoverInline(this);
 				}
 				else {
@@ -3471,7 +3483,7 @@ public partial class ffa4Parser : Parser {
 				State = 452;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorSlant) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -3489,6 +3501,10 @@ public partial class ffa4Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(ffa4Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(ffa4Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(ffa4Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(ffa4Parser.SeparatorCrlf, i);
 		}
 		public ReferenceNumberContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3509,36 +3525,29 @@ public partial class ffa4Parser : Parser {
 		EnterRule(_localctx, 124, RULE_referenceNumber);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 455;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 454;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 454;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 457;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,39,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -3556,6 +3565,10 @@ public partial class ffa4Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(ffa4Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(ffa4Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(ffa4Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(ffa4Parser.SeparatorCrlf, i);
 		}
 		public InnerSupplementaryShipmentInformationContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3576,36 +3589,29 @@ public partial class ffa4Parser : Parser {
 		EnterRule(_localctx, 126, RULE_innerSupplementaryShipmentInformation);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 460;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 459;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 459;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 462;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,40,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -3623,6 +3629,10 @@ public partial class ffa4Parser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorSlant() { return GetTokens(ffa4Parser.SeparatorSlant); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorSlant(int i) {
 			return GetToken(ffa4Parser.SeparatorSlant, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] SeparatorCrlf() { return GetTokens(ffa4Parser.SeparatorCrlf); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode SeparatorCrlf(int i) {
+			return GetToken(ffa4Parser.SeparatorCrlf, i);
 		}
 		public FileReferenceContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3643,36 +3653,29 @@ public partial class ffa4Parser : Parser {
 		EnterRule(_localctx, 128, RULE_fileReference);
 		int _la;
 		try {
-			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 465;
 			ErrorHandler.Sync(this);
-			_alt = 1;
+			_la = TokenStream.LA(1);
 			do {
-				switch (_alt) {
-				case 1:
-					{
-					{
-					State = 464;
-					_la = TokenStream.LA(1);
-					if ( _la <= 0 || (_la==SeparatorSlant) ) {
-					ErrorHandler.RecoverInline(this);
-					}
-					else {
-						ErrorHandler.ReportMatch(this);
-					    Consume();
-					}
-					}
-					}
-					break;
-				default:
-					throw new NoViableAltException(this);
+				{
+				{
+				State = 464;
+				_la = TokenStream.LA(1);
+				if ( _la <= 0 || (_la==SeparatorSlant || _la==SeparatorCrlf) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				}
 				}
 				State = 467;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,41,Context);
-			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+				_la = TokenStream.LA(1);
+			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__0) | (1L << T__1) | (1L << LineIdentifierSsr) | (1L << LineIdentifierOsi) | (1L << SeparatorHyphen) | (1L << A) | (1L << N) | (1L << G))) != 0) );
 			}
 		}
 		catch (RecognitionException re) {
@@ -3725,24 +3728,24 @@ public partial class ffa4Parser : Parser {
 		1,64,4,64,466,8,64,11,64,12,64,467,1,64,0,0,65,0,2,4,6,8,10,12,14,16,18,
 		20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,
 		68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110,
-		112,114,116,118,120,122,124,126,128,0,4,1,0,1,2,1,0,7,8,1,0,10,10,1,0,
-		5,5,446,0,130,1,0,0,0,2,143,1,0,0,0,4,148,1,0,0,0,6,167,1,0,0,0,8,171,
-		1,0,0,0,10,176,1,0,0,0,12,181,1,0,0,0,14,191,1,0,0,0,16,201,1,0,0,0,18,
-		208,1,0,0,0,20,214,1,0,0,0,22,217,1,0,0,0,24,222,1,0,0,0,26,226,1,0,0,
-		0,28,232,1,0,0,0,30,235,1,0,0,0,32,238,1,0,0,0,34,241,1,0,0,0,36,247,1,
-		0,0,0,38,250,1,0,0,0,40,253,1,0,0,0,42,257,1,0,0,0,44,260,1,0,0,0,46,264,
-		1,0,0,0,48,267,1,0,0,0,50,271,1,0,0,0,52,278,1,0,0,0,54,280,1,0,0,0,56,
-		287,1,0,0,0,58,294,1,0,0,0,60,296,1,0,0,0,62,299,1,0,0,0,64,303,1,0,0,
-		0,66,310,1,0,0,0,68,314,1,0,0,0,70,317,1,0,0,0,72,321,1,0,0,0,74,330,1,
-		0,0,0,76,334,1,0,0,0,78,338,1,0,0,0,80,342,1,0,0,0,82,346,1,0,0,0,84,348,
-		1,0,0,0,86,352,1,0,0,0,88,364,1,0,0,0,90,367,1,0,0,0,92,371,1,0,0,0,94,
-		374,1,0,0,0,96,378,1,0,0,0,98,387,1,0,0,0,100,390,1,0,0,0,102,393,1,0,
-		0,0,104,405,1,0,0,0,106,415,1,0,0,0,108,419,1,0,0,0,110,423,1,0,0,0,112,
-		426,1,0,0,0,114,430,1,0,0,0,116,435,1,0,0,0,118,440,1,0,0,0,120,445,1,
-		0,0,0,122,450,1,0,0,0,124,455,1,0,0,0,126,460,1,0,0,0,128,465,1,0,0,0,
-		130,131,3,2,1,0,131,132,3,4,2,0,132,134,3,6,3,0,133,135,3,8,4,0,134,133,
-		1,0,0,0,134,135,1,0,0,0,135,137,1,0,0,0,136,138,3,10,5,0,137,136,1,0,0,
-		0,137,138,1,0,0,0,138,139,1,0,0,0,139,141,3,12,6,0,140,142,3,14,7,0,141,
+		112,114,116,118,120,122,124,126,128,0,3,1,0,1,2,1,0,7,8,2,0,5,5,10,10,
+		446,0,130,1,0,0,0,2,143,1,0,0,0,4,148,1,0,0,0,6,167,1,0,0,0,8,171,1,0,
+		0,0,10,176,1,0,0,0,12,181,1,0,0,0,14,191,1,0,0,0,16,201,1,0,0,0,18,208,
+		1,0,0,0,20,214,1,0,0,0,22,217,1,0,0,0,24,222,1,0,0,0,26,226,1,0,0,0,28,
+		232,1,0,0,0,30,235,1,0,0,0,32,238,1,0,0,0,34,241,1,0,0,0,36,247,1,0,0,
+		0,38,250,1,0,0,0,40,253,1,0,0,0,42,257,1,0,0,0,44,260,1,0,0,0,46,264,1,
+		0,0,0,48,267,1,0,0,0,50,271,1,0,0,0,52,278,1,0,0,0,54,280,1,0,0,0,56,287,
+		1,0,0,0,58,294,1,0,0,0,60,296,1,0,0,0,62,299,1,0,0,0,64,303,1,0,0,0,66,
+		310,1,0,0,0,68,314,1,0,0,0,70,317,1,0,0,0,72,321,1,0,0,0,74,330,1,0,0,
+		0,76,334,1,0,0,0,78,338,1,0,0,0,80,342,1,0,0,0,82,346,1,0,0,0,84,348,1,
+		0,0,0,86,352,1,0,0,0,88,364,1,0,0,0,90,367,1,0,0,0,92,371,1,0,0,0,94,374,
+		1,0,0,0,96,378,1,0,0,0,98,387,1,0,0,0,100,390,1,0,0,0,102,393,1,0,0,0,
+		104,405,1,0,0,0,106,415,1,0,0,0,108,419,1,0,0,0,110,423,1,0,0,0,112,426,
+		1,0,0,0,114,430,1,0,0,0,116,435,1,0,0,0,118,440,1,0,0,0,120,445,1,0,0,
+		0,122,450,1,0,0,0,124,455,1,0,0,0,126,460,1,0,0,0,128,465,1,0,0,0,130,
+		131,3,2,1,0,131,132,3,4,2,0,132,134,3,6,3,0,133,135,3,8,4,0,134,133,1,
+		0,0,0,134,135,1,0,0,0,135,137,1,0,0,0,136,138,3,10,5,0,137,136,1,0,0,0,
+		137,138,1,0,0,0,138,139,1,0,0,0,139,141,3,12,6,0,140,142,3,14,7,0,141,
 		140,1,0,0,0,141,142,1,0,0,0,142,1,1,0,0,0,143,144,3,62,31,0,144,145,5,
 		5,0,0,145,146,3,64,32,0,146,147,5,10,0,0,147,3,1,0,0,0,148,149,3,22,11,
 		0,149,150,3,24,12,0,150,152,3,26,13,0,151,153,3,28,14,0,152,151,1,0,0,
@@ -3823,10 +3826,10 @@ public partial class ffa4Parser : Parser {
 		442,443,1,0,0,0,443,119,1,0,0,0,444,446,8,2,0,0,445,444,1,0,0,0,446,447,
 		1,0,0,0,447,445,1,0,0,0,447,448,1,0,0,0,448,121,1,0,0,0,449,451,8,2,0,
 		0,450,449,1,0,0,0,451,452,1,0,0,0,452,450,1,0,0,0,452,453,1,0,0,0,453,
-		123,1,0,0,0,454,456,8,3,0,0,455,454,1,0,0,0,456,457,1,0,0,0,457,455,1,
-		0,0,0,457,458,1,0,0,0,458,125,1,0,0,0,459,461,8,3,0,0,460,459,1,0,0,0,
+		123,1,0,0,0,454,456,8,2,0,0,455,454,1,0,0,0,456,457,1,0,0,0,457,455,1,
+		0,0,0,457,458,1,0,0,0,458,125,1,0,0,0,459,461,8,2,0,0,460,459,1,0,0,0,
 		461,462,1,0,0,0,462,460,1,0,0,0,462,463,1,0,0,0,463,127,1,0,0,0,464,466,
-		8,3,0,0,465,464,1,0,0,0,466,467,1,0,0,0,467,465,1,0,0,0,467,468,1,0,0,
+		8,2,0,0,465,464,1,0,0,0,466,467,1,0,0,0,467,465,1,0,0,0,467,468,1,0,0,
 		0,468,129,1,0,0,0,42,134,137,141,152,155,158,162,169,174,179,184,187,194,
 		197,222,245,273,276,289,292,305,308,354,360,362,369,382,385,395,401,403,
 		407,410,413,432,437,442,447,452,457,462,467

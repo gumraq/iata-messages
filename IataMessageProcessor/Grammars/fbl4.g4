@@ -98,12 +98,12 @@ isoCountryCode:							A A;
 informationIdentifier:					A A A;
 custSecurityAndRegulatCtrlInfoId:		A A?;
 endOfMessageCode:						A A A A;
-aircraftRegistration:					~SeparatorCrlf+;
-supplemCustSecurityAndRegulatCtrlInfo:	~SeparatorCrlf+;
-manifestDescriptionOfGoods:				~SeparatorCrlf+;
+aircraftRegistration:					~(SeparatorSlant|SeparatorCrlf)+;
+supplemCustSecurityAndRegulatCtrlInfo:	~(SeparatorSlant|SeparatorCrlf)+;
+manifestDescriptionOfGoods:				~(SeparatorSlant|SeparatorCrlf)+;
 abbreviatedName:						~(SeparatorSlant|SeparatorCrlf)+;
-ssrDescription:							~SeparatorCrlf+;
-osiDescription:							~SeparatorCrlf+;
+ssrDescription:							~(SeparatorSlant|SeparatorCrlf)+;
+osiDescription:							~(SeparatorSlant|SeparatorCrlf)+;
 
 
 

@@ -37,8 +37,8 @@ airportCodeOfDeparture:					A A A;
 airportCodeOfArrival:					A A A;
 airportCodeOfOrigin:					A A A;
 airportCodeOfDestitation:				A A A;
-manifestDescriptionOfGoods:				~(SeparatorCrlf)+;
-osiDescription:							~(SeparatorCrlf)+;
+manifestDescriptionOfGoods:				~(SeparatorSlant|SeparatorCrlf)+;
+osiDescription:							~(SeparatorSlant|SeparatorCrlf)+;
 
 
 /*Lexer Rules*/

@@ -70,12 +70,12 @@ officeFunctionDesignator:				(A | N) (A | N);
 companyDesignator:						(A | N) (A | N);
 participantIdentifier:					(A | N)+;
 participantCode:						(A | N)+;
-manifestDescriptionOfGoods:				~SeparatorCrlf+;
-ssrDescription:							~SeparatorCrlf+;
-osiDescription:							~SeparatorCrlf+;
-referenceNumber:						~SeparatorSlant+;
-innerSupplementaryShipmentInformation:	~SeparatorSlant+;
-fileReference:							~SeparatorSlant+;
+manifestDescriptionOfGoods:				~(SeparatorSlant|SeparatorCrlf)+;
+ssrDescription:							~(SeparatorSlant|SeparatorCrlf)+;
+osiDescription:							~(SeparatorSlant|SeparatorCrlf)+;
+referenceNumber:						~(SeparatorSlant|SeparatorCrlf)+;
+innerSupplementaryShipmentInformation:	~(SeparatorSlant|SeparatorCrlf)+;
+fileReference:							~(SeparatorSlant|SeparatorCrlf)+;
 
 
 /*Lexer Rules*/

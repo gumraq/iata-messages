@@ -150,9 +150,9 @@ numberOfPieces:							N N? N? N?;
 isoCountryCode:							A A;						
 informationIdentifier:					A A A;
 custSecurityAndRegulatCtrlInfoId:		A A?;
-supplemCustSecurityAndRegulatCtrlInfo:	~SeparatorCrlf+;
-osiDescription:							~SeparatorCrlf+;
-name:									~SeparatorCrlf+;
+supplemCustSecurityAndRegulatCtrlInfo:	~(SeparatorSlant|SeparatorCrlf)+;
+osiDescription:							~(SeparatorSlant|SeparatorCrlf)+;
+name:									~(SeparatorSlant|SeparatorCrlf)+;
 
 
 /*Lexer Rules*/

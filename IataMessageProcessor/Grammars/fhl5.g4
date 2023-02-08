@@ -8,8 +8,8 @@ fhl5:									standardMessageIdentification masterAwbConsignmentDetail houseWayb
 standardMessageIdentification:			standardMessageIdentifier SeparatorSlant messageTypeVersionNumber SeparatorCrlf;
 masterAwbConsignmentDetail:				lineIdentifier SeparatorSlant masterAwbIdentification awbOriginAndDestination quantityDetail SeparatorCrlf;
 houseWaybills:							houseWaybillSummaryDetails+ freeTextDescriptionOfGoods? harmonisedTariffScheduleInformation? otherCustSecurityAndRegulatCtrlInfo?;
-shipperNameAndAddress:					ShpLineIdentifier name streetAddress location codedLocation contactDetail* SeparatorCrlf;
-consigneeNameAndAddress:				CneLineIdentifier name streetAddress location codedLocation contactDetail* SeparatorCrlf;
+shipperNameAndAddress:					ShpLineIdentifier SeparatorCrlf name streetAddress location codedLocation contactDetail* SeparatorCrlf;
+consigneeNameAndAddress:				CneLineIdentifier SeparatorCrlf name streetAddress location codedLocation contactDetail* SeparatorCrlf;
 chargeDeclarations:						lineIdentifier SeparatorSlant isoCurrencyCode SeparatorSlant prepaidCollectChargeDeclarations? SeparatorSlant valueForCarriageDeclaration SeparatorSlant valueForCustomsDeclaration SeparatorSlant valueForInsuranceDeclaration SeparatorCrlf;
 
 /*Вспомогательные элементы*/
@@ -74,14 +74,14 @@ isoCountryCode:							A A;
 informationIdentifier:					A A A;
 custSecurityAndRegulatCtrlInfoId:		A A?;
 harmonisedCommodityCode:				(A | N)+;
-freeText:								~SeparatorCrlf+;
-nameInner:								~SeparatorSlant+;
-supplemCustSecurityAndRegulatCtrlInfo:	~SeparatorCrlf+;
-manifestDescriptionOfGoods:				~(SeparatorCrlf | SeparatorSlant)+;
-streetAddressInner:						~SeparatorSlant+;
-placeInner:								~SeparatorSlant+;
-postCodeInner:							~SeparatorSlant+;
-stateProvinceInner:						~SeparatorSlant+;
+freeText:								~(SeparatorSlant|SeparatorCrlf)+;
+nameInner:								~(SeparatorSlant|SeparatorCrlf)+;
+supplemCustSecurityAndRegulatCtrlInfo:	~(SeparatorSlant|SeparatorCrlf)+;
+manifestDescriptionOfGoods:				~(SeparatorSlant|SeparatorCrlf)+;
+streetAddressInner:						~(SeparatorSlant|SeparatorCrlf)+;
+placeInner:								~(SeparatorSlant|SeparatorCrlf)+;
+postCodeInner:							~(SeparatorSlant|SeparatorCrlf)+;
+stateProvinceInner:						~(SeparatorSlant|SeparatorCrlf)+;
 
 
 /*Lexer Rules*/
@@ -92,8 +92,8 @@ LineIdentifierOsi:						'OSI/';
 LineIdentifierUld:						'ULD/';
 
 HbsLineIdentifier:						'HBS/';
-ShpLineIdentifier:						'SHP' SeparatorCrlf;
-CneLineIdentifier:						'CNE' SeparatorCrlf;
+ShpLineIdentifier:						'SHP';
+CneLineIdentifier:						'CNE';
 NamIdentifier:							'NAM';
 AdrIdentifier:							'ADR';
 LocIdentifier:							'LOC';
